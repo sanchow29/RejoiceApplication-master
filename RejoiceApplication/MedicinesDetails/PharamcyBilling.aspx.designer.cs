@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RejoiceApplication {
+namespace RejoiceApplication.MedicinesDetails {
     
     
     public partial class PharamcyBillinng {

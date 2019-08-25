@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace RejoiceApplication.Medicines
+namespace RejoiceApplication.MedicinesDetails
 {
     public partial class DispatchedMedicinesList : System.Web.UI.Page
     {

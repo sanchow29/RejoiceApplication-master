@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DispatchMedicines.aspx.cs" Inherits="RejoiceApplication.Medicines.DispatchMedicines" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DispatchMedicines.aspx.cs" Inherits="RejoiceApplication.MedicinesDetails.DispatchMedicines" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="page-inner" style="min-height: 1050px;">
