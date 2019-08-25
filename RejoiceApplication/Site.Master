@@ -1,0 +1,399 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RejoiceApplication.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />  
+ <%--   <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
+   
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/sweetalert.css" runat="server" />
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/example.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/bootstrap-select.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/dataTables.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/dataTables.editor.min.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/dataTables.tableTools.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/dataTables.responsive.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/jquery-ui.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/font-awesome.min.css" runat="server"/>
+
+   <%--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css" runat="server"/>--%>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/popup.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/style.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/custom.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/fullcalendar.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/select2.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/bootstrap.min.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/datepicker.min.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/time.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/bootstrap-multiselect.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/white.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/hospitalmgt.min.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/validationEngine.jquery.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/hospital-responsive.css" runat="server"/>
+        <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/fileinput.min.css" runat="server" />
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/jquery-1.11.1.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/select2.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/jquery-ui.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/jquery.timeago.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/moment.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/bootstrap-select.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/fullcalendar.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/jquery.dataTables.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/dataTables.tableTools.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/dataTables.editor.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/dataTables.responsive.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/bootstrap.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/bootstrap-datepicker.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/time.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/bootstrap-multiselect.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/responsive-tabs.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/sweetalert-dev.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/en.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/jquery.validationEngine-en.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/jquery.validationEngine.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/canvas-to-blob.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/fileinput.min.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/fileinput.js")%>'></script>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/NewScripts/fileinput_locale_es.js")%>'></script>
+
+        <script>
+            jQuery(document).ready(function () {
+                jQuery('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek,agendaDay'
+                    },
+                    editable: false,
+                    timeFormat: 'h(:mm)A',
+                    eventLimit: 1,
+                    slotDuration: '00:15:00',
+                    events: [{ "type": "appointment", "title": "Detail", "start": "2019-03-16 10:00:00", "end": "2019-03-16 10:15:00", "patient_name": "Ashish Ranjan(P20319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-03-23 20:00:00", "end": "2019-03-23 20:15:00", "patient_name": "Ashish Ranjan(P20319)", "doctor_name": "Fernando Therrien", "appointment_time": "08:00PM" }, { "type": "appointment", "title": "Detail", "start": "2019-03-22 14:00:00", "end": "2019-03-22 14:15:00", "patient_name": "Anna Sanz(P50319)", "doctor_name": "Fernando Therrien", "appointment_time": "02:00PM" }, { "type": "appointment", "title": "Detail", "start": "2019-03-18 10:45:00", "end": "2019-03-18 11:00:00", "patient_name": "Mario Rossi(P40319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:45AM" }, { "type": "appointment", "title": "Detail", "start": "2019-03-22 16:45:00", "end": "2019-03-22 17:00:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "04:45PM" }, { "type": "appointment", "title": "Detail", "start": "2019-03-30 10:00:00", "end": "2019-03-30 10:15:00", "patient_name": "Ashish Ranjan(P20319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-04-01 10:30:00", "end": "2019-04-01 10:45:00", "patient_name": "muhammed shameem(P100419)", "doctor_name": "Fernando Therrien", "appointment_time": "10:30AM" }, { "type": "appointment", "title": "Detail", "start": "2019-04-01 17:00:00", "end": "2019-04-01 17:15:00", "patient_name": "muhammed shameem(P100419)", "doctor_name": "Fernando Therrien", "appointment_time": "05:00PM" }, { "type": "appointment", "title": "Detail", "start": "2019-04-18 10:30:00", "end": "2019-04-18 10:45:00", "patient_name": "Mario Rossi(P40319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:30AM" }, { "type": "appointment", "title": "Detail", "start": "2019-04-22 10:30:00", "end": "2019-04-22 10:45:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:30AM" }, { "type": "appointment", "title": "Detail", "start": "2019-04-22 10:00:00", "end": "2019-04-22 10:15:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-04-22 10:15:00", "end": "2019-04-22 10:30:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:15AM" }, { "type": "appointment", "title": "Detail", "start": "2019-05-13 11:45:00", "end": "2019-05-13 12:00:00", "patient_name": "R R(P370519)", "doctor_name": "Fernando Therrien", "appointment_time": "11:45AM" }, { "type": "appointment", "title": "Detail", "start": "2019-05-13 11:00:00", "end": "2019-05-13 11:15:00", "patient_name": "Abhijit Borgohain(P390519)", "doctor_name": "Fernando Therrien", "appointment_time": "11:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-05-14 10:00:00", "end": "2019-05-14 10:15:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "10:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-05-14 10:15:00", "end": "2019-05-14 10:30:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:15AM" }, { "type": "appointment", "title": "Detail", "start": "2019-05-13 10:15:00", "end": "2019-05-13 10:30:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "10:15AM" }, { "type": "appointment", "title": "Detail", "start": "2019-05-20 14:15:00", "end": "2019-05-20 14:30:00", "patient_name": "R R(P370519)", "doctor_name": "Fernando Therrien", "appointment_time": "02:15PM" }, { "type": "appointment", "title": "Detail", "start": "2019-05-20 11:00:00", "end": "2019-05-20 11:15:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "11:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-05-20 10:45:00", "end": "2019-05-20 11:00:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "10:45AM" }, { "type": "appointment", "title": "Detail", "start": "2019-06-03 10:30:00", "end": "2019-06-03 10:45:00", "patient_name": "R R(P370519)", "doctor_name": "Fernando Therrien", "appointment_time": "10:30AM" }, { "type": "appointment", "title": "Detail", "start": "2019-06-03 11:15:00", "end": "2019-06-03 11:30:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "11:15AM " }, { "type": "appointment", "title": "Detail", "start": "2019-06-24 11:45:00", "end": "2019-06-24 12:00:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "11:45AM" }, { "type": "appointment", "title": "Detail", "start": "2019-06-17 10:15:00", "end": "2019-06-17 10:30:00", "patient_name": "claudiu ciubotaru(P570619)", "doctor_name": "Fernando Therrien", "appointment_time": "10:15AM" }, { "type": "appointment", "title": "Detail", "start": "2019-06-24 11:00:00", "end": "2019-06-24 11:15:00", "patient_name": "R R(P370519)", "doctor_name": "Fernando Therrien", "appointment_time": "11:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-06-24 10:15:00", "end": "2019-06-24 10:30:00", "patient_name": "aaaa aaa(P340519)", "doctor_name": "Fernando Therrien", "appointment_time": "10:15AM" }, { "type": "appointment", "title": "Detail", "start": "2019-06-24 10:45:00", "end": "2019-06-24 11:00:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "10:45AM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-10 10:00:00", "end": "2019-07-10 10:15:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-17 10:15:00", "end": "2019-07-17 10:30:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:15AM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-17 10:30:00", "end": "2019-07-17 10:45:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "10:30AM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-12 11:15:00", "end": "2019-07-12 11:30:00", "patient_name": "Jose Figueroa(P10319)", "doctor_name": "Fernando Therrien", "appointment_time": "11:15AM " }, { "type": "appointment", "title": "Detail", "start": "2019-07-12 20:00:00", "end": "2019-07-12 20:15:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "08:00PM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-25 16:45:00", "end": "2019-07-25 17:00:00", "patient_name": "AS as(P180419)", "doctor_name": "Fernando Therrien", "appointment_time": "04:45PM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-31 10:15:00", "end": "2019-07-31 10:30:00", "patient_name": "Apj Kalam(P440519)", "doctor_name": "Fernando Therrien", "appointment_time": "10:15AM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-18 10:30:00", "end": "2019-07-18 10:45:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "10:30AM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-18 14:30:00", "end": "2019-07-18 14:45:00", "patient_name": "Ashish Ranjan(P20319)", "doctor_name": "Fernando Therrien", "appointment_time": "02:30PM" }, { "type": "appointment", "title": "Detail", "start": "2019-07-29 10:45:00", "end": "2019-07-29 11:00:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "10:45AM" }, { "type": "appointment", "title": "Detail", "start": "2019-08-05 10:30:00", "end": "2019-08-05 10:45:00", "patient_name": "aaaa aaa(P340519)", "doctor_name": "Fernando Therrien", "appointment_time": "10:30AM" }, { "type": "appointment", "title": "Detail", "start": "2019-08-05 10:00:00", "end": "2019-08-05 10:15:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "10:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-08-05 10:15:00", "end": "2019-08-05 10:30:00", "patient_name": "R R(P370519)", "doctor_name": "Fernando Therrien", "appointment_time": "10:15AM" }, { "type": "appointment", "title": "Detail", "start": "2019-08-08 10:00:00", "end": "2019-08-08 10:15:00", "patient_name": "Abhijit Borgohain(P390519)", "doctor_name": "Fernando Therrien", "appointment_time": "10:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-08-09 18:00:00", "end": "2019-08-09 18:15:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "06:00PM" }, { "type": "appointment", "title": "Detail", "start": "2019-08-09 18:15:00", "end": "2019-08-09 18:30:00", "patient_name": "R R(P370519)", "doctor_name": "Fernando Therrien", "appointment_time": "06:15PM" }, { "type": "appointment", "title": "Detail", "start": "2019-08-19 10:00:00", "end": "2019-08-19 10:15:00", "patient_name": "aaaa aaa(P340519)", "doctor_name": "Fernando Therrien", "appointment_time": "10:00AM" }, { "type": "appointment", "title": "Detail", "start": "2019-08-20 12:45:00", "end": "2019-08-20 13:00:00", "patient_name": "Nina Cadela(P160419)", "doctor_name": "Fernando Therrien", "appointment_time": "12:45PM" }, { "type": "event", "title": "event 1", "start": "2019-03-26", "end": "2019-03-31", "event_for": "Patient,Doctor,Nurse,Support Staff,Pharmacist,Laboratory Staff,Accountant", "event_comment": "event 1", "backgroundColor": "green" }, { "type": "notice", "title": "holiday", "start": "2019-03-27", "end": "2019-04-01", "event_for": "Patient,Doctor,Nurse,Support Staff,Pharmacist,Laboratory Staff,Accountant", "event_comment": "", "backgroundColor": "#F25656" }],
+                    eventRender: function (event, element) {
+                        if (event.type == 'appointment') {
+                            element.find('.fc-title').append(" :" + event.doctor_name + "   :" + event.patient_name + ", ");
+                        }
+                        if (event.type == 'event') {
+                            element.find('.fc-content').css("background-color", "green");
+                        }
+                        if (event.type == 'notice') {
+                            element.find('.fc-content').css("background-color", "#F25656");
+                        }
+                    },
+                    eventMouseover: function (event, element) {
+                        if (event.type == 'appointment') {
+                            var date = new Date(event.start);
+                            var time = event.appointment_time;
+                            var month = date.getMonth() + 1;
+                            var day = date.getDate();
+                            var year = date.getFullYear();
+                            var full_date = year + "-" + month + "-" + day;
+                            var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Doctor Name  : ' + event.doctor_name + '<br> Patient Name :' + event.patient_name + ' <br>  Date  :' + full_date + '<br> Time  :' + time + ' </div>';
+                            var $tool = $(tooltip).appendTo('body');
+
+                            $(this).mouseover(function (e) {
+                                $(this).css('z-index', 10000);
+                                $tool.fadeIn('500');
+                                $tool.fadeTo('10', 1.9);
+                            }).mousemove(function (e) {
+                                $tool.css('top', e.pageY + 5);
+                                $tool.css('left', e.pageX + 5);
+                            });
+                        }
+                        else {
+                            var date = new Date(event.start);
+                            var month = date.getMonth() + 1;
+                            var day = date.getDate();
+                            var year = date.getFullYear();
+                            var full_start_date = year + "-" + month + "-" + day;
+
+                            var newdate = event.end;
+                            var newdate1 = new Date(newdate);
+                            newdate1.setDate(newdate1.getDate() - 1);
+
+                            var date1 = new Date(newdate1);
+                            var month1 = date1.getMonth() + 1;
+                            var day1 = date1.getDate();
+                            var year1 = date1.getFullYear();
+                            var full_end_date = year1 + "-" + month1 + "-" + day1;
+
+                            if (event.type == 'event') {
+                                var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Event Name  : ' + event.title + '<br> Start Date :' + full_start_date + ' <br>  End Date  :' + full_end_date + '<br> Event For  :' + event.event_for + ' <br> Comment  :' + event.event_comment + '</div>';
+                            }
+                            else {
+                                var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Notice Name  : ' + event.title + '<br> Start Date :' + full_start_date + ' <br>  End Date  :' + full_end_date + '<br> Notice For  :' + event.event_for + ' <br> Comment  :' + event.event_comment + '</div>';
+                            }
+                            var $tool = $(tooltip).appendTo('body');
+
+                            $(this).mouseover(function (e) {
+                                $(this).css('z-index', 10000);
+                                $tool.fadeIn('500');
+                                $tool.fadeTo('10', 1.9);
+                            }).mousemove(function (e) {
+                                $tool.css('top', e.pageY + 5);
+                                $tool.css('left', e.pageX + 5);
+                            });
+                        }
+                    },
+                    eventMouseout: function (event, element) {
+                        $(this).css('z-index', 8);
+                        $('.tooltipevent').remove();
+                    }
+                });
+            });
+        </script>
+        <style>
+            @media only screen and (max-width : 768px) {
+                input[type=radio] {
+                    margin: 2px 0 0;
+                }
+
+                .radio-inline input[type=radio] {
+                    margin-left: -20px;
+                }
+
+                .radio input[type=radio] {
+                    margin-left: -20px;
+                }
+            }
+
+            @media only screen and (max-width : 480px) {
+                input[type=checkbox], input[type=radio] {
+                    margin: 2px 0px 0px;
+                }
+            }
+        </style>
+</head>
+<body class="hospital-management-content">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <%--<asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />--%>
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+       <!-- start body div-->
+        <!--task-event POP up code -->
+        <div class="popup-bg">
+            <div class="overlay-content content_width">
+                <div class="modal-content" style="border-top: 5px solid #22baa0;">
+                    <div class="task_event_list">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End task-event POP-UP Code -->
+        <div class="container-fluid mainpage">
+            <!-- start container fluid div-->
+            <div class="navbar">
+                <!-- start navbar div-->
+                <!-- HOSPTAL LOGO AND NAME -->
+                <div class="col-md-3 col-sm-2 col-xs-4">
+                    <h3>
+                        <img src="../Images/Rejoice Logo7.png" class="img-circle head_logo" width="40" height="40" />
+                        <span>Rejoice</span>
+                    </h3>
+                </div>
+                <!--  END HOSPTAL LOGO AND NAME  -->
+                <ul class="nav navbar-right col-md-9 col-sm-10 col-xs-8">
+
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown"
+                           class="dropdown-toggle" href="javascript:;">
+                            <img src=../Images/doctor.png height="40px" width="40px" class="img-circle" />	
+                            <span>Test User </span> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li>
+                                <a href="../account.html">
+                                    <i class="fa fa-user"></i>
+                                    My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Login.aspx">
+                                    <i class="fa fa-sign-out m-r-xs"></i>Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                </ul>
+            </div><!-- end navbar div-->
+        </div><!-- end container fluid div-->
+        <div class="container-fluid">
+            <!-- start container fluid div-->
+            <div class="row">
+                <!-- start row div-->
+                <div class="col-sm-2 nopadding hospital_left">
+                    <!-- start menu div-->
+                    <!--  Left Side -->
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <a href="Default.aspx"><span class="icone"><img src="../../Images/home.png" /></span><span class="title">Home</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="DoctorDashBoard.html">
+                                <span class="icone"><img src="../../Images/dashboard.png" /></span><span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="doctor.html" class="left-tooltip" data-tooltip="Doctor" title="Doctor">
+                                <span class="icone"> <img src="../../Images/doctoricon.png" /></span><span class="title">Doctor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="OutPatient.html" class="left-tooltip" data-tooltip="Outpatient" title="Outpatient">
+                                <span class="icone"> <img src="../Images/outpatient.png" /></span><span class="title">Outpatient</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Inpatient.html" class="left-tooltip" data-tooltip="Inpatient" title="Inpatient">
+                                <span class="icone"> <img src="../Images/inPatient.png" /></span><span class="title">Inpatient</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Nurse.html" class="left-tooltip" data-tooltip="Nurse" title="Nurse">
+                                <span class="icone"> <img src="../Images/Nurse.png" /></span><span class="title">Nurse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="SupportStaff.html" class="left-tooltip" data-tooltip="Support Staff" title="Support Staff">
+                                <span class="icone"> <img src="../Images/support.png" /></span><span class="title">Support Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-tooltip" data-tooltip="Pharmacist" title="Pharmacist">
+                                <span class="icone"> <img src="../Images/Pharmacist.png" /></span><span class="title">Pharmacist</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="laboratorystaff.html" class="left-tooltip" data-tooltip="Laboratory Staff" title="Laboratory Staff">
+                                <span class="icone"> <img src="../Images/Laboratorist.png" /></span><span class="title">Laboratory Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="accountant.html" class="left-tooltip" data-tooltip="Accountant" title="Accountant">
+                                <span class="icone"> <img src="../Images/Accountant.png" /></span><span class="title">Accountant</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="MedicinesDetails/Medicines6.aspx" class="left-tooltip" data-tooltip="Medicine" title="Medicine">
+                                <span class="icone"> <img src="../Images/Medicine.png" /></span><span class="title">Medicine</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../Treatment/Treatment.aspx" class="left-tooltip" data-tooltip="Treatment" title="Treatment">
+                                <span class="icone"> <img src="../Images/Treatment.png" /></span><span class="title">Treatment</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../Prescription/Prescription.aspx" class="left-tooltip" data-tooltip="Prescription" title="Prescription">
+                                <span class="icone"> <img src="../Images/Prescription.png" /></span><span class="title">Prescription</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bedallotment.html" class="left-tooltip" data-tooltip="Assign Bed-Nurse" title="Assign Bed-Nurse">
+                                <span class="icone"> <img src="../Images/Assign--Bed-nurse.png" /></span><span class="title">Assign Bed-Nurse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../Operation/OperationList.aspx" class="left-tooltip" data-tooltip="Operation List" title="Operation List">
+                                <span class="icone"> <img src="../Images/Operation-List.png" /></span><span class="title">Operation List</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../Diagnosis/Diagnosis.aspx" class="left-tooltip" data-tooltip="Diagnosis" title="Diagnosis">
+                                <span class="icone"> <img src="../Images/Diagnosis-Report.png" /></span><span class="title">Diagnosis</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-tooltip" data-tooltip="Blood Bank" title="Blood Bank">
+                                <span class="icone"> <img src="../Images/Blood-Bank.png" /></span><span class="title">Blood Bank</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="appointment.html" class="left-tooltip" data-tooltip="Appointment" title="Appointment">
+                                <span class="icone"> <img src="../Images/Appointment.png" /></span><span class="title">Appointment</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Invoice/Invoice.aspx" class="left-tooltip" data-tooltip="Invoice" title="Invoice">
+                                <span class="icone"> <img src="../Images/payment.png" /></span><span class="title">Invoice</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="event.html" class="left-tooltip" data-tooltip="Event" title="Event">
+                                <span class="icone"> <img src="../Images/notice.png" /></span><span class="title">Event</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Message/Messages.aspx" class="left-tooltip" data-tooltip="Message" title="Message">
+                                <span class="icone"> <img src="../Images/message.png" /></span><span class="title">Message</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Ambulance/Ambulance.aspx" class="left-tooltip" data-tooltip="Ambulance" title="Ambulance">
+                                <span class="icone"> <img src="../Images/Ambulance.png" /></span><span class="title">Ambulance</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Instrument/InstrumentList.aspx" class="left-tooltip" data-tooltip="instrument" title="instrument">
+                                <span class="icone"> <img src="../Images/Instrument.png" /></span><span class="title">Instrument</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Reports/BedOccupation.aspx" class="left-tooltip" data-tooltip="Report" title="Report">
+                                <span class="icone"> <img src="../Images/Report.png" /></span><span class="title">Report</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-tooltip" data-tooltip="Account" title="Account">
+                                <span class="icone"> <img src="../Images/account.png" /></span><span class="title">Account</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="CreatePatient.aspx">
+                                <span class="icone"><img src="../Images/dashboard.png" /></span><span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- end menu div-->
+                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+
+            </asp:ContentPlaceHolder>         
+
+            </div><!-- end row div-->
+            <div class="row">
+           
+        </div>
+        </div><!-- end container fluid div-->
+        
+
+    </form>
+</body>
+</html>

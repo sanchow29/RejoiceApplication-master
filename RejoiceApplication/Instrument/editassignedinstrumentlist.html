@@ -1,0 +1,665 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/xmlrpc.php">
+    <!--[if lt IE 9]>
+    <script src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/themes/twentyfifteen/js/html5.js"></script>
+    <![endif]-->
+    <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+    <title>Hospital Management System &#8211;  </title>
+    <meta name='robots' content='noindex,follow' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+    <link rel="alternate" type="application/rss+xml" title="Hospital Management System &raquo; Feed" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Hospital Management System &raquo; Comments Feed" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/comments/feed/" />
+    <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/pushnifty.com\/mojoomla\/extend\/wordpress\/hospital\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript'>
+/* <![CDATA[ */
+var language_translate = {"add_note_alert":"Please enter a note.","medicine_stock_out_alert":"Medicine Out Of Stock","unique_medicine_alert":"Please Enter Unique Medicine Name","unique_medicine_id__alert":"Please Enter Unique Medicine ID","phocode_alert":"Please Enter Only + and 0-9","delete_record_alert":"Are you sure want to delete this record?","edit_record_alert":"Are you sure want to edit this record?","select_multiselect_tax":"Select Tax","select_all_multiselect":"Select all","time_validation_alert":"End Time Must Be Greater Than The Start Time"};
+var hmgt = {"ajax":"http:\/\/pushnifty.com\/mojoomla\/extend\/wordpress\/hospital\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+    </script>
+    <script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/popup.js?ver=5.1.1'></script>
+    <link rel='https://api.w.org/' href='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.1.1" />
+    <link rel="canonical" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/" />
+    <link rel='shortlink' href='http://pushnifty.com/mojoomla/extend/wordpress/hospital/' />
+    <link rel="alternate" type="application/json+oembed" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fpushnifty.com%2Fmojoomla%2Fextend%2Fwordpress%2Fhospital%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fpushnifty.com%2Fmojoomla%2Fextend%2Fwordpress%2Fhospital%2F&#038;format=xml" />
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/sweetalert.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/example.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/bootstrap-select.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/dataTables.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/dataTables.editor.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/dataTables.tableTools.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/dataTables.responsive.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/popup.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/fullcalendar.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/select2-3.5.3/select2.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/datepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/time.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/bootstrap-multiselect.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/white.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/hospitalmgt.min.css" />
+
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/css/validationEngine.jquery.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/hospital-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/css/fileinput.min.css" />
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/select2-3.5.3/select2.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery.timeago.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/moment.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap-select.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/dataTables.tableTools.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/dataTables.editor.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/dataTables.responsive.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/time.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap-multiselect.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/responsive-tabs.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/sweetalert-dev.js"></script>
+
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/calendar-lang/en.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/js/languages/jquery.validationEngine-en.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/js/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/js/plugins/canvas-to-blob.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/js/fileinput.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/js/fileinput.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/js/fileinput_locale_es.js"></script>
+
+        <script>
+jQuery(document).ready(function() {
+	jQuery('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			editable: false,
+			timeFormat: 'h(:mm)A',
+			eventLimit: 1,
+			slotDuration:'00:15:00',
+			events:[{"type":"appointment","title":"Detail","start":"2019-03-16 10:00:00","end":"2019-03-16 10:15:00","patient_name":"Ashish Ranjan(P20319)","doctor_name":"Fernando Therrien","appointment_time":"10:00AM"},{"type":"appointment","title":"Detail","start":"2019-03-23 20:00:00","end":"2019-03-23 20:15:00","patient_name":"Ashish Ranjan(P20319)","doctor_name":"Fernando Therrien","appointment_time":"08:00PM"},{"type":"appointment","title":"Detail","start":"2019-03-22 14:00:00","end":"2019-03-22 14:15:00","patient_name":"Anna Sanz(P50319)","doctor_name":"Fernando Therrien","appointment_time":"02:00PM"},{"type":"appointment","title":"Detail","start":"2019-03-18 10:45:00","end":"2019-03-18 11:00:00","patient_name":"Mario Rossi(P40319)","doctor_name":"Fernando Therrien","appointment_time":"10:45AM"},{"type":"appointment","title":"Detail","start":"2019-03-22 16:45:00","end":"2019-03-22 17:00:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"04:45PM"},{"type":"appointment","title":"Detail","start":"2019-03-30 10:00:00","end":"2019-03-30 10:15:00","patient_name":"Ashish Ranjan(P20319)","doctor_name":"Fernando Therrien","appointment_time":"10:00AM"},{"type":"appointment","title":"Detail","start":"2019-04-01 10:30:00","end":"2019-04-01 10:45:00","patient_name":"muhammed shameem(P100419)","doctor_name":"Fernando Therrien","appointment_time":"10:30AM"},{"type":"appointment","title":"Detail","start":"2019-04-01 17:00:00","end":"2019-04-01 17:15:00","patient_name":"muhammed shameem(P100419)","doctor_name":"Fernando Therrien","appointment_time":"05:00PM"},{"type":"appointment","title":"Detail","start":"2019-04-18 10:30:00","end":"2019-04-18 10:45:00","patient_name":"Mario Rossi(P40319)","doctor_name":"Fernando Therrien","appointment_time":"10:30AM"},{"type":"appointment","title":"Detail","start":"2019-04-22 10:30:00","end":"2019-04-22 10:45:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"10:30AM"},{"type":"appointment","title":"Detail","start":"2019-04-22 10:00:00","end":"2019-04-22 10:15:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"10:00AM"},{"type":"appointment","title":"Detail","start":"2019-04-22 10:15:00","end":"2019-04-22 10:30:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"10:15AM"},{"type":"appointment","title":"Detail","start":"2019-05-13 11:45:00","end":"2019-05-13 12:00:00","patient_name":"R R(P370519)","doctor_name":"Fernando Therrien","appointment_time":"11:45AM"},{"type":"appointment","title":"Detail","start":"2019-05-13 11:00:00","end":"2019-05-13 11:15:00","patient_name":"Abhijit Borgohain(P390519)","doctor_name":"Fernando Therrien","appointment_time":"11:00AM"},{"type":"appointment","title":"Detail","start":"2019-05-14 10:00:00","end":"2019-05-14 10:15:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"10:00AM"},{"type":"appointment","title":"Detail","start":"2019-05-14 10:15:00","end":"2019-05-14 10:30:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"10:15AM"},{"type":"appointment","title":"Detail","start":"2019-05-13 10:15:00","end":"2019-05-13 10:30:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"10:15AM"},{"type":"appointment","title":"Detail","start":"2019-05-20 14:15:00","end":"2019-05-20 14:30:00","patient_name":"R R(P370519)","doctor_name":"Fernando Therrien","appointment_time":"02:15PM"},{"type":"appointment","title":"Detail","start":"2019-05-20 11:00:00","end":"2019-05-20 11:15:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"11:00AM"},{"type":"appointment","title":"Detail","start":"2019-05-20 10:45:00","end":"2019-05-20 11:00:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"10:45AM"},{"type":"appointment","title":"Detail","start":"2019-06-03 10:30:00","end":"2019-06-03 10:45:00","patient_name":"R R(P370519)","doctor_name":"Fernando Therrien","appointment_time":"10:30AM"},{"type":"appointment","title":"Detail","start":"2019-06-03 11:15:00","end":"2019-06-03 11:30:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"11:15AM "},{"type":"appointment","title":"Detail","start":"2019-06-24 11:45:00","end":"2019-06-24 12:00:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"11:45AM"},{"type":"appointment","title":"Detail","start":"2019-06-17 10:15:00","end":"2019-06-17 10:30:00","patient_name":"claudiu ciubotaru(P570619)","doctor_name":"Fernando Therrien","appointment_time":"10:15AM"},{"type":"appointment","title":"Detail","start":"2019-06-24 11:00:00","end":"2019-06-24 11:15:00","patient_name":"R R(P370519)","doctor_name":"Fernando Therrien","appointment_time":"11:00AM"},{"type":"appointment","title":"Detail","start":"2019-06-24 10:15:00","end":"2019-06-24 10:30:00","patient_name":"aaaa aaa(P340519)","doctor_name":"Fernando Therrien","appointment_time":"10:15AM"},{"type":"appointment","title":"Detail","start":"2019-06-24 10:45:00","end":"2019-06-24 11:00:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"10:45AM"},{"type":"appointment","title":"Detail","start":"2019-07-10 10:00:00","end":"2019-07-10 10:15:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"10:00AM"},{"type":"appointment","title":"Detail","start":"2019-07-17 10:15:00","end":"2019-07-17 10:30:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"10:15AM"},{"type":"appointment","title":"Detail","start":"2019-07-17 10:30:00","end":"2019-07-17 10:45:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"10:30AM"},{"type":"appointment","title":"Detail","start":"2019-07-12 11:15:00","end":"2019-07-12 11:30:00","patient_name":"Jose Figueroa(P10319)","doctor_name":"Fernando Therrien","appointment_time":"11:15AM "},{"type":"appointment","title":"Detail","start":"2019-07-12 20:00:00","end":"2019-07-12 20:15:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"08:00PM"},{"type":"appointment","title":"Detail","start":"2019-07-25 16:45:00","end":"2019-07-25 17:00:00","patient_name":"AS as(P180419)","doctor_name":"Fernando Therrien","appointment_time":"04:45PM"},{"type":"appointment","title":"Detail","start":"2019-07-31 10:15:00","end":"2019-07-31 10:30:00","patient_name":"Apj Kalam(P440519)","doctor_name":"Fernando Therrien","appointment_time":"10:15AM"},{"type":"appointment","title":"Detail","start":"2019-07-18 10:30:00","end":"2019-07-18 10:45:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"10:30AM"},{"type":"appointment","title":"Detail","start":"2019-07-18 14:30:00","end":"2019-07-18 14:45:00","patient_name":"Ashish Ranjan(P20319)","doctor_name":"Fernando Therrien","appointment_time":"02:30PM"},{"type":"appointment","title":"Detail","start":"2019-07-29 10:45:00","end":"2019-07-29 11:00:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"10:45AM"},{"type":"appointment","title":"Detail","start":"2019-08-05 10:30:00","end":"2019-08-05 10:45:00","patient_name":"aaaa aaa(P340519)","doctor_name":"Fernando Therrien","appointment_time":"10:30AM"},{"type":"appointment","title":"Detail","start":"2019-08-05 10:00:00","end":"2019-08-05 10:15:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"10:00AM"},{"type":"appointment","title":"Detail","start":"2019-08-05 10:15:00","end":"2019-08-05 10:30:00","patient_name":"R R(P370519)","doctor_name":"Fernando Therrien","appointment_time":"10:15AM"},{"type":"appointment","title":"Detail","start":"2019-08-08 10:00:00","end":"2019-08-08 10:15:00","patient_name":"Abhijit Borgohain(P390519)","doctor_name":"Fernando Therrien","appointment_time":"10:00AM"},{"type":"appointment","title":"Detail","start":"2019-08-09 18:00:00","end":"2019-08-09 18:15:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"06:00PM"},{"type":"appointment","title":"Detail","start":"2019-08-09 18:15:00","end":"2019-08-09 18:30:00","patient_name":"R R(P370519)","doctor_name":"Fernando Therrien","appointment_time":"06:15PM"},{"type":"appointment","title":"Detail","start":"2019-08-19 10:00:00","end":"2019-08-19 10:15:00","patient_name":"aaaa aaa(P340519)","doctor_name":"Fernando Therrien","appointment_time":"10:00AM"},{"type":"appointment","title":"Detail","start":"2019-08-20 12:45:00","end":"2019-08-20 13:00:00","patient_name":"Nina Cadela(P160419)","doctor_name":"Fernando Therrien","appointment_time":"12:45PM"},{"type":"event","title":"event 1","start":"2019-03-26","end":"2019-03-31","event_for":"Patient,Doctor,Nurse,Support Staff,Pharmacist,Laboratory Staff,Accountant","event_comment":"event 1","backgroundColor":"green"},{"type":"notice","title":"holiday","start":"2019-03-27","end":"2019-04-01","event_for":"Patient,Doctor,Nurse,Support Staff,Pharmacist,Laboratory Staff,Accountant","event_comment":"","backgroundColor":"#F25656"}],
+			eventRender: function(event, element)
+			{
+				if(event.type=='appointment')
+				{
+					element.find('.fc-title').append(" :" + event.doctor_name +"   :" + event.patient_name + ", ");
+				}
+				if(event.type=='event')
+				{
+					element.find('.fc-content').css("background-color", "green");
+				}
+				if(event.type=='notice')
+				{
+					element.find('.fc-content').css("background-color", "#F25656");
+				}
+	        },
+			eventMouseover: function(event, element)
+			{
+				if(event.type=='appointment')
+				{
+					var date = new Date(event.start);
+					var time = event.appointment_time;
+					var month = date.getMonth() + 1;
+					var day = date.getDate();
+					var year = date.getFullYear();
+					var full_date = year + "-" + month + "-" + day;
+					var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Doctor Name  : ' + event.doctor_name + '<br> Patient Name :' + event.patient_name +' <br>  Date  :' + full_date +'<br> Time  :'+ time +' </div>';
+					var $tool = $(tooltip).appendTo('body');
+
+					$(this).mouseover(function(e)
+					{
+						$(this).css('z-index', 10000);
+						$tool.fadeIn('500');
+						$tool.fadeTo('10', 1.9);
+					}).mousemove(function(e)
+					{
+						$tool.css('top', e.pageY + 5);
+						$tool.css('left', e.pageX + 5);
+					});
+				}
+				else
+				{
+					var date = new Date(event.start);
+					var month = date.getMonth() + 1;
+					var day = date.getDate();
+					var year = date.getFullYear();
+					var full_start_date = year + "-" + month + "-" + day;
+
+					var newdate = event.end;
+					var newdate1 = new Date(newdate);
+					newdate1.setDate(newdate1.getDate() - 1);
+
+					var date1 = new Date(newdate1);
+					var month1 = date1.getMonth() + 1;
+					var day1 = date1.getDate();
+					var year1 = date1.getFullYear();
+					var full_end_date = year1 + "-" + month1 + "-" + day1;
+
+					if(event.type=='event')
+					{
+						var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Event Name  : ' + event.title + '<br> Start Date :' + full_start_date +' <br>  End Date  :' + full_end_date +'<br> Event For  :'+ event.event_for +' <br> Comment  :'+ event.event_comment +'</div>';
+					}
+					else
+					{
+						var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Notice Name  : ' + event.title + '<br> Start Date :' + full_start_date +' <br>  End Date  :' + full_end_date +'<br> Notice For  :'+ event.event_for +' <br> Comment  :'+ event.event_comment +'</div>';
+					}
+					var $tool = $(tooltip).appendTo('body');
+
+					$(this).mouseover(function(e)
+					{
+						$(this).css('z-index', 10000);
+							$tool.fadeIn('500');
+							$tool.fadeTo('10', 1.9);
+					}).mousemove(function(e) {
+						$tool.css('top', e.pageY + 5);
+						$tool.css('left', e.pageX + 5);
+					});
+				}
+			},
+			eventMouseout: function(event, element)
+			{
+				$(this).css('z-index', 8);
+				$('.tooltipevent').remove();
+			}
+		});
+	});
+        </script>
+        <style>
+            @media only screen and (max-width : 768px) {
+                input[type=radio] {
+                    margin: 2px 0 0;
+                }
+
+                .radio-inline input[type=radio] {
+                    margin-left: -20px;
+                }
+
+                .radio input[type=radio] {
+                    margin-left: -20px;
+                }
+            }
+
+            @media only screen and (max-width : 480px) {
+                input[type=checkbox], input[type=radio] {
+                    margin: 2px 0px 0px;
+                }
+            }
+        </style>
+    </head>
+    <body class="hospital-management-content">
+        <!-- start body div-->
+        <!--task-event POP up code -->
+        <div class="popup-bg">
+            <div class="overlay-content content_width">
+                <div class="modal-content" style="border-top: 5px solid #22baa0;">
+                    <div class="task_event_list">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End task-event POP-UP Code -->
+        <div class="container-fluid mainpage">
+            <!-- start container fluid div-->
+            <div class="navbar">
+                <!-- start navbar div-->
+                <!-- HOSPTAL LOGO AND NAME -->
+                <div class="col-md-3 col-sm-2 col-xs-4">
+                    <h3>
+                        <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/Thumbnail-img.png" class="img-circle head_logo" width="40" height="40" />
+                        <span>Hospital Management System</span>
+                    </h3>
+                </div>
+                <!--  END HOSPTAL LOGO AND NAME  -->
+                <ul class="nav navbar-right col-md-9 col-sm-10 col-xs-8">
+
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown"
+                           class="dropdown-toggle" href="javascript:;">
+                            <img src=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/useriamge/doctor.png height="40px" width="40px" class="img-circle" />								<span>	Fernando Therrien </span> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li>
+                                <a href="?dashboard=user&page=account">
+                                    <i class="fa fa-user"></i>
+                                    My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Fpushnifty.com%2Fmojoomla%2Fextend%2Fwordpress%2Fhospital&amp;_wpnonce=a3739ed7ae">
+                                    <i class="fa fa-sign-out m-r-xs"></i>Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                </ul>
+            </div><!-- end navbar div-->
+        </div><!-- end container fluid div-->
+        <div class="container-fluid">
+            <!-- start container fluid div-->
+            <div class="row">
+                <!-- start row div-->
+                <div class="col-sm-2 nopadding hospital_left">
+                    <!-- start menu div-->
+                    <!--  Left Side -->
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital"><span class="icone"><img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/home.png" /></span><span class="title">Home</span></a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user">
+                                <span class="icone"><img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/dashboard.png" /></span><span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=doctor" class="left-tooltip" data-tooltip="Doctor" title="Doctor">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/doctor.png" /></span><span class="title">Doctor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=outpatient" class="left-tooltip" data-tooltip="Outpatient" title="Outpatient">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/outpatient.png" /></span><span class="title">Outpatient</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=patient" class="left-tooltip" data-tooltip="Inpatient" title="Inpatient">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Patient.png" /></span><span class="title">Inpatient</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=nurse" class="left-tooltip" data-tooltip="Nurse" title="Nurse">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Nurse.png" /></span><span class="title">Nurse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=supportstaff" class="left-tooltip" data-tooltip="Support Staff" title="Support Staff">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/support.png" /></span><span class="title">Support Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=pharmacist" class="left-tooltip" data-tooltip="Pharmacist" title="Pharmacist">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Pharmacist.png" /></span><span class="title">Pharmacist</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=laboratorystaff" class="left-tooltip" data-tooltip="Laboratory Staff" title="Laboratory Staff">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Laboratorist.png" /></span><span class="title">Laboratory Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=accountant" class="left-tooltip" data-tooltip="Accountant" title="Accountant">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Accountant.png" /></span><span class="title">Accountant</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=medicine" class="left-tooltip" data-tooltip="Medicine" title="Medicine">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Medicine.png" /></span><span class="title">Medicine</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=treatment" class="left-tooltip" data-tooltip="Treatment" title="Treatment">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Treatment.png" /></span><span class="title">Treatment</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=prescription" class="left-tooltip" data-tooltip="Prescription" title="Prescription">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Prescription.png" /></span><span class="title">Prescription</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=bedallotment" class="left-tooltip" data-tooltip="Assign Bed-Nurse" title="Assign Bed-Nurse">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Assign--Bed-nurse.png" /></span><span class="title">Assign Bed-Nurse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=operation" class="left-tooltip" data-tooltip="Operation List" title="Operation List">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Operation-List.png" /></span><span class="title">Operation List</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=diagnosis" class="left-tooltip" data-tooltip="Diagnosis" title="Diagnosis">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Diagnosis-Report.png" /></span><span class="title">Diagnosis</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=bloodbank" class="left-tooltip" data-tooltip="Blood Bank" title="Blood Bank">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Blood-Bank.png" /></span><span class="title">Blood Bank</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=appointment" class="left-tooltip" data-tooltip="Appointment" title="Appointment">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Appointment.png" /></span><span class="title">Appointment</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=invoice" class="left-tooltip" data-tooltip="Invoice" title="Invoice">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/payment.png" /></span><span class="title">Invoice</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=event" class="left-tooltip" data-tooltip="Event" title="Event">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/notice.png" /></span><span class="title">Event</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=message" class="left-tooltip" data-tooltip="Message" title="Message">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/message.png" /></span><span class="title">Message</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=ambulance" class="left-tooltip" data-tooltip="Ambulance" title="Ambulance">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Ambulance.png" /></span><span class="title">Ambulance</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="?dashboard=user&page=instrument" class="left-tooltip" data-tooltip="instrument" title="instrument">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Instrument.png" /></span><span class="title">Instrument</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=report" class="left-tooltip" data-tooltip="Report" title="Report">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Report.png" /></span><span class="title">Report</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=account" class="left-tooltip" data-tooltip="Account" title="Account">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/account.png" /></span><span class="title">Account</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- end menu div-->
+                <div class="page-inner" style="min-height:1050px;">
+                    <!-- start page inner div-->
+                    <div class="row right_side instrument">
+                        <!-- start dashboard content div-->
+                        <noscript><meta http-equiv="refresh" content="0;URL=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/ShowErrorPage.php"></noscript>
+                        <script type="text/javascript">
+jQuery(document).ready(function($) {
+	jQuery('#instrument_list').DataTable({
+	"responsive": true,
+	"aoColumns":[
+	    {"bSortable": true},
+	    {"bSortable": true},
+	    {"bSortable": true},
+	    {"bSortable": true},
+	    {"bSortable": true},
+	    {"bSortable": true},
+	    {"bSortable": false}],
+		language:{"sEmptyTable":"No data available in table","sInfo":"Showing _START_ to _END_ of _TOTAL_ entries","sInfoEmpty":"Showing 0 to 0 of 0 entries","sInfoFiltered":"(filtered from _MAX_ total entries)","sInfoPostFix":"","sInfoThousands":",","sLengthMenu":"Show _MENU_ entries","sLoadingRecords":"Loading...","sProcessing":"Processing...","sSearch":"Search:","sZeroRecords":"No matching records found","oPaginate":{"sFirst":"First","sLast":"Last","sNext":"Next","sPrevious":"Previous"},"oAria":{"sSortAscending":": activate to sort column ascending","sSortDescending":": activate to sort column descending"}}	});
+});
+                        </script>
+
+                        <div class="panel-body panel-white">
+                            <!--START PANEL BODY DIV-->
+                            <ul class="nav nav-tabs panel_tabs" role="tablist">
+
+                                <li class="">
+                                    <a href="?dashboard=user&page=instrument&tab=instrumentlist" class="tab ">
+                                        <i class="fa fa-align-justify"></i> Instrument List
+                                    </a>
+                                    </a>
+                                </li>
+
+                                <li class="">
+                                    <a href="?dashboard=user&page=instrument&tab=addinstrument&&action=edit&instumrnt_id=" class="tab ">
+                                        <i class="fa fa"></i> Edit Instrument
+                                    </a>
+
+                                </li>
+                                <li class="">
+                                    <a href="?dashboard=user&page=instrument&tab=assigninstrumentlist" class="tab ">
+                                        <i class="fa fa-align-justify"></i> Assigned Instrument List
+                                    </a>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="?dashboard=user&page=instrument&tab=assign_instrument&&action=edit&assign_instument_id=MQ==" class="tab active">
+                                        <i class="fa fa"></i> Edit Assigned Instrument
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+                            <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('#assign_instrument_form').validationEngine({promptPosition : "bottomRight",maxErrorsPerField: 1});
+
+			var start = new Date();
+			var end = new Date(new Date().setYear(start.getFullYear()+1));
+			$.fn.datepicker.defaults.format =" yyyy-mm-dd";
+			$('#start_date').datepicker({
+				startDate : start,
+				endDate   : end,
+				autoclose: true
+			}).on('changeDate', function (selected) {
+			var minDate = new Date(selected.date.valueOf());
+			$('#end_date').datepicker('setStartDate', minDate);
+			});
+			$.fn.datepicker.defaults.format =" yyyy-mm-dd";
+			$('#end_date').datepicker({
+				startDate : start,
+				endDate   : end,
+				autoclose: true
+			}).on('changeDate', function (selected) {
+				var maxDate = new Date(selected.date.valueOf());
+				$('#start_date').datepicker('setEndDate', maxDate);
+			});
+
+			$('#end_time').timepicki(
+			{
+				show_meridian:false,
+				min_hour_value:0,
+				max_hour_value:23,
+				step_size_minutes:15,
+				overflow_minutes:true,
+				increase_direction:'up',
+				disable_keyboard_mobile: true}
+				);
+				$('#start_time').timepicki(
+			{
+				show_meridian:false,
+				min_hour_value:0,
+				max_hour_value:23,
+				step_size_minutes:15,
+				overflow_minutes:true,
+				increase_direction:'up',
+				disable_keyboard_mobile: true}
+				);
+		} );
+                            </script>
+                            <div class="panel-body">
+                                <!--START PANEL BODY DIV-->
+                                <form name="assign_instrument_form" action="" method="post" class="form-horizontal" id="assign_instrument_form">
+                                    <!--START Assign INSTRUMENT FORM-->
+                                    <input type="hidden" name="action" value="edit">
+                                    <input type="hidden" name="assign_instrument_id" value="1" />
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="patient">Patient<span class="require-field">*</span></label>
+                                        <div class="col-sm-8">
+                                            <select name="patient_id" class="form-control validate[required] " id="patient_id">
+                                                <option value="">Select Patient</option>
+                                                <option value="35">P160419 - Nina Cadela</option>
+                                                <option value="57">P370519 - R R</option>
+                                                <option value="104">P840819 - rer e</option>
+                                                <option value="54">P340519 - aaaa aaa</option>
+                                                <option value="70">P500519 - aaannnnn bbb</option>
+                                                <option value="59">P390519 - Abhijit Borgohain</option>
+                                                <option value="64">P440519 - Apj Kalam</option>
+                                                <option value="97">P770719 - ashok kumar</option>
+                                                <option value="96">P760719 - ashok kumar</option>
+                                                <option value="4">P20319 - Ashish Ranjan</option>
+                                                <option value="48">P280419 - Amel Ali</option>
+                                                <option value="109">P890819 - Andile Zulu</option> selected='selected'
+                                                <option value="7" selected='selected'>P50319 - Anna Sanz</option>
+                                                <option value="63">P430519 - Treatment Range</option>
+                                                <option value="95">P750719 - Adi Nugroho</option>
+                                                <option value="50">P300419 - gab girbaci</option>
+                                                <option value="47">P270419 - Kristopher Davis</option>
+                                                <option value="77">P570619 - claudiu ciubotaru</option>
+                                                <option value="88">P680719 - NiftecsPOS Ombachi</option>
+                                                <option value="110">P900819 - David Urrego</option>
+                                                <option value="31">P120419 - akshay sarwade</option>
+                                                <option value="34">P150419 - prayag bhaler</option>
+                                                <option value="90">P700719 - damien schuling</option>
+                                                <option value="83">P630619 - Favour Isoah</option>
+                                                <option value="100">P800819 - fdsfdsf dsfsdfsdf</option>
+                                                <option value="86">P660619 - abc def</option>
+                                                <option value="42">P220419 - Joshua Altio</option>
+                                                <option value="41">P210419 - Joshua Altio</option>
+                                                <option value="101">P810819 - Haris Abbas</option>
+                                                <option value="43">P230419 - hendra wijaya</option>
+                                                <option value="89">P690719 - matthew kargbo</option>
+                                                <option value="74">P540619 - jong test</option>
+                                                <option value="106">P860819 - Igor Negromonte</option>
+                                                <option value="105">P850819 - Emran  Imran</option>
+                                                <option value="107">P870819 - ahmed ahmed</option>
+                                                <option value="81">P610619 - Ilyas Awan</option>
+                                                <option value="92">P720719 - Eugene Ciervo</option>
+                                                <option value="55">P350519 - pooja chaudhery</option>
+                                                <option value="62">P420519 - uu ui</option>
+                                                <option value="39">P190419 - king hytrd</option>
+                                                <option value="87">P670619 - kkk k</option>
+                                                <option value="73">P530519 - Kartik Bhatt</option>
+                                                <option value="99">P790719 - kumar singh</option>
+                                                <option value="98">P780719 - mark masai manu</option>
+                                                <option value="82">P620619 - Johnson  Landzro</option>
+                                                <option value="8">P60319 - Lucas M</option>
+                                                <option value="49">P290419 - Ahmed Ahme</option>
+                                                <option value="65">P450519 - testq proba</option>
+                                                <option value="6">P40319 - Mario Rossi</option>
+                                                <option value="69">P490519 - John Owner</option>
+                                                <option value="103">P830819 - maxmuts muutus</option>
+                                                <option value="51">P310419 - test  test</option>
+                                                <option value="91">P710719 - Mustufa Aghadi</option>
+                                                <option value="32">P130419 - prayag bhaler</option>
+                                                <option value="85">P650619 - Onder Gulec</option>
+                                                <option value="84">P640619 - ttttt tt</option>
+                                                <option value="5">P30319 - John Mark</option>
+                                                <option value="3">P10319 - Jose Figueroa</option>
+                                                <option value="60">P400519 - patient p</option>
+                                                <option value="61">P410519 - patiente p</option>
+                                                <option value="68">P480519 - test SINHA</option>
+                                                <option value="94">P740719 - sddsa dassss</option>
+                                                <option value="108">P880819 - Renan Remi</option>
+                                                <option value="58">P380519 - Nico Alderson</option>
+                                                <option value="53">P330419 - abc PANDIT</option>
+                                                <option value="29">P100419 - muhammed shameem</option>
+                                                <option value="46">P260419 - Carlos Roberto Carlos Roberto</option>
+                                                <option value="66">P460519 - mohammad khan</option>
+                                                <option value="79">P590619 - juan juanxin</option>
+                                                <option value="37">P170419 - stan Ngaguthii</option>
+                                                <option value="75">P550619 - tan me</option>
+                                                <option value="44">P240419 - Test Test</option>
+                                                <option value="45">P250419 - Test Test</option>
+                                                <option value="71">P510519 - testaaa testaaa</option>
+                                                <option value="52">P320419 - Moses Peter</option>
+                                                <option value="72">P520519 - Abd ASb</option>
+                                                <option value="76">P560619 - TJ med</option>
+                                                <option value="102">P820819 - tiny tim</option>
+                                                <option value="40">P200419 - Tony Stark</option>
+                                                <option value="56">P360519 - Ulisses  Silva</option>
+                                                <option value="38">P180419 - AS as</option>
+                                                <option value="67">P470519 - Everton  Muta</option>
+                                                <option value="80">P600619 - Vishal Singh</option>
+                                                <option value="27">P80319 - Vivekanand Adkatalwar</option>
+                                                <option value="93">P730719 - Le Thanh</option>
+                                                <option value="78">P580619 - Zeeshan Asghar</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="patient">Instrument<span class="require-field">*</span></label>
+                                        <div class="col-sm-8">
+                                            <select name="instrument_id" class="form-control validate[required] " id="instrument_id" disabled>
+                                                <option value="">Select Instrument</option>
+                                                selected='selected'
+                                                <option value="1" selected='selected'>001 - Verumak</option>
+                                                <option value="2">002 - Verumak</option>
+                                                <option value="3">10 - Verumak</option>
+                                            </select>
+                                            <input type="hidden" name="instrument_id" value="1">
+                                        </div>
+
+                                    </div>
+                                    <input id="charge_type" type="hidden" value="Daily" name="charge_type">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="facility_start_date">
+                                            Start Date <span class="require-field">*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input id="start_date" class="form-control validate[required] start" type="text"
+                                                   value="2019-08-05" name="start_date">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="end_date">
+                                            Expected End Date <span class="require-field">*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input id="end_date" class="form-control validate[required] end" type="text"
+                                                   value="2019-09-05" name="end_date">
+                                        </div>
+                                    </div>
+
+                                    <div id="select_instrument_block">
+
+                                    </div>
+                                    <input type="hidden" id="_wpnonce" name="_wpnonce" value="8395b69289" /><input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=instrument&amp;tab=assign_instrument&amp;action=edit&amp;assign_instument_id=MQ%3D%3D" />				<div class="form-group">
+                                        <label class="col-sm-2 control-label" for="description">Description</label>
+                                        <div class="col-sm-8">
+                                            <textarea id="description" class="form-control validate[custom[address_description_validation]]" maxlength="150" name="description"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-offset-2 col-sm-8">
+                                        <input type="submit" value="Save" name="assign_instrument" class="btn btn-success assigned_instrument_validation" />
+                                    </div>
+                                </form><!--END Assign INSTRUMENT FORM-->
+                            </div>	<!--END PANEL BODY DIV-->
+                        </div><!--END PANEL BODY DIV-->
+                    </div><!--END PANEL BODY DIV-->

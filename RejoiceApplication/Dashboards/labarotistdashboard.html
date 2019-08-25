@@ -1,0 +1,658 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/xmlrpc.php">
+    <!--[if lt IE 9]>
+    <script src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/themes/twentyfifteen/js/html5.js"></script>
+    <![endif]-->
+    <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+    <title>Hospital Management System &#8211;  </title>
+    <meta name='robots' content='noindex,follow' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+    <link rel="alternate" type="application/rss+xml" title="Hospital Management System &raquo; Feed" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Hospital Management System &raquo; Comments Feed" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/comments/feed/" />
+    <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/pushnifty.com\/mojoomla\/extend\/wordpress\/hospital\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript'>
+/* <![CDATA[ */
+var language_translate = {"add_note_alert":"Please enter a note.","medicine_stock_out_alert":"Medicine Out Of Stock","unique_medicine_alert":"Please Enter Unique Medicine Name","unique_medicine_id__alert":"Please Enter Unique Medicine ID","phocode_alert":"Please Enter Only + and 0-9","delete_record_alert":"Are you sure want to delete this record?","edit_record_alert":"Are you sure want to edit this record?","select_multiselect_tax":"Select Tax","select_all_multiselect":"Select all","time_validation_alert":"End Time Must Be Greater Than The Start Time"};
+var hmgt = {"ajax":"http:\/\/pushnifty.com\/mojoomla\/extend\/wordpress\/hospital\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+    </script>
+    <script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/popup.js?ver=5.1.1'></script>
+    <link rel='https://api.w.org/' href='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.1.1" />
+    <link rel="canonical" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/" />
+    <link rel='shortlink' href='http://pushnifty.com/mojoomla/extend/wordpress/hospital/' />
+    <link rel="alternate" type="application/json+oembed" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fpushnifty.com%2Fmojoomla%2Fextend%2Fwordpress%2Fhospital%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fpushnifty.com%2Fmojoomla%2Fextend%2Fwordpress%2Fhospital%2F&#038;format=xml" />
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/sweetalert.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/example.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/bootstrap-select.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/dataTables.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/dataTables.editor.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/dataTables.tableTools.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/dataTables.responsive.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/popup.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/fullcalendar.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/select2-3.5.3/select2.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/datepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/time.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/bootstrap-multiselect.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/white.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/hospitalmgt.min.css" />
+
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/css/validationEngine.jquery.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/hospital-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/css/fileinput.min.css" />
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/select2-3.5.3/select2.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery.timeago.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/moment.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap-select.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/dataTables.tableTools.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/dataTables.editor.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/dataTables.responsive.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/time.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap-multiselect.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/responsive-tabs.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/sweetalert-dev.js"></script>
+
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/calendar-lang/en.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/js/languages/jquery.validationEngine-en.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/js/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/js/plugins/canvas-to-blob.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/js/fileinput.min.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/js/fileinput.js"></script>
+        <script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/bootstrap-fileinput-master/js/fileinput_locale_es.js"></script>
+
+        <script>
+jQuery(document).ready(function() {
+	jQuery('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			editable: false,
+			timeFormat: 'h(:mm)A',
+			eventLimit: 1,
+			slotDuration:'00:15:00',
+			events:[{"type":"event","title":"event 1","start":"2019-03-26","end":"2019-03-31","event_for":"Patient,Doctor,Nurse,Support Staff,Pharmacist,Laboratory Staff,Accountant","event_comment":"event 1","backgroundColor":"green"},{"type":"notice","title":"holiday","start":"2019-03-27","end":"2019-04-01","event_for":"Patient,Doctor,Nurse,Support Staff,Pharmacist,Laboratory Staff,Accountant","event_comment":"","backgroundColor":"#F25656"}],
+			eventRender: function(event, element)
+			{
+				if(event.type=='appointment')
+				{
+					element.find('.fc-title').append(" :" + event.doctor_name +"   :" + event.patient_name + ", ");
+				}
+				if(event.type=='event')
+				{
+					element.find('.fc-content').css("background-color", "green");
+				}
+				if(event.type=='notice')
+				{
+					element.find('.fc-content').css("background-color", "#F25656");
+				}
+	        },
+			eventMouseover: function(event, element)
+			{
+				if(event.type=='appointment')
+				{
+					var date = new Date(event.start);
+					var time = event.appointment_time;
+					var month = date.getMonth() + 1;
+					var day = date.getDate();
+					var year = date.getFullYear();
+					var full_date = year + "-" + month + "-" + day;
+					var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Doctor Name  : ' + event.doctor_name + '<br> Patient Name :' + event.patient_name +' <br>  Date  :' + full_date +'<br> Time  :'+ time +' </div>';
+					var $tool = $(tooltip).appendTo('body');
+
+					$(this).mouseover(function(e)
+					{
+						$(this).css('z-index', 10000);
+						$tool.fadeIn('500');
+						$tool.fadeTo('10', 1.9);
+					}).mousemove(function(e)
+					{
+						$tool.css('top', e.pageY + 5);
+						$tool.css('left', e.pageX + 5);
+					});
+				}
+				else
+				{
+					var date = new Date(event.start);
+					var month = date.getMonth() + 1;
+					var day = date.getDate();
+					var year = date.getFullYear();
+					var full_start_date = year + "-" + month + "-" + day;
+
+					var newdate = event.end;
+					var newdate1 = new Date(newdate);
+					newdate1.setDate(newdate1.getDate() - 1);
+
+					var date1 = new Date(newdate1);
+					var month1 = date1.getMonth() + 1;
+					var day1 = date1.getDate();
+					var year1 = date1.getFullYear();
+					var full_end_date = year1 + "-" + month1 + "-" + day1;
+
+					if(event.type=='event')
+					{
+						var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Event Name  : ' + event.title + '<br> Start Date :' + full_start_date +' <br>  End Date  :' + full_end_date +'<br> Event For  :'+ event.event_for +' <br> Comment  :'+ event.event_comment +'</div>';
+					}
+					else
+					{
+						var tooltip = '<div class="tooltipevent" style="background:#feb811;width:230px;color:white;padding:5px;position:absolute;z-index:10001;margin:0;">Notice Name  : ' + event.title + '<br> Start Date :' + full_start_date +' <br>  End Date  :' + full_end_date +'<br> Notice For  :'+ event.event_for +' <br> Comment  :'+ event.event_comment +'</div>';
+					}
+					var $tool = $(tooltip).appendTo('body');
+
+					$(this).mouseover(function(e)
+					{
+						$(this).css('z-index', 10000);
+							$tool.fadeIn('500');
+							$tool.fadeTo('10', 1.9);
+					}).mousemove(function(e) {
+						$tool.css('top', e.pageY + 5);
+						$tool.css('left', e.pageX + 5);
+					});
+				}
+			},
+			eventMouseout: function(event, element)
+			{
+				$(this).css('z-index', 8);
+				$('.tooltipevent').remove();
+			}
+		});
+	});
+        </script>
+        <style>
+            @media only screen and (max-width : 768px) {
+                input[type=radio] {
+                    margin: 2px 0 0;
+                }
+
+                .radio-inline input[type=radio] {
+                    margin-left: -20px;
+                }
+
+                .radio input[type=radio] {
+                    margin-left: -20px;
+                }
+            }
+
+            @media only screen and (max-width : 480px) {
+                input[type=checkbox], input[type=radio] {
+                    margin: 2px 0px 0px;
+                }
+            }
+        </style>
+    </head>
+    <body class="hospital-management-content">
+        <!-- start body div-->
+        <!--task-event POP up code -->
+        <div class="popup-bg">
+            <div class="overlay-content content_width">
+                <div class="modal-content" style="border-top: 5px solid #22baa0;">
+                    <div class="task_event_list">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End task-event POP-UP Code -->
+        <div class="container-fluid mainpage">
+            <!-- start container fluid div-->
+            <div class="navbar">
+                <!-- start navbar div-->
+                <!-- HOSPTAL LOGO AND NAME -->
+                <div class="col-md-3 col-sm-2 col-xs-4">
+                    <h3>
+                        <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/Thumbnail-img.png" class="img-circle head_logo" width="40" height="40" />
+                        <span>Hospital Management System</span>
+                    </h3>
+                </div>
+                <!--  END HOSPTAL LOGO AND NAME  -->
+                <ul class="nav navbar-right col-md-9 col-sm-10 col-xs-8">
+
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown"
+                           class="dropdown-toggle" href="javascript:;">
+                            <img src=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/useriamge/laboratorystaff.png height="40px" width="40px" class="img-circle" />								<span>	Candra Bolanos </span> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li>
+                                <a href="?dashboard=user&page=account">
+                                    <i class="fa fa-user"></i>
+                                    My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Fpushnifty.com%2Fmojoomla%2Fextend%2Fwordpress%2Fhospital&amp;_wpnonce=194edf4373">
+                                    <i class="fa fa-sign-out m-r-xs"></i>Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                </ul>
+            </div><!-- end navbar div-->
+        </div><!-- end container fluid div-->
+        <div class="container-fluid">
+            <!-- start container fluid div-->
+            <div class="row">
+                <!-- start row div-->
+                <div class="col-sm-2 nopadding hospital_left">
+                    <!-- start menu div-->
+                    <!--  Left Side -->
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital"><span class="icone"><img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/home.png" /></span><span class="title">Home</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="?dashboard=user">
+                                <span class="icone"><img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/dashboard.png" /></span><span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=doctor" class="left-tooltip" data-tooltip="Doctor" title="Doctor">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/doctor.png" /></span><span class="title">Doctor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=outpatient" class="left-tooltip" data-tooltip="Outpatient" title="Outpatient">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/outpatient.png" /></span><span class="title">Outpatient</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=patient" class="left-tooltip" data-tooltip="Inpatient" title="Inpatient">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Patient.png" /></span><span class="title">Inpatient</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=nurse" class="left-tooltip" data-tooltip="Nurse" title="Nurse">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Nurse.png" /></span><span class="title">Nurse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=supportstaff" class="left-tooltip" data-tooltip="Support Staff" title="Support Staff">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/support.png" /></span><span class="title">Support Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=pharmacist" class="left-tooltip" data-tooltip="Pharmacist" title="Pharmacist">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Pharmacist.png" /></span><span class="title">Pharmacist</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=laboratorystaff" class="left-tooltip" data-tooltip="Laboratory Staff" title="Laboratory Staff">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Laboratorist.png" /></span><span class="title">Laboratory Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=accountant" class="left-tooltip" data-tooltip="Accountant" title="Accountant">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Accountant.png" /></span><span class="title">Accountant</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=medicine" class="left-tooltip" data-tooltip="Medicine" title="Medicine">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Medicine.png" /></span><span class="title">Medicine</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=treatment" class="left-tooltip" data-tooltip="Treatment" title="Treatment">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Treatment.png" /></span><span class="title">Treatment</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=prescription" class="left-tooltip" data-tooltip="Prescription" title="Prescription">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Prescription.png" /></span><span class="title">Prescription</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=diagnosis" class="left-tooltip" data-tooltip="Diagnosis" title="Diagnosis">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Diagnosis-Report.png" /></span><span class="title">Diagnosis</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=bloodbank" class="left-tooltip" data-tooltip="Blood Bank" title="Blood Bank">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/Blood-Bank.png" /></span><span class="title">Blood Bank</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=event" class="left-tooltip" data-tooltip="Event" title="Event">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/notice.png" /></span><span class="title">Event</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=message" class="left-tooltip" data-tooltip="Message" title="Message">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/message.png" /></span><span class="title">Message</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?dashboard=user&page=account" class="left-tooltip" data-tooltip="Account" title="Account">
+                                <span class="icone"> <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/icon/account.png" /></span><span class="title">Account</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- end menu div-->
+                <div class="page-inner" style="min-height:1050px;">
+                    <!-- start page inner div-->
+                    <div class="row right_side ">
+                        <!-- start dashboard content div-->
+                        <!---start new dashboard------>
+
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=patient">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body patient">
+                                            <div class="info-box-stats">
+                                                <p class="counter">86</p>
+
+                                                <span class="info-box-title">Patient</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/patient.png" class="dashboard_background">
+
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=doctor">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body doctor">
+                                            <div class="info-box-stats">
+                                                <p class="counter">1</p>
+                                                <span class="info-box-title">Doctor</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/doctor.png" class="dashboard_background">
+
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=nurse">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body nurse">
+                                            <div class="info-box-stats">
+                                                <p class="counter">1</p>
+                                                <span class="info-box-title">Nurse</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/nurse.png" class="dashboard_background">
+
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=supportstaff">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body receptionist">
+                                            <div class="info-box-stats">
+                                                <p class="counter">1</p>
+
+                                                <span class="info-box-title">Support Staff</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/support-staft.png" class="dashboard_background">
+                                        </div>
+                                    </div>
+                            </div>
+
+
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=message&tab=inbox">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body message">
+                                            <div class="info-box-stats">
+                                                <p class="counter">0</p>
+
+                                                <span class="info-box-title">Message</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/message.png" class="dashboard_background">
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=account">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body setting">
+                                            <div class="info-box-stats">
+                                                <p class="counter"> &nbsp;</p>
+                                                <span class="info-box-title">Setting</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/setting-image.png" class="dashboard_background">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=event">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body eventnotice">
+                                            <div class="info-box-stats">
+                                                <p class="counter">
+                                                    2
+                                                </p>
+
+                                                <span class="info-box-title">Events/ <BR> Notice</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/notice-event-image.png" class="dashboard_background">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=pharmacist">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body pharmacist">
+                                            <div class="info-box-stats">
+                                                <p class="counter">1</p>
+
+                                                <span class="info-box-title">Pharmacist</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/pharmacist.png" class="dashboard_background">
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=laboratorystaff">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body laboratorist">
+                                            <div class="info-box-stats">
+                                                <p class="counter">1</p>
+
+                                                <span class="info-box-title">Laboratory <BR> Staff</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/laboratorist.png" class="dashboard_background">
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=diagnosis">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body diagnosis">
+                                            <div class="info-box-stats">
+                                                <p class="counter">26</p>
+
+                                                <span class="info-box-title">Diagnosis <BR> Report</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/diagnosis-image.png" class="dashboard_background">
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
+                                <a href="http://pushnifty.com/mojoomla/extend/wordpress/hospital?dashboard=user&page=accountant">
+                                    <div class="panel info-box panel-white">
+                                        <div class="panel-body accountant">
+                                            <div class="info-box-stats">
+                                                <p class="counter">2</p>
+                                                <span class="info-box-title">Accountant</span>
+                                            </div>
+                                            <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/accountant.png" class="dashboard_background">
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row dashboard_panel_heading_border">
+                            <div class="col-md-6 no-paddingR">
+                                <!--  Start Prescription Box -->
+                                <div class="panel panel-white event priscription">
+                                    <div class="panel-heading ">
+                                        <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/Prescription.png">
+                                        <h3 class="panel-title">Prescription</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="events">
+
+                                            <div class="calendar-event">
+                                                <p class="remainder_title_pr Bold viewpriscription show_task_event" id="100" model="Prescription Details">
+                                                    Patient Name :
+                                                    rer e
+                                                </p>
+                                                <p class="remainder_date_pr"> 2019-08-22 </p>
+                                                <p class="remainder_title_pr viewpriscription"> Description	 : dasfadf  1025 zdgse ae </p>
+                                            </div>
+
+                                            <div class="calendar-event">
+                                                <p class="remainder_title_pr Bold viewpriscription show_task_event" id="99" model="Prescription Details">
+                                                    Patient Name :
+                                                    David Urrego
+                                                </p>
+                                                <p class="remainder_date_pr"> 2019-08-21 </p>
+                                                <p class="remainder_title_pr viewpriscription"> Description	 : ortodoncia</p>
+                                            </div>
+
+                                            <div class="calendar-event">
+                                                <p class="remainder_title_pr Bold viewpriscription show_task_event" id="97" model="Prescription Details">
+                                                    Patient Name :
+                                                    aaannnnn bbb
+                                                </p>
+                                                <p class="remainder_date_pr"> 2019-08-18 </p>
+                                                <p class="remainder_title_pr viewpriscription"> Description	 : Reeeeeeeport</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Prescription Box -->
+                                <!--  Start Operation Box -->
+                                <!-- End Operation Box -->
+                                <!-- start calendar Box -->
+                                <div class="panel panel-white">
+                                    <div class="panel-heading" style="margin-bottom: 15px;">
+                                        <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/calender.png">
+                                        <h3 class="panel-title">Calendar</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="calendar"></div>
+                                    </div>
+                                </div>
+                                <!-- end calendar Box -->
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Start Appointment Box -->
+                                <!--  End Appoinment box -->
+                                <!--  Start assigned bed Box -->
+                                <!-- End assigned bed Box -->
+                                <!--  Start Event Box -->
+                                <div class="panel panel-white event">
+                                    <div class="panel-heading ">
+                                        <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/event.png">
+                                        <h3 class="panel-title">Events</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="events">
+                                            <div class="calendar-event">
+                                                <p class="remainder_title Bold viewdetail show_task_event" id="78" model="Event Details">
+                                                    event 1
+                                                </p>
+                                                <p class="remainder_date">
+                                                    2019-03-26 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2019-03-30
+                                                </p>
+                                                <p class="remainder_title viewdetail">
+                                                    event 1
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Event Box -->
+                                <!--  Start Notice box -->
+                                <div class="panel panel-white nt">
+                                    <div class="panel-heading">
+                                        <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/dashboard/notice1.png">
+                                        <h3 class="panel-title">Notice</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="events">
+
+                                            <div class="calendar-event">
+                                                <p class="remainder_title Bold viewdetail show_task_event" id="80" model="Notice Details">
+                                                    holiday
+                                                </p>
+                                                <p class="remainder_date">	2019-03-27 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2019-03-31</p>
+                                                <p class="remainder_title viewdetail"></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  End Notice box -->
+                            </div>
+                        </div>
+                        <!---End new dashboard------>
+                    </div><!-- end dashboard content div-->
+                </div><!-- end page inner div-->
+            </div><!-- end row div-->
+        </div><!-- end container fluid div-->
+    </body>
+</html>
