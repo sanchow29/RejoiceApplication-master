@@ -139,11 +139,10 @@
     <Content Include="Ambulance\AmbulanceRequest.aspx" />
     <Content Include="Ambulance\editambulancelist.html" />
     <Content Include="Ambulance\editambulancerequest.html" />
-    <Content Include="Appointments\addappoitnment.html" />
-    <Content Include="Appointments\appointment.html" />
-    <Content Include="Appointments\appoitmenttime.html" />
+    <Content Include="Appointments\AddAppoitnment.aspx" />
+    <Content Include="Appointments\Appoitnments.aspx" />
+    <Content Include="Appointments\AppoitnmentTime.aspx" />
     <Content Include="Appointments\editappoitment.html" />
-    <Content Include="Appointments\AppoitmentBookings.aspx" />
     <Content Include="BillingInPatient.aspx" />
     <Content Include="BillingOutPatient.aspx" />
     <Content Include="BloodBank\addblooddonor.html" />
@@ -419,12 +418,26 @@
     <Compile Include="Ambulance\AmbulanceRequest.aspx.designer.cs">
       <DependentUpon>AmbulanceRequest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Appointments\AppoitmentBookings.aspx.cs">
-      <DependentUpon>AppoitmentBookings.aspx</DependentUpon>
+    <Compile Include="Appointments\AddAppoitnment.aspx.cs">
+      <DependentUpon>AddAppoitnment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Appointments\AppoitmentBookings.aspx.designer.cs">
-      <DependentUpon>AppoitmentBookings.aspx</DependentUpon>
+    <Compile Include="Appointments\AddAppoitnment.aspx.designer.cs">
+      <DependentUpon>AddAppoitnment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\Appoitnments.aspx.cs">
+      <DependentUpon>Appoitnments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointments\Appoitnments.aspx.designer.cs">
+      <DependentUpon>Appoitnments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\AppoitnmentTime.aspx.cs">
+      <DependentUpon>AppoitnmentTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointments\AppoitnmentTime.aspx.designer.cs">
+      <DependentUpon>AppoitnmentTime.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
