@@ -145,15 +145,15 @@
     <Content Include="Appointments\editappoitment.html" />
     <Content Include="BillingInPatient.aspx" />
     <Content Include="BillingOutPatient.aspx" />
-    <Content Include="BloodBank\addblooddonor.html" />
-    <Content Include="BloodBank\Addbloodgroup.html" />
-    <Content Include="BloodBank\bloodbank.html" />
-    <Content Include="BloodBank\blooddonorlist.html" />
-    <Content Include="BloodBank\dispatchblood.html" />
-    <Content Include="BloodBank\dispatchbloodlist.html" />
+    <Content Include="BloodBank\AddBloodDonor.aspx" />
+    <Content Include="BloodBank\AddBloodGroup.aspx" />
+    <Content Include="BloodBank\BloodBankList.aspx" />
+    <Content Include="BloodBank\BloodDonorList.aspx" />
+    <Content Include="BloodBank\DispatchBloodList.aspx" />
     <Content Include="BloodBank\editblooddonor.html" />
     <Content Include="BloodBank\editbloodgroup.html" />
     <Content Include="BloodBank\editdispatchblood.html" />
+    <Content Include="BloodBank\DispatchBlood.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -285,7 +285,6 @@
     <Content Include="Images\Treatment.png" />
     <Content Include="Instrument\editassignedinstrumentlist.html" />
     <Content Include="Instrument\editinstrument.html" />
-    <Content Include="Instrument\instrument.html" />
     <Content Include="Invoice\LabBilling.aspx" />
     <Content Include="Reports\LabReports.aspx" />
     <Content Include="Login.aspx" />
@@ -461,6 +460,48 @@
     </Compile>
     <Compile Include="BillingOutPatient.aspx.designer.cs">
       <DependentUpon>BillingOutPatient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BloodBank\AddBloodDonor.aspx.cs">
+      <DependentUpon>AddBloodDonor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BloodBank\AddBloodDonor.aspx.designer.cs">
+      <DependentUpon>AddBloodDonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BloodBank\AddBloodGroup.aspx.cs">
+      <DependentUpon>AddBloodGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BloodBank\AddBloodGroup.aspx.designer.cs">
+      <DependentUpon>AddBloodGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BloodBank\BloodBankList.aspx.cs">
+      <DependentUpon>BloodBankList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BloodBank\BloodBankList.aspx.designer.cs">
+      <DependentUpon>BloodBankList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BloodBank\BloodDonorList.aspx.cs">
+      <DependentUpon>BloodDonorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BloodBank\BloodDonorList.aspx.designer.cs">
+      <DependentUpon>BloodDonorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BloodBank\DispatchBloodList.aspx.cs">
+      <DependentUpon>DispatchBloodList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BloodBank\DispatchBloodList.aspx.designer.cs">
+      <DependentUpon>DispatchBloodList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BloodBank\DispatchBlood.aspx.cs">
+      <DependentUpon>DispatchBlood.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BloodBank\DispatchBlood.aspx.designer.cs">
+      <DependentUpon>DispatchBlood.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
