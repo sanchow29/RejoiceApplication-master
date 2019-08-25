@@ -301,7 +301,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="MedicinesDetails/Medicines6.aspx" class="left-tooltip" data-tooltip="Medicine" title="Medicine">
+                            <a href="../MedicinesDetails/Medicines6.aspx" class="left-tooltip" data-tooltip="Medicine" title="Medicine">
                                 <span class="icone"> <img src="../Images/Medicine.png" /></span><span class="title">Medicine</span>
                             </a>
                         </li>
@@ -331,17 +331,17 @@
                             </a>
                         </li>
                         <li>
-                            <a href="" class="left-tooltip" data-tooltip="Blood Bank" title="Blood Bank">
+                            <a href="../BloodBank/BloodBankList.aspx" class="left-tooltip" data-tooltip="Blood Bank" title="Blood Bank">
                                 <span class="icone"> <img src="../Images/Blood-Bank.png" /></span><span class="title">Blood Bank</span>
                             </a>
                         </li>
                         <li>
-                            <a href="appointment.html" class="left-tooltip" data-tooltip="Appointment" title="Appointment">
+                            <a href="../Appointments/Appoitnments.aspx" class="left-tooltip" data-tooltip="Appointment" title="Appointment">
                                 <span class="icone"> <img src="../Images/Appointment.png" /></span><span class="title">Appointment</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Invoice/Invoice.aspx" class="left-tooltip" data-tooltip="Invoice" title="Invoice">
+                            <a href="../Invoice/Invoice.aspx" class="left-tooltip" data-tooltip="Invoice" title="Invoice">
                                 <span class="icone"> <img src="../Images/payment.png" /></span><span class="title">Invoice</span>
                             </a>
                         </li>
@@ -351,22 +351,22 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Message/Messages.aspx" class="left-tooltip" data-tooltip="Message" title="Message">
+                            <a href="../Message/Messages.aspx" class="left-tooltip" data-tooltip="Message" title="Message">
                                 <span class="icone"> <img src="../Images/message.png" /></span><span class="title">Message</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Ambulance/Ambulance.aspx" class="left-tooltip" data-tooltip="Ambulance" title="Ambulance">
+                            <a href="../Ambulance/Ambulance.aspx" class="left-tooltip" data-tooltip="Ambulance" title="Ambulance">
                                 <span class="icone"> <img src="../Images/Ambulance.png" /></span><span class="title">Ambulance</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Instrument/InstrumentList.aspx" class="left-tooltip" data-tooltip="instrument" title="instrument">
+                            <a href="../Instrument/InstrumentList.aspx" class="left-tooltip" data-tooltip="instrument" title="instrument">
                                 <span class="icone"> <img src="../Images/Instrument.png" /></span><span class="title">Instrument</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Reports/BedOccupation.aspx" class="left-tooltip" data-tooltip="Report" title="Report">
+                            <a href="../Reports/BedOccupation.aspx" class="left-tooltip" data-tooltip="Report" title="Report">
                                 <span class="icone"> <img src="../Images/Report.png" /></span><span class="title">Report</span>
                             </a>
                         </li>
@@ -377,7 +377,7 @@
                         </li>
                         <li >
                             <a href="CreatePatient.aspx">
-                                <span class="icone"><img src="../Images/dashboard.png" /></span><span class="title">Dashboard</span>
+                                <span class="icone"><img src="../Images/dashboard.png" /></span><span class="title">CreatePatient</span>
                             </a>
                         </li>
                     </ul>
