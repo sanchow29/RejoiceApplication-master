@@ -157,7 +157,7 @@
                 <label class="col-sm-2 control-label" for="gender">Gender<span class="require-field">*</span></label>
                 <div class="col-sm-8">
                     <label class="radio-inline">
-                        <input type="radio" value="male" class="tog validate[required]" name="gender" checked='checked'/>Male
+                        <input type="radio" value="male" class="tog validate[required]" name="gender" checked="checked"/>Male
                     </label>
                     <label class="radio-inline">
                         <input type="radio" value="female" class="tog validate[required]" name="gender"/>Female
@@ -323,43 +323,44 @@
 </div>
 </div>
 <!-- .entry-content -->
-<script type='text/javascript'>
-    <
-    br /  >  < b > Warning < /
-    b > :
-    include_once():
+<script type="text/javascript">
+    <;
+    br /  >  < b > Warning <  /;
+    b >  :;
+    include_once():;
     http
         : // wrapper is disabled in the server configuration by allow_url_include=0 in <b>/home/pushnift/public_html/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/settings.php</b> on line <b>2101</b><br />
-                
-    <
-    br /  >  < b > Warning < /
-    b > :
-    include_once(http
-        : //pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/assets/js/lang/en.js): failed to open stream: no suitable wrapper could be found in <b>/home/pushnift/public_html/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/settings.php</b> on line <b>2101</b><br />
-    <
-    br /  >  < b > Warning < /
-    b > :
-    include_once():
-    Failed
-    opening
-    'http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/assets/js/lang/en.js'
+
+        ;
+    ;<
+    br /  >  < b > Warning <  /;
+    b >  :;
+    include_once(http;
+    : //pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/assets/js/lang/en.js): failed to open stream: no suitable wrapper could be found in <b>/home/pushnift/public_html/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/settings.php</b> on line <b>2101</b><br />
+    ;<
+    br /  >  < b > Warning <  /;
+    b >  :;
+    include_once():;
+    Failed;
+    opening;
+    'http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/assets/js/lang/en.js';
     for inclusion(include_path = '.:/opt/alt/php72/usr/share/pear') in
-    <
+    ;<
     b >
         /home/pushnift / public_html / mojoomla / extend / wordpress / hospital / wp -
         content / plugins / hospital -
         management / settings.php <
-    /
-    b > on
-    line < b > 2101 < /
-    b >  < br /  > 
+    ; /
+    b > on;
+    line < b > 2101 <  /;
+    b >  < br /  > ;
 </script>
-<link rel='stylesheet' id='wcwm-validate-css-css' href='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/css/validationEngine.jquery.css?ver=5.1.1' type='text/css' media='all'/>
-<link rel='stylesheet' id='hmgt-bootstrap-timepicker-css-css' href='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/datepicker.min.css?ver=5.1.1' type='text/css' media='all'/>
-<link rel='stylesheet' id='jquery-style-css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css?ver=5.1.1' type='text/css' media='all'/>
-<script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/js/admin-bar.min.js?ver=5.1.1'></script>
-<script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/themes/twentyfifteen/js/skip-link-focus-fix.js?ver=20141010'></script>
-<script type='text/javascript'>
+<link rel="stylesheet" id="wcwm-validate-css-css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/css/validationEngine.jquery.css?ver=5.1.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="hmgt-bootstrap-timepicker-css-css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/datepicker.min.css?ver=5.1.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="jquery-style-css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css?ver=5.1.1" type="text/css" media="all"/>
+<script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/js/admin-bar.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/themes/twentyfifteen/js/skip-link-focus-fix.js?ver=20141010"></script>
+<script type="text/javascript">
     /* <![CDATA[ */
     var screenReaderText = {
         "expand": "<span class=\"screen-reader-text\">expand child menu<\/span>",
@@ -367,12 +368,12 @@
     };
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/themes/twentyfifteen/js/functions.js?ver=20150330'></script>
-<script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
-<script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery-1.11.1.min.js?ver=4.1.1'></script>
-<script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/js/languages/jquery.validationEngine-en.js?ver=5.1.1'></script>
-<script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/js/jquery.validationEngine.js?ver=5.1.1'></script>
-<script type='text/javascript' src='http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap-datepicker.js?ver=5.1.1'></script>
+<script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/themes/twentyfifteen/js/functions.js?ver=20150330"></script>
+<script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/jquery-1.11.1.min.js?ver=4.1.1"></script>
+<script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/js/languages/jquery.validationEngine-en.js?ver=5.1.1"></script>
+<script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/js/jquery.validationEngine.js?ver=5.1.1"></script>
+<script type="text/javascript" src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/js/bootstrap-datepicker.js?ver=5.1.1"></script>
 
 </div>
 </div>

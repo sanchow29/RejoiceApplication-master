@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace RejoiceApplication
+namespace RejoiceApplication.Details
 {
-    public partial class StaffDetails : System.Web.UI.Page
+    public partial class InPatient : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

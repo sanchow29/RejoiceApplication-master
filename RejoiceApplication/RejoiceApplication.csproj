@@ -132,7 +132,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Account.aspx" />
     <Content Include="Ambulance\AddNewAmbulance.aspx" />
     <Content Include="Ambulance\Ambulance.aspx" />
     <Content Include="Ambulance\AmbulanceList.aspx" />
@@ -143,8 +143,6 @@
     <Content Include="Appointments\Appoitnments.aspx" />
     <Content Include="Appointments\AppoitnmentTime.aspx" />
     <Content Include="Appointments\editappoitment.html" />
-    <Content Include="BillingInPatient.aspx" />
-    <Content Include="BillingOutPatient.aspx" />
     <Content Include="BloodBank\AddBloodDonor.aspx" />
     <Content Include="BloodBank\AddBloodGroup.aspx" />
     <Content Include="BloodBank\BloodBankList.aspx" />
@@ -154,7 +152,6 @@
     <Content Include="BloodBank\editbloodgroup.html" />
     <Content Include="BloodBank\editdispatchblood.html" />
     <Content Include="BloodBank\DispatchBlood.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -172,9 +169,19 @@
     <Content Include="Dashboards\pharmasistdashboard.html" />
     <Content Include="Dashboards\supportstaffdashboard.html" />
     <Content Include="Default.aspx" />
+    <Content Include="Details\Accountant.aspx" />
+    <Content Include="Details\BedAllotment.aspx" />
+    <Content Include="Details\DoctorList.aspx" />
+    <Content Include="Details\InPatientList.aspx" />
+    <Content Include="Details\LaboratoryStaff.aspx" />
+    <Content Include="Details\Nurse.aspx" />
+    <Content Include="Details\OutPatientList.aspx" />
+    <Content Include="Details\Pharmacist.aspx" />
+    <Content Include="Details\SupportStaff.aspx" />
     <Content Include="Diagnosis\AddDiagnosis.aspx" />
     <Content Include="Diagnosis\Diagnosis.aspx" />
     <Content Include="Diagnosis\editdiagonisis.html" />
+    <Content Include="Events.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\dashboard\accountant.png" />
@@ -288,11 +295,8 @@
     <Content Include="Invoice\LabBilling.aspx" />
     <Content Include="Reports\LabReports.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="MedicinesInventory.aspx" />
     <Content Include="Operation\Editoperation.html" />
-    <Content Include="PatientDetails.aspx" />
     <Content Include="Prescription\Editprescription.html" />
-    <Content Include="RoomData.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -375,7 +379,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="StaffDetails.aspx" />
     <Content Include="Treatment\AddTreatment.aspx" />
     <Content Include="Treatment\addtreatment.html" />
     <Content Include="Treatment\edittreatment.html" />
@@ -389,6 +392,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Ambulance\AddNewAmbulance.aspx.cs">
       <DependentUpon>AddNewAmbulance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -439,28 +449,7 @@
       <DependentUpon>AppoitnmentTime.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BillingInPatient.aspx.cs">
-      <DependentUpon>BillingInPatient.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BillingInPatient.aspx.designer.cs">
-      <DependentUpon>BillingInPatient.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BillingOutPatient.aspx.cs">
-      <DependentUpon>BillingOutPatient.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BillingOutPatient.aspx.designer.cs">
-      <DependentUpon>BillingOutPatient.aspx</DependentUpon>
-    </Compile>
     <Compile Include="BloodBank\AddBloodDonor.aspx.cs">
       <DependentUpon>AddBloodDonor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -503,13 +492,6 @@
     <Compile Include="BloodBank\DispatchBlood.aspx.designer.cs">
       <DependentUpon>DispatchBlood.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CreatePatient.aspx.cs">
       <DependentUpon>CreatePatient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -531,6 +513,69 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Details\Accountant.aspx.cs">
+      <DependentUpon>Accountant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\Accountant.aspx.designer.cs">
+      <DependentUpon>Accountant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details\BedAllotment.aspx.cs">
+      <DependentUpon>BedAllotment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\BedAllotment.aspx.designer.cs">
+      <DependentUpon>BedAllotment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details\DoctorList.aspx.cs">
+      <DependentUpon>DoctorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\DoctorList.aspx.designer.cs">
+      <DependentUpon>DoctorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details\InPatientList.aspx.cs">
+      <DependentUpon>InPatientList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\InPatientList.aspx.designer.cs">
+      <DependentUpon>InPatientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details\LaboratoryStaff.aspx.cs">
+      <DependentUpon>LaboratoryStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\LaboratoryStaff.aspx.designer.cs">
+      <DependentUpon>LaboratoryStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details\Nurse.aspx.cs">
+      <DependentUpon>Nurse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\Nurse.aspx.designer.cs">
+      <DependentUpon>Nurse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details\OutPatientList.aspx.cs">
+      <DependentUpon>OutPatientList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\OutPatientList.aspx.designer.cs">
+      <DependentUpon>OutPatientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details\Pharmacist.aspx.cs">
+      <DependentUpon>Pharmacist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\Pharmacist.aspx.designer.cs">
+      <DependentUpon>Pharmacist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details\SupportStaff.aspx.cs">
+      <DependentUpon>SupportStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details\SupportStaff.aspx.designer.cs">
+      <DependentUpon>SupportStaff.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Diagnosis\AddDiagnosis.aspx.cs">
       <DependentUpon>AddDiagnosis.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -544,6 +589,13 @@
     </Compile>
     <Compile Include="Diagnosis\Diagnosis.aspx.designer.cs">
       <DependentUpon>Diagnosis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -709,20 +761,6 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MedicinesInventory.aspx.cs">
-      <DependentUpon>MedicinesInventory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MedicinesInventory.aspx.designer.cs">
-      <DependentUpon>MedicinesInventory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PatientDetails.aspx.cs">
-      <DependentUpon>PatientDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PatientDetails.aspx.designer.cs">
-      <DependentUpon>PatientDetails.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\OperationFailReports.aspx.cs">
       <DependentUpon>OperationFailReports.aspx</DependentUpon>
@@ -738,13 +776,6 @@
     <Compile Include="Reports\OperationReports.aspx.designer.cs">
       <DependentUpon>OperationReports.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RoomData.aspx.cs">
-      <DependentUpon>RoomData.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RoomData.aspx.designer.cs">
-      <DependentUpon>RoomData.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -758,13 +789,6 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="StaffDetails.aspx.cs">
-      <DependentUpon>StaffDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StaffDetails.aspx.designer.cs">
-      <DependentUpon>StaffDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Treatment\AddTreatment.aspx.cs">
       <DependentUpon>AddTreatment.aspx</DependentUpon>

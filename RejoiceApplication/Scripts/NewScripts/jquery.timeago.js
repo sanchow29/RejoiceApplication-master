@@ -15,11 +15,11 @@
  */
 
 (function(factory) {
-    if (typeof define === 'function' && define.amd) {
+    if (typeof define === "function" && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
-    } else if (typeof module === 'object' && typeof module.exports === 'object') {
-        factory(require('jquery'));
+        define(["jquery"], factory);
+    } else if (typeof module === "object" && typeof module.exports === "object") {
+        factory(require("jquery"));
     } else {
         // Browser globals
         factory(jQuery);
@@ -51,7 +51,7 @@
                     prefixFromNow: null,
                     suffixAgo: "ago",
                     suffixFromNow: "from now",
-                    inPast: 'any moment now',
+                    inPast: "any moment now",
                     seconds: "less than a minute",
                     minute: " minute",
                     minutes: "%d minutes",
@@ -70,7 +70,7 @@
 
             inWords: function(distanceMillis) {
                 if (!this.settings.allowPast && ! this.settings.allowFuture) {
-                    throw 'timeago allowPast and allowFuture settings can not both be set to false.';
+                    throw "timeago allowPast and allowFuture settings can not both be set to false.";
                 }
 
                 var $l = this.settings.strings;
@@ -153,12 +153,12 @@
         },
         update: function(time) {
             var parsedTime = $t.parse(time);
-            $(this).data('timeago', { datetime: parsedTime });
+            $(this).data("timeago", { datetime: parsedTime });
             if ($t.settings.localeTitle) $(this).attr("title", parsedTime.toLocaleString());
             refresh.apply(this);
         },
         updateFromDOM: function() {
-            $(this).data('timeago',
+            $(this).data("timeago",
                 { datetime: $t.parse($t.isTime(this) ? $(this).attr("datetime") : $(this).attr("title")) });
             refresh.apply(this);
         },
@@ -207,7 +207,7 @@
             element.data("timeago", { datetime: $t.datetime(element) });
             var text = $.trim(element.text());
             if ($t.settings.localeTitle) {
-                element.attr("title", element.data('timeago').datetime.toLocaleString());
+                element.attr("title", element.data("timeago").datetime.toLocaleString());
             } else if (text.length > 0 && !($t.isTime(element) && element.attr("title"))) {
                 element.attr("title", text);
             }

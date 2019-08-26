@@ -35,13 +35,13 @@
                     return tim + ":" + mini;
                 }
             },
-            increase_direction: 'up',
-            custom_classes: '',
+            increase_direction: "up",
+            custom_classes: "",
             min_hour_value: 1,
             max_hour_value: 12,
             show_meridian: true,
-            step_size_hours: '1',
-            step_size_minutes: '1',
+            step_size_hours: "1",
+            step_size_minutes: "1",
             overflow_minutes: false,
             disable_keyboard_mobile: false,
             reset: false,
@@ -60,10 +60,10 @@
             var ele_par = $(this).parents(".time_pick");
 
             // developer can specify which arrow makes the numbers go up or down
-            var top_arrow_button = (settings.increase_direction === 'down')
+            var top_arrow_button = (settings.increase_direction === "down")
                 ? "<div class='prev timepicker_prev action-prev '></div>"
                 : "<div class='prev timepicker_prev action-next'></div>";
-            var bottom_arrow_button = (settings.increase_direction === 'down')
+            var bottom_arrow_button = (settings.increase_direction === "down")
                 ? "<div class='next timepicker_next action-next'></div>"
                 : "<div class='next timepicker_next action-prev'></div>";
 
@@ -101,9 +101,9 @@
             ele_par.append(new_ele);
             var ele_next = $(this).next(".timepicker_wrap");
             var ele_next_all_child = ele_next.find("div");
-            var inputs = ele_par.find('input');
+            var inputs = ele_par.find("input");
 
-            $('.reset_time').on("click",
+            $(".reset_time").on("click",
                 function(event) {
                     ele.val("");
                     close_timepicki();
@@ -261,7 +261,7 @@
                 function(event) {
                     if (!$(event.target).is(ele_next) &&
                         ele_next.css("display") == "block" &&
-                        !$(event.target).is($('.reset_time'))) {
+                        !$(event.target).is($(".reset_time"))) {
                         if (!$(event.target).is(ele)) {
                             set_value(event, !is_element_in_timepicki($(event.target)));
                         } else {
@@ -277,10 +277,10 @@
                 });
 
             // open the modal when the user focuses on the input
-            ele.on('focus', open_timepicki);
+            ele.on("focus", open_timepicki);
 
             // select all text in input when user focuses on it
-            inputs.on('focus',
+            inputs.on("focus",
                 function() {
                     var input = $(this);
                     if (!input.is(ele)) {
@@ -289,41 +289,41 @@
                 });
 
             // allow user to increase and decrease numbers using arrow keys
-            inputs.on('keydown',
+            inputs.on("keydown",
                 function(e) {
                     var direction, input = $(this);
 
                     // UP
                     if (e.which === 38) {
-                        if (settings.increase_direction === 'down') {
-                            direction = 'prev';
+                        if (settings.increase_direction === "down") {
+                            direction = "prev";
                         } else {
-                            direction = 'next';
+                            direction = "next";
                         }
                         // DOWN
                     } else if (e.which === 40) {
-                        if (settings.increase_direction === 'down') {
-                            direction = 'next';
+                        if (settings.increase_direction === "down") {
+                            direction = "next";
                         } else {
-                            direction = 'prev';
+                            direction = "prev";
                         }
                     }
 
-                    if (input.closest('.timepicker_wrap .time').length) {
+                    if (input.closest(".timepicker_wrap .time").length) {
                         change_time(null, direction);
-                    } else if (input.closest('.timepicker_wrap .mins').length) {
+                    } else if (input.closest(".timepicker_wrap .mins").length) {
                         change_mins(null, direction);
-                    } else if (input.closest('.timepicker_wrap .meridian').length && settings.show_meridian) {
+                    } else if (input.closest(".timepicker_wrap .meridian").length && settings.show_meridian) {
                         change_meri(null, direction);
                     }
                 });
 
             // close the modal when the time picker loses keyboard focus
-            inputs.on('blur',
+            inputs.on("blur",
                 function() {
                     setTimeout(function() {
                             var focused_element = $(document.activeElement);
-                            if (focused_element.is(':input') && !is_element_in_timepicki(focused_element)) {
+                            if (focused_element.is(":input") && !is_element_in_timepicki(focused_element)) {
                                 set_value();
                                 close_timepicki();
                             }
@@ -349,12 +349,12 @@
 
                     // store the value so we can set the initial value
                     // next time the picker is opened
-                    ele.attr('data-timepicki-tim', tim);
-                    ele.attr('data-timepicki-mini', mini);
+                    ele.attr("data-timepicki-tim", tim);
+                    ele.attr("data-timepicki-mini", mini);
 
                     if (settings.show_meridian) {
 
-                        ele.attr('data-timepicki-meri', meri);
+                        ele.attr("data-timepicki-meri", meri);
                         // set the formatted value
                         ele.val(settings.format_output(tim, mini, meri));
                     } else {
@@ -378,21 +378,21 @@
                 ele_next.fadeIn();
                 if (!settings.input_writable) {
                     // focus on the first input and select its contents
-                    var first_input = ele_next.find('input:visible').first();
+                    var first_input = ele_next.find("input:visible").first();
                     first_input.focus();
                 }
                 // if the user presses shift+tab while on the first input,
                 // they mean to exit the time picker and go to the previous field
                 var first_input_exit_handler = function(e) {
                     if (e.which === 9 && e.shiftKey) {
-                        first_input.off('keydown', first_input_exit_handler);
-                        var all_form_elements = $(':input:visible:not(.timepicki-input)');
+                        first_input.off("keydown", first_input_exit_handler);
+                        var all_form_elements = $(":input:visible:not(.timepicki-input)");
                         var index_of_timepicki_input = all_form_elements.index(ele);
                         var previous_form_element = all_form_elements.get(index_of_timepicki_input - 1);
                         previous_form_element.focus();
                     }
                 };
-                first_input.on('keydown', first_input_exit_handler);
+                first_input.on("keydown", first_input_exit_handler);
             }
 
             function close_timepicki() {
@@ -403,14 +403,14 @@
                 var d, ti, mi, mer;
 
                 // if a value was already picked we will remember that value
-                if (ele.is('[data-timepicki-tim]')) {
-                    ti = Number(ele.attr('data-timepicki-tim'));
-                    mi = Number(ele.attr('data-timepicki-mini'));
+                if (ele.is("[data-timepicki-tim]")) {
+                    ti = Number(ele.attr("data-timepicki-tim"));
+                    mi = Number(ele.attr("data-timepicki-mini"));
                     if (settings.show_meridian) {
-                        mer = ele.attr('data-timepicki-meri');
+                        mer = ele.attr("data-timepicki-meri");
                     }
                     // developer can specify a custom starting value
-                } else if (typeof start_time === 'object') {
+                } else if (typeof start_time === "object") {
                     ti = Number(start_time[0]);
                     mi = Number(start_time[1]);
                     if (settings.show_meridian) {
@@ -459,11 +459,11 @@
                 var ele_st = Number(settings.min_hour_value);
                 var ele_en = Number(settings.max_hour_value);
                 var step_size = Number(settings.step_size_hours);
-                if ((cur_ele && cur_ele.hasClass('action-next')) || direction === 'next') {
+                if ((cur_ele && cur_ele.hasClass("action-next")) || direction === "next") {
                     if (cur_time + step_size > ele_en) {
                         var min_value = ele_st;
                         if (min_value < 10) {
-                            min_value = '0' + min_value;
+                            min_value = "0" + min_value;
                         } else {
                             min_value = String(min_value);
                         }
@@ -475,12 +475,12 @@
                         }
                         ele_next.find("." + cur_cli + " .ti_tx input").val(cur_time);
                     }
-                } else if ((cur_ele && cur_ele.hasClass('action-prev')) || direction === 'prev') {
-                    var minValue = Number(settings.min_hour_value)
+                } else if ((cur_ele && cur_ele.hasClass("action-prev")) || direction === "prev") {
+                    var minValue = Number(settings.min_hour_value);
                     if (cur_time - step_size < minValue) {
                         var max_value = ele_en;
                         if (max_value < 10) {
-                            max_value = '0' + max_value;
+                            max_value = "0" + max_value;
                         } else {
                             max_value = String(max_value);
                         }
@@ -501,11 +501,11 @@
                 var ele_st = 0;
                 var ele_en = 59;
                 var step_size = Number(settings.step_size_minutes);
-                if ((cur_ele && cur_ele.hasClass('action-next')) || direction === 'next') {
+                if ((cur_ele && cur_ele.hasClass("action-next")) || direction === "next") {
                     if (cur_mins + step_size > ele_en) {
                         ele_next.find("." + cur_cli + " .mi_tx input").val("00");
                         if (settings.overflow_minutes) {
-                            change_time(null, 'next');
+                            change_time(null, "next");
                         }
                     } else {
                         cur_mins = cur_mins + step_size;
@@ -515,11 +515,11 @@
                             ele_next.find("." + cur_cli + " .mi_tx input").val(cur_mins);
                         }
                     }
-                } else if ((cur_ele && cur_ele.hasClass('action-prev')) || direction === 'prev') {
+                } else if ((cur_ele && cur_ele.hasClass("action-prev")) || direction === "prev") {
                     if (cur_mins - step_size <= -1) {
                         ele_next.find("." + cur_cli + " .mi_tx input").val(ele_en + 1 - step_size);
                         if (settings.overflow_minutes) {
-                            change_time(null, 'prev');
+                            change_time(null, "prev");
                         }
                     } else {
                         cur_mins = cur_mins - step_size;
@@ -538,13 +538,13 @@
                 var ele_en = 1;
                 var cur_mer = null;
                 cur_mer = ele_next.find("." + cur_cli + " .mer_tx input").val();
-                if ((cur_ele && cur_ele.hasClass('action-next')) || direction === 'next') {
+                if ((cur_ele && cur_ele.hasClass("action-next")) || direction === "next") {
                     if (cur_mer == "AM") {
                         ele_next.find("." + cur_cli + " .mer_tx input").val("PM");
                     } else {
                         ele_next.find("." + cur_cli + " .mer_tx input").val("AM");
                     }
-                } else if ((cur_ele && cur_ele.hasClass('action-prev')) || direction === 'prev') {
+                } else if ((cur_ele && cur_ele.hasClass("action-prev")) || direction === "prev") {
                     if (cur_mer == "AM") {
                         ele_next.find("." + cur_cli + " .mer_tx input").val("PM");
                     } else {

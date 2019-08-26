@@ -669,7 +669,7 @@
             <li class="dropdown">
                 <a data-toggle="dropdown"
                    class="dropdown-toggle" href="javascript:;">
-                    <img src=../Images/doctor.png height="40px" width="40px" class="img-circle"/>
+                    <img src="../Images/doctor.png" height="40px" width="40px" class="img-circle"/>
                     <span>Test User </span> <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu extended logout">
@@ -713,56 +713,56 @@
                 </a>
             </li>
             <li>
-                <a href="doctor.html" class="left-tooltip" data-tooltip="Doctor" title="Doctor">
+                <a href="../Details/DoctorList.aspx" class="left-tooltip" data-tooltip="Doctor" title="Doctor">
                     <span class="icone">
                         <img src="../../Images/doctoricon.png"/>
                     </span><span class="title">Doctor</span>
                 </a>
             </li>
             <li>
-                <a href="OutPatient.html" class="left-tooltip" data-tooltip="Outpatient" title="Outpatient">
+                <a href="../Details/OutPatientList.aspx" class="left-tooltip" data-tooltip="Outpatient" title="Outpatient">
                     <span class="icone">
                         <img src="../Images/outpatient.png"/>
                     </span><span class="title">Outpatient</span>
                 </a>
             </li>
             <li>
-                <a href="Inpatient.html" class="left-tooltip" data-tooltip="Inpatient" title="Inpatient">
+                <a href="../Details/InPatientList.aspx" class="left-tooltip" data-tooltip="Inpatient" title="Inpatient">
                     <span class="icone">
                         <img src="../Images/inPatient.png"/>
                     </span><span class="title">Inpatient</span>
                 </a>
             </li>
             <li>
-                <a href="Nurse.html" class="left-tooltip" data-tooltip="Nurse" title="Nurse">
+                <a href="../Details/Nurse.aspx" class="left-tooltip" data-tooltip="Nurse" title="Nurse">
                     <span class="icone">
                         <img src="../Images/Nurse.png"/>
                     </span><span class="title">Nurse</span>
                 </a>
             </li>
             <li>
-                <a href="SupportStaff.html" class="left-tooltip" data-tooltip="Support Staff" title="Support Staff">
+                <a href="../Details/SupportStaff.aspx" class="left-tooltip" data-tooltip="Support Staff" title="Support Staff">
                     <span class="icone">
                         <img src="../Images/support.png"/>
                     </span><span class="title">Support Staff</span>
                 </a>
             </li>
             <li>
-                <a href="" class="left-tooltip" data-tooltip="Pharmacist" title="Pharmacist">
+                <a href="../Details/Pharmacist.aspx" class="left-tooltip" data-tooltip="Pharmacist" title="Pharmacist">
                     <span class="icone">
                         <img src="../Images/Pharmacist.png"/>
                     </span><span class="title">Pharmacist</span>
                 </a>
             </li>
             <li>
-                <a href="laboratorystaff.html" class="left-tooltip" data-tooltip="Laboratory Staff" title="Laboratory Staff">
+                <a href="../Details/LaboratoryStaff.aspx" class="left-tooltip" data-tooltip="Laboratory Staff" title="Laboratory Staff">
                     <span class="icone">
                         <img src="../Images/Laboratorist.png"/>
                     </span><span class="title">Laboratory Staff</span>
                 </a>
             </li>
             <li>
-                <a href="accountant.html" class="left-tooltip" data-tooltip="Accountant" title="Accountant">
+                <a href="../Details/Accountant.aspx" class="left-tooltip" data-tooltip="Accountant" title="Accountant">
                     <span class="icone">
                         <img src="../Images/Accountant.png"/>
                     </span><span class="title">Accountant</span>
@@ -790,7 +790,7 @@
                 </a>
             </li>
             <li>
-                <a href="bedallotment.html" class="left-tooltip" data-tooltip="Assign Bed-Nurse" title="Assign Bed-Nurse">
+                <a href="../Details/BedAllotment.aspx" class="left-tooltip" data-tooltip="Assign Bed-Nurse" title="Assign Bed-Nurse">
                     <span class="icone">
                         <img src="../Images/Assign--Bed-nurse.png"/>
                     </span><span class="title">Assign Bed-Nurse</span>
@@ -832,7 +832,7 @@
                 </a>
             </li>
             <li>
-                <a href="event.html" class="left-tooltip" data-tooltip="Event" title="Event">
+                <a href="../Events.aspx" class="left-tooltip" data-tooltip="Event" title="Event">
                     <span class="icone">
                         <img src="../Images/notice.png"/>
                     </span><span class="title">Event</span>
@@ -867,7 +867,7 @@
                 </a>
             </li>
             <li>
-                <a href="" class="left-tooltip" data-tooltip="Account" title="Account">
+                <a href="Account.aspx" class="left-tooltip" data-tooltip="Account" title="Account">
                     <span class="icone">
                         <img src="../Images/account.png"/>
                     </span><span class="title">Account</span>

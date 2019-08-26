@@ -9,7 +9,7 @@ using Microsoft.AspNet.FriendlyUrls.Resolvers;
 
 namespace RejoiceApplication
 {
-    public partial class ViewSwitcher : System.Web.UI.UserControl
+    public partial class ViewSwitcher : UserControl
     {
         protected string CurrentView { get; private set; }
 
@@ -32,7 +32,7 @@ namespace RejoiceApplication
             if (switchViewRoute == null)
             {
                 // Friendly URLs is not enabled or the name of the switch view route is out of sync
-                this.Visible = false;
+                Visible = false;
                 return;
             }
 

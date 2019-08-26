@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RejoiceApplication.Instrument
 {
-    public partial class AssignedInstrumentList : System.Web.UI.Page
+    public partial class AssignedInstrumentList : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

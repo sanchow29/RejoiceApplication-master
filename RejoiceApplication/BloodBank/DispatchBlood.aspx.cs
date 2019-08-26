@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RejoiceApplication.BloodBank
 {
-    public partial class UsedBloodBankList : System.Web.UI.Page
+    public partial class UsedBloodBankList : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

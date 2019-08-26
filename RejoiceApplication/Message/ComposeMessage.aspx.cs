@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RejoiceApplication.Message
 {
-    public partial class ComposeMessage : System.Web.UI.Page
+    public partial class ComposeMessage : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

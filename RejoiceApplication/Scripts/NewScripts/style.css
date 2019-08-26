@@ -153,7 +153,7 @@ updated.below-h2 { text-transform: capitalize; }
     display: none;
     position: absolute;
     background: #f00;
-    width: 200px;	
+    width: 200px;
 }
 
 button:hover div.toshow { display: block; }
@@ -285,7 +285,7 @@ table.dataTable thead th, table.dataTable thead td { padding: 10px 10px; }
     width: 15%;
     height: 100%;
     margin-top: 70px;
-    float: left;  
+    float: left;
 }
 
 .hospital-management-content .page-inner {

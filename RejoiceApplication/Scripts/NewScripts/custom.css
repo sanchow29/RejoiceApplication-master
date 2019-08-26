@@ -203,11 +203,11 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .view_invoice_lable_css .view_invoice_lable { padding-left: 15px !important; }	
+    .view_invoice_lable_css .view_invoice_lable { padding-left: 15px !important; }
 }
 
 @media only screen and (max-width: 600px) {
-    .view_invoice_lable_css .view_invoice_lable { padding-left: 18px !important; }		
+    .view_invoice_lable_css .view_invoice_lable { padding-left: 18px !important; }
 }
 
 /*start payment receipt*/
@@ -850,7 +850,7 @@ h3.padding { margin-top: 5px !important; }
     width: 20%;
     padding-bottom: 11px;
     padding-top: 11px;
-    padding-right: 15px;	
+    padding-right: 15px;
 }
 
 .invoice_lable {
@@ -952,7 +952,7 @@ table.print_table_border {
     position: absolute;
     top: 0px;
     right: 24px;
-    background-repeat: no-repeat;	
+    background-repeat: no-repeat;
 }
 
 .invoicefont1 { z-index: -1; }

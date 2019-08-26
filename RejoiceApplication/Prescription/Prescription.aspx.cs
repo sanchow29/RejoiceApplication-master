@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RejoiceApplication.Prescription
 {
-    public partial class Prescription : System.Web.UI.Page
+    public partial class Prescription : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

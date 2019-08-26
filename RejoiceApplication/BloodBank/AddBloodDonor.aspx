@@ -136,7 +136,7 @@
                                 <label class="col-sm-2 control-label" for="gender">Gender<span class="require-field">*</span></label>
                                 <div class="col-sm-8">
                                     <label class="radio-inline">
-                                        <input type="radio" value="male" class="tog validate[required]" name="gender" checked='checked'/>Male
+                                        <input type="radio" value="male" class="tog validate[required]" name="gender" checked="checked"/>Male
                                     </label>
                                     <label class="radio-inline">
                                         <input type="radio" value="female" class="tog validate[required]" name="gender"/>Female

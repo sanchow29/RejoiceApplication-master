@@ -122,7 +122,7 @@
                         <label class="col-sm-3 control-label" for="charge_type">Charges Type<span class="require-field">*</span></label>
                         <div class="col-sm-9">
                             <label class="radio-inline">
-                                <input type="radio" value="Daily" class="tog validate[required]" name="charge_type" checked='checked'/>Daily
+                                <input type="radio" value="Daily" class="tog validate[required]" name="charge_type" checked="checked"/>Daily
                             </label>
                             <label class="radio-inline">
                                 <input type="radio" value="Hourly" class="tog validate[required]" name="charge_type"/>Hourly

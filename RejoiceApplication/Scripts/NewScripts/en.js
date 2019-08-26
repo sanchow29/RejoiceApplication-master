@@ -45,7 +45,7 @@
                 ordinal: function(a) {
                     var b = a % 10,
                         c = 1 === ~~(a % 100 / 10) ? "th" : 1 === b ? "st" : 2 === b ? "nd" : 3 === b ? "rd" : "th";
-                    return a + c
+                    return a + c;
                 }
-            }), a.fullCalendar.lang("en-ca")
+            }), a.fullCalendar.lang("en-ca");
     });

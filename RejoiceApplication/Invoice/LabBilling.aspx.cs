@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RejoiceApplication
 {
-    public partial class LabBilling : System.Web.UI.Page
+    public partial class LabBilling : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

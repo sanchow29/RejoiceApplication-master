@@ -601,7 +601,7 @@
                         },
                         error: function(data) {
                         }
-                    })
+                    });
 
                 }
             });
@@ -718,7 +718,7 @@
     <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label" for="gender">Gender<span class="require-field">*</span></label>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 has-feedback">
         <label class="radio-inline">
-            <input type="radio" value="male" class="tog validate[required]" name="gender" checked='checked'/>Male
+            <input type="radio" value="male" class="tog validate[required]" name="gender" checked="checked"/>Male
         </label>
         <label class="radio-inline">
             <input type="radio" value="female" class="tog validate[required]" name="gender"/>Female

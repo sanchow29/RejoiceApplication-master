@@ -6,7 +6,7 @@ using System.Data;
 
 namespace RejoiceApplication
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Login : Page
     {
         private string MyConnection2 =
             "server = 50.62.209.108;port=3306; user id = sarasa; database = hans;password=@dmin@2018";
@@ -17,23 +17,21 @@ namespace RejoiceApplication
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            string userName = UserName.Text;
-            string password = Password.Text;
+            var userName = UserName.Text;
+            var password = Password.Text;
 
             if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(password))
-            {
                 try
                 {
                     var Query = "select * from rejoice_UserDetails ;";
-                    MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                    MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                    var MyConn2 = new MySqlConnection(MyConnection2);
+                    var MyCommand2 = new MySqlCommand(Query, MyConn2);
                     MyConn2.Open();
-                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                    var MyAdapter = new MySqlDataAdapter();
                     MyAdapter.SelectCommand = MyCommand2;
-                    DataTable dTable = new DataTable();
+                    var dTable = new DataTable();
                     MyAdapter.Fill(dTable);
                     if (dTable.Rows.Count > 0)
-                    {
                         //Session["CurrentUser"] = Login1.UserName;
                         //foreach (DataRow row in dTable.Rows)
                         //{
@@ -48,20 +46,17 @@ namespace RejoiceApplication
 
                         //}
                         Response.Redirect("~/Default.aspx");
-                    }
                     else
-                    {
                         //  ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Unable to login , Please try again')", true);
                         return;
-                    }
 
                     MyConn2.Close();
                 }
                 catch (Exception ex)
                 {
-                    string filePath = Server.MapPath("~/testfolder/Logs/") + "\\" + "Catch.txt";
+                    var filePath = Server.MapPath("~/testfolder/Logs/") + "\\" + "Catch.txt";
 
-                    using (StreamWriter writer = new StreamWriter(filePath, true))
+                    using (var writer = new StreamWriter(filePath, true))
                     {
                         writer.WriteLine(
                             "-----------------------------------------------------------------------------");
@@ -81,12 +76,9 @@ namespace RejoiceApplication
                     //   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Unable to login , Please try again')", true);
                     return;
                 }
-            }
             else
-            {
                 // ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Please enter username and password to proceed')", true);
                 return;
-            }
         }
     }
 }

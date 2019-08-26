@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RejoiceApplication.Appointments
 {
-    public partial class AppoitnmentTime : System.Web.UI.Page
+    public partial class AppoitnmentTime : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RejoiceApplication
 {
-    public partial class CreateUser : System.Web.UI.Page
+    public partial class CreateUser : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

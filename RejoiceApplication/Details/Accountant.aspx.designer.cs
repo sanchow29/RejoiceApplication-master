@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RejoiceApplication
+namespace RejoiceApplication.Details
 {
 
 
-    public partial class About
+    public partial class Accountant
     {
     }
 }
