@@ -1,56 +1,57 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateUser.aspx.cs" Inherits="RejoiceApplication.CreateUser" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>doctor,staff creation
+    <h1>
+        doctor,staff creation
     </h1>
     <script type="text/javascript">
         function validate() {
-            var Fname = document.getElementById('<%=txtFname.ClientID%>').value;
-            var Lname = document.getElementById('<%=txtLname.ClientID%>').value;
-            var email = document.getElementById('<%=txtEmail.ClientID%>').value;
-            var userid = document.getElementById('<%=txtuserid.ClientID%>').value;
-            var pwd = document.getElementById('<%=txtPwd.ClientID%>').value;
-            var PhoneNo = document.getElementById('<%=txtPhoneNo.ClientID%>').value;
-            var EmailLimit = document.getElementById('<%=txtbldgroup.ClientID%>').value;
+            var Fname = document.getElementById('<%= txtFname.ClientID %>').value;
+            var Lname = document.getElementById('<%= txtLname.ClientID %>').value;
+            var email = document.getElementById('<%= txtEmail.ClientID %>').value;
+            var userid = document.getElementById('<%= txtuserid.ClientID %>').value;
+            var pwd = document.getElementById('<%= txtPwd.ClientID %>').value;
+            var PhoneNo = document.getElementById('<%= txtPhoneNo.ClientID %>').value;
+            var EmailLimit = document.getElementById('<%= txtbldgroup.ClientID %>').value;
             if (Fname == "") {
                 alert("please enter First Name!!");
-                document.getElementById('<%=txtFname.ClientID%>').focus();
+                document.getElementById('<%= txtFname.ClientID %>').focus();
                 return false;
             }
             if (Lname == "") {
                 alert("please enter Last Name!!");
-                document.getElementById('<%=txtLname.ClientID%>').focus();
+                document.getElementById('<%= txtLname.ClientID %>').focus();
                 return false;
             }
             if (email == "") {
                 alert("please enter Email!!");
-                document.getElementById('<%=txtEmail.ClientID%>').focus();
+                document.getElementById('<%= txtEmail.ClientID %>').focus();
                 return false;
             }
             if (userid == "") {
                 alert("please enter UserId!!");
-                document.getElementById('<%=txtuserid.ClientID%>').focus();
+                document.getElementById('<%= txtuserid.ClientID %>').focus();
                 return false;
             }
             if (pwd == "") {
                 alert("please enter Password!!");
-                document.getElementById('<%=txtPwd.ClientID%>').focus();
+                document.getElementById('<%= txtPwd.ClientID %>').focus();
                 return false;
             }
             if (pwd.length < 8) {
                 alert("Password length should be from 8 to 20 !!");
-                document.getElementById('<%=txtPwd.ClientID%>').focus();
+                document.getElementById('<%= txtPwd.ClientID %>').focus();
                 return false;
             }
 
             if (PhoneNo == "") {
                 alert("please enter Phone!!");
-                document.getElementById('<%=txtPhoneNo.ClientID%>').focus();
+                document.getElementById('<%= txtPhoneNo.ClientID %>').focus();
                 return false;
             }
             if (EmailLimit == "") {
                 alert("please enter Email Limit!!");
-                document.getElementById('<%=txtbldgroup.ClientID%>').focus();
+                document.getElementById('<%= txtbldgroup.ClientID %>').focus();
                 return false;
             }
             return true;
@@ -84,20 +85,20 @@
                     <asp:TextBox ID="txtPhoneNo" CssClass="form-control input-sm" runat="server" TextMode="Phone"></asp:TextBox>
                 </div>
                 <div>
-                     <ajax:CalendarExtender ID="CalendarExtender1" TargetControlID="txtDOBDate" Format="dd/MM/yyyy" PopupButtonID="imgbtnCalendar" runat="server"></ajax:CalendarExtender>
+                    <ajax:CalendarExtender ID="CalendarExtender1" TargetControlID="txtDOBDate" Format="dd/MM/yyyy" PopupButtonID="imgbtnCalendar" runat="server"></ajax:CalendarExtender>
                     <label for="txtDOBDate" class="form-control label label-primary">DOB:</label>
                     <span>
-                        
-                    <asp:TextBox ID="txtDOBDate" CssClass="form-control input-sm" runat="server"></asp:TextBox>
-                     <asp:ImageButton ID="imgbtnCalendar" runat="server" ImageUrl="~/Images/calendar.png" />
-                        </span>
+
+                        <asp:TextBox ID="txtDOBDate" CssClass="form-control input-sm" runat="server"></asp:TextBox>
+                        <asp:ImageButton ID="imgbtnCalendar" runat="server" ImageUrl="~/Images/calendar.png"/>
+                    </span>
                 </div>
                 <div>
                     <label for="rblsex" class="form-control label label-primary">Sex:</label>
                     <asp:RadioButtonList ID="rblsex" runat="server" Height="16px" Width="275px">
                         <asp:ListItem Text="Male" Value="Male" Selected="True">
                         </asp:ListItem>
-                        <asp:ListItem Text="Female" Value="Female" />
+                        <asp:ListItem Text="Female" Value="Female"/>
                     </asp:RadioButtonList>
 
                 </div>
@@ -126,7 +127,7 @@
                 <div>
                     <label for="txtadd2" class="form-control label label-primary">Address2:</label>
                     <asp:TextBox ID="txtadd2" CssClass="form-control input-sm" runat="server"></asp:TextBox>
-                </div>                
+                </div>
                 <div>
                     <label for="txtCity" class="form-control label label-primary">City:</label>
                     <asp:TextBox ID="txtCity" CssClass="form-control input-sm" runat="server"></asp:TextBox>
@@ -148,26 +149,26 @@
                     <asp:TextBox ID="txtDepartment" CssClass="form-control input-sm" runat="server"></asp:TextBox>
 
                 </div>
-                <br />
+                <br/>
                 <div>
                     <label for="ddlestatus" class="form-control label label-primary">Status :</label>
-                    <asp:DropDownList ID="ddlestatus"  CssClass="form-control input-sm" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlestatus" CssClass="form-control input-sm" runat="server"></asp:DropDownList>
 
                 </div>
-                <br />
+                <br/>
 
                 <div>
                     <label for="ddlrole" class="form-control label label-primary">Role:</label>
-                    <asp:DropDownList ID="ddlrole"  CssClass="form-control input-sm" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlrole" CssClass="form-control input-sm" runat="server"></asp:DropDownList>
 
                 </div>
-                 <br />
+                <br/>
                 <div>
                     <label for="txtExperience" class="form-control label label-primary">Experience:</label>
                     <asp:TextBox ID="txtExperience" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                 </div>
             </div>
-           
+
             <%-- <asp:Button ID="btncreateuser" runat="server" CssClass="btn btn-primary" Text="Create User" OnClientClick="javascript:return validate()" OnClick="btncreateuser_Click" />--%>
         </div>
     </div>

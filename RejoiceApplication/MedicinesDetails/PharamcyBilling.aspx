@@ -17,7 +17,7 @@
                     <ajax:CalendarExtender ID="CalendarExtender1" TargetControlID="txtBDate" Format="dd/MM/yyyy" PopupButtonID="imgbtnCalendar" runat="server"></ajax:CalendarExtender>
                     <label for="txtBDate" class="form-control label label-primary">Bill Date:</label>
                     <asp:TextBox ID="txtBDate" CssClass="form-control input-sm" runat="server"></asp:TextBox>
-                    <asp:ImageButton ID="imgbtnCalendar" runat="server" ImageUrl="~/Images/calendar.png" />
+                    <asp:ImageButton ID="imgbtnCalendar" runat="server" ImageUrl="~/Images/calendar.png"/>
 
                 </div>
                 <div>
@@ -42,27 +42,27 @@
                     <label for="txtmfgdate" class="form-control label label-primary">Manufacture Date:</label>
                     <asp:TextBox ID="txtmfgdate" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                 </div>
-                  <div>
+                <div>
                     <label for="txtrate" class="form-control label label-primary">Rate:</label>
                     <asp:TextBox ID="txtrate" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                 </div>
-                  <div>
+                <div>
                     <label for="txtexpdate" class="form-control label label-primary">discount:</label>
                     <asp:TextBox ID="TextBox3" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                 </div>
-                  <div>
+                <div>
                     <label for="txtexpdate" class="form-control label label-primary">Type:</label>
                     <asp:TextBox ID="TextBox4" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                 </div>
-                  <div>
+                <div>
                     <label for="txtexpdate" class="form-control label label-primary">BillReference No:</label>
                     <asp:TextBox ID="TextBox5" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                 </div>
-                  <div>
+                <div>
                     <label for="txtexpdate" class="form-control label label-primary">Payment Type:</label>
                     <asp:TextBox ID="TextBox6" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                 </div>
-                  <div>
+                <div>
                     <label for="txtexpdate" class="form-control label label-primary">Expiery Date:</label>
                     <asp:TextBox ID="TextBox7" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                 </div>

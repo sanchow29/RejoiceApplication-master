@@ -11,7 +11,6 @@ namespace RejoiceApplication.MedicinesDetails
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

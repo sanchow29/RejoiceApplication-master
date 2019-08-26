@@ -22,7 +22,7 @@
                     <asp:RadioButtonList ID="rblRoomType" runat="server">
                         <asp:ListItem Text="AC" Value="AC">
                         </asp:ListItem>
-                        <asp:ListItem Text="Non AC" Value="NAC" Selected="True" />
+                        <asp:ListItem Text="Non AC" Value="NAC" Selected="True"/>
                     </asp:RadioButtonList>
 
                 </div>
@@ -31,8 +31,8 @@
                     <asp:RadioButtonList ID="rblTypeofShare" runat="server">
                         <asp:ListItem Text="Private" Value="Single">
                         </asp:ListItem>
-                        <asp:ListItem Text="Two" Value="Two" Selected="True" />
-                        <asp:ListItem Text="Three" Value="Three" />
+                        <asp:ListItem Text="Two" Value="Two" Selected="True"/>
+                        <asp:ListItem Text="Three" Value="Three"/>
                     </asp:RadioButtonList>
 
                 </div>
@@ -41,8 +41,8 @@
                     <asp:RadioButtonList ID="rblBedType" runat="server">
                         <asp:ListItem Text="General" Value="General">
                         </asp:ListItem>
-                        <asp:ListItem Text="Room" Value="Room" Selected="True" />
-                        <asp:ListItem Text="ICU" Value="ICU" />
+                        <asp:ListItem Text="Room" Value="Room" Selected="True"/>
+                        <asp:ListItem Text="ICU" Value="ICU"/>
                     </asp:RadioButtonList>
 
                 </div>

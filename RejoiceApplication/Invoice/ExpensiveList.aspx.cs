@@ -11,7 +11,6 @@ namespace RejoiceApplication.Invoice
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

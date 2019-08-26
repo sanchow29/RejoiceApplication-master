@@ -9,7 +9,7 @@
                 <meta http-equiv="refresh" content="0;URL=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/ShowErrorPage.php">
             </noscript>
             <script type="text/javascript">
-                jQuery(document).ready(function ($) {
+                jQuery(document).ready(function($) {
 
                     $('#blooddonor_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
                     $('#bloodgroup_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
@@ -21,14 +21,58 @@
                 });
             </script>
             <script type="text/javascript">
-                jQuery(document).ready(function () {
+                jQuery(document).ready(function() {
                     jQuery('#bloodgroup_list').DataTable({
                         "responsive": true,
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
                     jQuery('#blooddonor_list').DataTable({
                         "responsive": true,
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
 
 
@@ -83,42 +127,45 @@
                                     <table id="blooddonor_list" class="display dataTable" cellspacing="0" width="100%">
                                         <!--START BLOOD DONOR LIST TABLE-->
                                         <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Blood Group</th>
-                                                <th>Age</th>
-                                                <th>Gender</th>
-                                                <th>Number Of Bags</th>
-                                                <th>Last Donation Date</th>
-                                                <th>Action</th>
-                                            </tr>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Blood Group</th>
+                                            <th>Age</th>
+                                            <th>Gender</th>
+                                            <th>Number Of Bags</th>
+                                            <th>Last Donation Date</th>
+                                            <th>Action</th>
+                                        </tr>
                                         </thead>
                                         <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Blood Group</th>
-                                                <th>Age</th>
-                                                <th>Gender</th>
-                                                <th>Number Of Bags</th>
-                                                <th>Last Donation Date</th>
-                                                <th>Action</th>
-                                            </tr>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Blood Group</th>
+                                            <th>Age</th>
+                                            <th>Gender</th>
+                                            <th>Number Of Bags</th>
+                                            <th>Last Donation Date</th>
+                                            <th>Action</th>
+                                        </tr>
                                         </tfoot>
                                         <tbody>
-                                            <tr>
-                                                <td class="name"><a href="#">xxx</a></td>
-                                                <td class="bloodgroup">O+
-                                                </td>
-                                                <td class="age">12</td>
-                                                <td class="age">male</td>
-                                                <td class="subject_name">9</td>
-                                                <td class="lastdonate_date">2019-07-29</td>
+                                        <tr>
+                                            <td class="name">
+                                                <a href="#">xxx</a>
+                                            </td>
+                                            <td class="bloodgroup">
+                                                O+
+                                            </td>
+                                            <td class="age">12</td>
+                                            <td class="age">male</td>
+                                            <td class="subject_name">9</td>
+                                            <td class="lastdonate_date">2019-07-29</td>
 
-                                                <td class="action">
-                                                    <a href="?dashboard=user&page=bloodbank&tab=addblooddonor&action=edit&blooddonor_id=Mw==" class="btn btn-info">Edit</a>
+                                            <td class="action">
+                                                <a href="?dashboard=user&page=bloodbank&tab=addblooddonor&action=edit&blooddonor_id=Mw==" class="btn btn-info">Edit</a>
 
-                                                </td>
-                                            </tr>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                     <!--END BLLOD DONOR LIST TABLE -->

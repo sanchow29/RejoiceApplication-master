@@ -9,7 +9,7 @@
                 <meta http-equiv="refresh" content="0;URL=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/ShowErrorPage.php">
             </noscript>
             <script type="text/javascript">
-                jQuery(document).ready(function ($) {
+                jQuery(document).ready(function($) {
                     jQuery('#instrument_list').DataTable({
                         "responsive": true,
                         "aoColumns": [
@@ -19,8 +19,31 @@
                             { "bSortable": true },
                             { "bSortable": true },
                             { "bSortable": true },
-                            { "bSortable": false }],
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                            { "bSortable": false }
+                        ],
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
                 });
             </script>
@@ -33,7 +56,7 @@
                         <a href="InstrumentList.aspx" class="tab ">
                             <i class="fa fa-align-justify"></i>Instrument List
                         </a>
-                       
+
                     </li>
 
                     <li class="">
@@ -47,7 +70,7 @@
                         <a href="AssignedInstrumentList.aspx" class="tab ">
                             <i class="fa fa-align-justify"></i>Assigned Instrument List
                         </a>
-                        
+
                     </li>
                     <li class="active">
 
@@ -60,8 +83,9 @@
 
                 </ul>
                 <script type="text/javascript">
-                    jQuery(document).ready(function ($) {
-                        $('#assign_instrument_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
+                    jQuery(document).ready(function($) {
+                        $('#assign_instrument_form')
+                            .validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
 
                         var start = new Date();
                         var end = new Date(new Date().setYear(start.getFullYear() + 1));
@@ -70,19 +94,21 @@
                             startDate: start,
                             endDate: end,
                             autoclose: true
-                        }).on('changeDate', function (selected) {
-                            var minDate = new Date(selected.date.valueOf());
-                            $('#end_date').datepicker('setStartDate', minDate);
-                        });
+                        }).on('changeDate',
+                            function(selected) {
+                                var minDate = new Date(selected.date.valueOf());
+                                $('#end_date').datepicker('setStartDate', minDate);
+                            });
                         $.fn.datepicker.defaults.format = " yyyy-mm-dd";
                         $('#end_date').datepicker({
                             startDate: start,
                             endDate: end,
                             autoclose: true
-                        }).on('changeDate', function (selected) {
-                            var maxDate = new Date(selected.date.valueOf());
-                            $('#start_date').datepicker('setEndDate', maxDate);
-                        });
+                        }).on('changeDate',
+                            function(selected) {
+                                var maxDate = new Date(selected.date.valueOf());
+                                $('#start_date').datepicker('setEndDate', maxDate);
+                            });
 
                         $('#end_time').timepicki(
                             {
@@ -113,7 +139,7 @@
                     <form name="assign_instrument_form" action="" method="post" class="form-horizontal" id="assign_instrument_form">
                         <!--START Assign INSTRUMENT FORM-->
                         <input type="hidden" name="action" value="insert">
-                        <input type="hidden" name="assign_instrument_id" value="" />
+                        <input type="hidden" name="assign_instrument_id" value=""/>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="patient">Patient<span class="require-field">*</span></label>
                             <div class="col-sm-8">
@@ -152,7 +178,7 @@
                                     <option value="89">P690719 - matthew kargbo</option>
                                     <option value="74">P540619 - jong test</option>
                                     <option value="106">P860819 - Igor Negromonte</option>
-                                    <option value="105">P850819 - Emran  Imran</option>
+                                    <option value="105">P850819 - Emran Imran</option>
                                     <option value="107">P870819 - ahmed ahmed</option>
                                     <option value="81">P610619 - Ilyas Awan</option>
                                     <option value="92">P720719 - Eugene Ciervo</option>
@@ -163,14 +189,14 @@
                                     <option value="73">P530519 - Kartik Bhatt</option>
                                     <option value="99">P790719 - kumar singh</option>
                                     <option value="98">P780719 - mark masai manu</option>
-                                    <option value="82">P620619 - Johnson  Landzro</option>
+                                    <option value="82">P620619 - Johnson Landzro</option>
                                     <option value="8">P60319 - Lucas M</option>
                                     <option value="49">P290419 - Ahmed Ahme</option>
                                     <option value="65">P450519 - testq proba</option>
                                     <option value="6">P40319 - Mario Rossi</option>
                                     <option value="69">P490519 - John Owner</option>
                                     <option value="103">P830819 - maxmuts muutus</option>
-                                    <option value="51">P310419 - test  test</option>
+                                    <option value="51">P310419 - test test</option>
                                     <option value="91">P710719 - Mustufa Aghadi</option>
                                     <option value="32">P130419 - prayag bhaler</option>
                                     <option value="85">P650619 - Onder Gulec</option>
@@ -198,9 +224,9 @@
                                     <option value="76">P560619 - TJ med</option>
                                     <option value="102">P820819 - tiny tim</option>
                                     <option value="40">P200419 - Tony Stark</option>
-                                    <option value="56">P360519 - Ulisses  Silva</option>
+                                    <option value="56">P360519 - Ulisses Silva</option>
                                     <option value="38">P180419 - AS as</option>
-                                    <option value="67">P470519 - Everton  Muta</option>
+                                    <option value="67">P470519 - Everton Muta</option>
                                     <option value="80">P600619 - Vishal Singh</option>
                                     <option value="27">P80319 - Vivekanand Adkatalwar</option>
                                     <option value="93">P730719 - Le Thanh</option>
@@ -224,7 +250,7 @@
 
                         <div id="select_instrument_block">
                         </div>
-                        <input type="hidden" id="_wpnonce" name="_wpnonce" value="8395b69289" /><input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=instrument&amp;tab=assign_instrument&amp;action=insert" />
+                        <input type="hidden" id="_wpnonce" name="_wpnonce" value="8395b69289"/><input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=instrument&amp;tab=assign_instrument&amp;action=insert"/>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="description">Description</label>
                             <div class="col-sm-8">
@@ -233,7 +259,7 @@
                         </div>
 
                         <div class="col-sm-offset-2 col-sm-8">
-                            <input type="submit" value="Assign Instrument" name="assign_instrument" class="btn btn-success assigned_instrument_validation" />
+                            <input type="submit" value="Assign Instrument" name="assign_instrument" class="btn btn-success assigned_instrument_validation"/>
                         </div>
                     </form>
                     <!--END Assign INSTRUMENT FORM-->

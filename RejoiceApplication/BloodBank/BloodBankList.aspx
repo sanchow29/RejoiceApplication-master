@@ -9,7 +9,7 @@
                 <meta http-equiv="refresh" content="0;URL=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/ShowErrorPage.php">
             </noscript>
             <script type="text/javascript">
-                jQuery(document).ready(function ($) {
+                jQuery(document).ready(function($) {
 
                     $('#blooddonor_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
                     $('#bloodgroup_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
@@ -21,14 +21,58 @@
                 });
             </script>
             <script type="text/javascript">
-                jQuery(document).ready(function () {
+                jQuery(document).ready(function() {
                     jQuery('#bloodgroup_list').DataTable({
                         "responsive": true,
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
                     jQuery('#blooddonor_list').DataTable({
                         "responsive": true,
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
 
 
@@ -80,80 +124,85 @@
                             <table id="bloodgroup_list" class="display dataTable " cellspacing="0" width="100%">
                                 <!--START BLOOD GROUP LIST TABLE-->
                                 <thead>
-                                    <tr>
-                                        <th>Blood Group</th>
-                                        <th>Number Of Bags</th>
-                                        <th>Action</th>
-                                    </tr>
+                                <tr>
+                                    <th>Blood Group</th>
+                                    <th>Number Of Bags</th>
+                                    <th>Action</th>
+                                </tr>
                                 </thead>
                                 <tfoot>
-                                    <tr>
-                                        <th>Blood Group</th>
-                                        <th>Number Of Bags</th>
-                                        <th>Action</th>
-                                    </tr>
+                                <tr>
+                                    <th>Blood Group</th>
+                                    <th>Number Of Bags</th>
+                                    <th>Action</th>
+                                </tr>
                                 </tfoot>
                                 <tbody>
-                                    <tr>
-                                        <td class="blood_group">B+
-                                        </td>
-                                        <td class="subject_name">4</td>
+                                <tr>
+                                    <td class="blood_group">
+                                        B+
+                                    </td>
+                                    <td class="subject_name">4</td>
 
-                                        <td class="action">
+                                    <td class="action">
 
-                                            <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=MQ==" class="btn btn-info">Edit</a>
+                                        <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=MQ==" class="btn btn-info">Edit</a>
 
-                                        </td>
+                                    </td>
 
-                                    </tr>
-                                    <tr>
-                                        <td class="blood_group">A+
-                                        </td>
-                                        <td class="subject_name">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="blood_group">
+                                        A+
+                                    </td>
+                                    <td class="subject_name">0</td>
 
-                                        <td class="action">
+                                    <td class="action">
 
-                                            <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=Mg==" class="btn btn-info">Edit</a>
+                                        <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=Mg==" class="btn btn-info">Edit</a>
 
-                                        </td>
+                                    </td>
 
-                                    </tr>
-                                    <tr>
-                                        <td class="blood_group">AB+
-                                        </td>
-                                        <td class="subject_name">11</td>
+                                </tr>
+                                <tr>
+                                    <td class="blood_group">
+                                        AB+
+                                    </td>
+                                    <td class="subject_name">11</td>
 
-                                        <td class="action">
+                                    <td class="action">
 
-                                            <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=Mw==" class="btn btn-info">Edit</a>
+                                        <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=Mw==" class="btn btn-info">Edit</a>
 
-                                        </td>
+                                    </td>
 
-                                    </tr>
-                                    <tr>
-                                        <td class="blood_group">O+
-                                        </td>
-                                        <td class="subject_name">1233</td>
+                                </tr>
+                                <tr>
+                                    <td class="blood_group">
+                                        O+
+                                    </td>
+                                    <td class="subject_name">1233</td>
 
-                                        <td class="action">
+                                    <td class="action">
 
-                                            <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=NA==" class="btn btn-info">Edit</a>
+                                        <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=NA==" class="btn btn-info">Edit</a>
 
-                                        </td>
+                                    </td>
 
-                                    </tr>
-                                    <tr>
-                                        <td class="blood_group">O-
-                                        </td>
-                                        <td class="subject_name">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="blood_group">
+                                        O-
+                                    </td>
+                                    <td class="subject_name">1</td>
 
-                                        <td class="action">
+                                    <td class="action">
 
-                                            <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=NQ==" class="btn btn-info">Edit</a>
+                                        <a href="?dashboard=user&page=bloodbank&tab=addbloodgoup&action=edit&bloodgroup_id=NQ==" class="btn btn-info">Edit</a>
 
-                                        </td>
+                                    </td>
 
-                                    </tr>
+                                </tr>
                                 </tbody>
                             </table>
                             <!--END BLOOD GROUP LIST TABLE-->

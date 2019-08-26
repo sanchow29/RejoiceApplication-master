@@ -18,7 +18,8 @@
 
                 </div>
                 <div class="col-md-6">
-                    <h2>Inbox
+                    <h2>
+                        Inbox
 
                     </h2>
                 </div>
@@ -30,7 +31,9 @@
                     <li class="active">
                         <a href="Messages.aspx"><i class="fa fa-inbox"></i>Inbox<span class="badge badge-success pull-right">0</span></a>
                     </li>
-                    <li><a href="SentMessages.aspx"><i class="fa fa-sign-out"></i>Sent</a></li>
+                    <li>
+                        <a href="SentMessages.aspx"><i class="fa fa-sign-out"></i>Sent</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-md-10">
@@ -40,66 +43,73 @@
                         <!-- START TABE RESPONSIVE DIV -->
                         <table class="table">
                             <thead>
-                                <tr>
-                                    <th class="text-right" colspan="5"></th>
-                                </tr>
+                            <tr>
+                                <th class="text-right" colspan="5"></th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th class="hidden-xs">
-                                        <span>Message For</span>
-                                    </th>
-                                    <th>Subject</th>
-                                    <th>Description
-                                    </th>
-                                    <th>Date
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td>Jose Figueroa</td>
-                                    <td>
-                                        <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=205">HDS</a>
-                                    </td>
-                                    <td>SHGD						</td>
-                                    <td>2019-06-14
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Jose Figueroa</td>
-                                    <td>
-                                        <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=152">gdfgdf</a>
-                                    </td>
-                                    <td>gdfgdfgdfg						</td>
-                                    <td>2019-06-10
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Joanna Christopher</td>
-                                    <td>
-                                        <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=60">as</a>
-                                    </td>
-                                    <td>aaaa						</td>
-                                    <td>2019-05-16
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Jose Figueroa</td>
-                                    <td>
-                                        <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=36">csd</a>
-                                    </td>
-                                    <td>mhfmfn fgs						</td>
-                                    <td>2019-04-07
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=32">Doctor<span class="badge badge-success pull-right">1</span></a>
-                                    </td>
-                                    <td>Doctor						</td>
-                                    <td>2019-03-22
-                                    </td>
-                                </tr>
+                            <tr>
+                                <th class="hidden-xs">
+                                    <span>Message For</span>
+                                </th>
+                                <th>Subject</th>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Date
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Jose Figueroa</td>
+                                <td>
+                                    <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=205">HDS</a>
+                                </td>
+                                <td>SHGD </td>
+                                <td>
+                                    2019-06-14
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jose Figueroa</td>
+                                <td>
+                                    <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=152">gdfgdf</a>
+                                </td>
+                                <td>gdfgdfgdfg </td>
+                                <td>
+                                    2019-06-10
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Joanna Christopher</td>
+                                <td>
+                                    <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=60">as</a>
+                                </td>
+                                <td>aaaa </td>
+                                <td>
+                                    2019-05-16
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jose Figueroa</td>
+                                <td>
+                                    <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=36">csd</a>
+                                </td>
+                                <td>mhfmfn fgs </td>
+                                <td>
+                                    2019-04-07
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a href="?dashboard=user&page=message&tab=inbox&tab=view_message&from=inbox&id=32">Doctor<span class="badge badge-success pull-right">1</span></a>
+                                </td>
+                                <td>Doctor </td>
+                                <td>
+                                    2019-03-22
+                                </td>
+                            </tr>
 
                             </tbody>
                         </table>

@@ -8,20 +8,20 @@ namespace RejoiceApplication
 {
     public partial class Login : System.Web.UI.Page
     {
-        private string MyConnection2 = "server = 50.62.209.108;port=3306; user id = sarasa; database = hans;password=@dmin@2018";
+        private string MyConnection2 =
+            "server = 50.62.209.108;port=3306; user id = sarasa; database = hans;password=@dmin@2018";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
+
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-
             string userName = UserName.Text;
             string password = Password.Text;
 
             if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(password))
             {
-
                 try
                 {
                     var Query = "select * from rejoice_UserDetails ;";
@@ -51,7 +51,7 @@ namespace RejoiceApplication
                     }
                     else
                     {
-                      //  ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Unable to login , Please try again')", true);
+                        //  ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Unable to login , Please try again')", true);
                         return;
                     }
 
@@ -63,7 +63,8 @@ namespace RejoiceApplication
 
                     using (StreamWriter writer = new StreamWriter(filePath, true))
                     {
-                        writer.WriteLine("-----------------------------------------------------------------------------");
+                        writer.WriteLine(
+                            "-----------------------------------------------------------------------------");
                         writer.WriteLine("Date : " + DateTime.Now.ToString());
                         writer.WriteLine();
 
@@ -77,18 +78,15 @@ namespace RejoiceApplication
                         }
                     }
 
-                 //   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Unable to login , Please try again')", true);
+                    //   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Unable to login , Please try again')", true);
                     return;
-
                 }
-
             }
             else
             {
-               // ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Please enter username and password to proceed')", true);
+                // ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertLogin", "alert('Please enter username and password to proceed')", true);
                 return;
             }
         }
-
     }
 }

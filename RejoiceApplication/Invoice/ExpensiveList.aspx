@@ -10,7 +10,7 @@
             </noscript>
 
             <script type="text/javascript">
-                jQuery(document).ready(function ($) {
+                jQuery(document).ready(function($) {
                     $('#invoice_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
                     $('#income_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
                     $('#expense_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
@@ -23,9 +23,7 @@
             </script>
 
             <style>
-                select {
-                    padding: 6px;
-                }
+                select { padding: 6px; }
             </style>
             <!-- START POP up code -->
             <div class="popup-bg">
@@ -46,7 +44,7 @@
                         <a href="Invoice.aspx" class="tab ">
                             <i class="fa fa-align-justify"></i>Invoice List
                         </a>
-                        
+
                     </li>
                     <li class=""></li>
 
@@ -54,7 +52,7 @@
                         <a href="IncomeList.aspx" class="tab ">
                             <i class="fa fa-align-justify"></i>Income List
                         </a>
-                       
+
                     </li>
 
                     <li class=""></li>
@@ -69,7 +67,7 @@
                     <li class=""></li>
                 </ul>
                 <script type="text/javascript">
-                    jQuery(document).ready(function () {
+                    jQuery(document).ready(function() {
                         jQuery('#tblexpence').DataTable({
                             "responsive": true,
                             "order": [[2, "Desc"]],
@@ -79,7 +77,29 @@
                                 { "bSortable": true },
                                 { "bSortable": false }
                             ],
-                            language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                            language: {
+                                "sEmptyTable": "No data available in table",
+                                "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                                "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                                "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                                "sInfoPostFix": "",
+                                "sInfoThousands": ",",
+                                "sLengthMenu": "Show _MENU_ entries",
+                                "sLoadingRecords": "Loading...",
+                                "sProcessing": "Processing...",
+                                "sSearch": "Search:",
+                                "sZeroRecords": "No matching records found",
+                                "oPaginate": {
+                                    "sFirst": "First",
+                                    "sLast": "Last",
+                                    "sNext": "Next",
+                                    "sPrevious": "Previous"
+                                },
+                                "oAria": {
+                                    "sSortAscending": ": activate to sort column ascending",
+                                    "sSortDescending": ": activate to sort column descending"
+                                }
+                            }
                         });
 
 
@@ -92,21 +112,21 @@
                         <table id="tblexpence" class="display dataTable" cellspacing="0" width="100%">
                             <!-- START EXPENSE LIST TABLE-->
                             <thead>
-                                <tr>
-                                    <th>Supplier Name</th>
-                                    <th>Amount (<span>&#36;</span>)</th>
-                                    <th>Date</th>
-                                    <th>Action</th>
-                                </tr>
+                            <tr>
+                                <th>Supplier Name</th>
+                                <th>Amount (<span>&#36;</span>)</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
                             </thead>
 
                             <tfoot>
-                                <tr>
-                                    <th>Supplier Name</th>
-                                    <th>Amount (<span>&#36;</span>)</th>
-                                    <th>Date</th>
-                                    <th>Action</th>
-                                </tr>
+                            <tr>
+                                <th>Supplier Name</th>
+                                <th>Amount (<span>&#36;</span>)</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
                             </tfoot>
 
                             <tbody></tbody>

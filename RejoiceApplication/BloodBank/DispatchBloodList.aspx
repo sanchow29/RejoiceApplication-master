@@ -9,7 +9,7 @@
                 <meta http-equiv="refresh" content="0;URL=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/ShowErrorPage.php">
             </noscript>
             <script type="text/javascript">
-                jQuery(document).ready(function ($) {
+                jQuery(document).ready(function($) {
 
                     $('#blooddonor_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
                     $('#bloodgroup_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
@@ -21,14 +21,58 @@
                 });
             </script>
             <script type="text/javascript">
-                jQuery(document).ready(function () {
+                jQuery(document).ready(function() {
                     jQuery('#bloodgroup_list').DataTable({
                         "responsive": true,
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
                     jQuery('#blooddonor_list').DataTable({
                         "responsive": true,
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
 
 
@@ -74,8 +118,9 @@
                 <div class="tab-content">
                     <!--START TAB CONTENT DIV-->
                     <script type="text/javascript">
-                        $(document).ready(function () {
-                            $('#dispatch_blood_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
+                        $(document).ready(function() {
+                            $('#dispatch_blood_form')
+                                .validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
                             $.fn.datepicker.defaults.format = " yyyy-mm-dd";
                             $('#date').datepicker({
                                 endDate: '+0d',
@@ -95,7 +140,7 @@
                             <input type="hidden" name="action" value="insert">
                             <input type="hidden" name="old_blood_group" value="">
                             <input type="hidden" name="old_blood_status" value="">
-                            <input type="hidden" name="dispatchblood_id" value="" />
+                            <input type="hidden" name="dispatchblood_id" value=""/>
 
                             <div class="form-group">
                                 <label class="col-sm-2 control-label" for="patient">Patient<span class="require-field">*</span></label>
@@ -118,7 +163,7 @@
                                         <option value="39">P190419 - king hytrd</option>
                                         <option value="8">P60319 - Lucas M</option>
                                         <option value="49">P290419 - Ahmed Ahme</option>
-                                        <option value="51">P310419 - test  test</option>
+                                        <option value="51">P310419 - test test</option>
                                         <option value="32">P130419 - prayag bhaler</option>
                                         <option value="85">P650619 - Onder Gulec</option>
                                         <option value="84">P640619 - ttttt tt</option>
@@ -127,7 +172,7 @@
                                         <option value="53">P330419 - abc PANDIT</option>
                                         <option value="46">P260419 - Carlos Roberto Carlos Roberto</option>
                                         <option value="79">P590619 - juan juanxin</option>
-                                        <option value="56">P360519 - Ulisses  Silva</option>
+                                        <option value="56">P360519 - Ulisses Silva</option>
                                         <option value="80">P600619 - Vishal Singh</option>
                                         <option value="27">P80319 - Vivekanand Adkatalwar</option>
                                     </select>
@@ -152,13 +197,13 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label" for="blood_status">Number Of Bags<span class="require-field">*</span></label>
                                 <div class="col-sm-8">
-                                    <input id="blood_status" class="form-control validate[required] text-input dispatch_blood_status_check" type="number" min="1" onkeypress="if(this.value.length==1) return false;" value="" name="blood_status">
+                                    <input id="blood_status" class="form-control validate[required] text-input dispatch_blood_status_check" type="number" min="1" onkeypress="if (this.value.length == 1) return false;" value="" name="blood_status">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label" for="">Charge (&#36;)<span class="require-field">*</span></label>
                                 <div class="col-sm-8">
-                                    <input id="" class="form-control validate[required]" min="0" type="number" onkeypress="if(this.value.length==8) return false;" step="0.01" value="" name="blood_charge">
+                                    <input id="" class="form-control validate[required]" min="0" type="number" onkeypress="if (this.value.length == 8) return false;" step="0.01" value="" name="blood_charge">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -171,7 +216,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <input type="hidden" id="_wpnonce" name="_wpnonce" value="fda0f20c1d" /><input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=bloodbank&amp;tab=adddispatchblood&amp;action=insert" />
+                            <input type="hidden" id="_wpnonce" name="_wpnonce" value="fda0f20c1d"/><input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=bloodbank&amp;tab=adddispatchblood&amp;action=insert"/>
                             <div class="form-group margin_bottom_5px">
                                 <label class="col-sm-2 control-label" for="last_donet_date">Date<span class="require-field">*</span></label>
                                 <div class="col-sm-8">
@@ -179,7 +224,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-offset-2 col-sm-8">
-                                <input type="submit" value="Save" name="save_dispatch_blood" class="btn btn-success" />
+                                <input type="submit" value="Save" name="save_dispatch_blood" class="btn btn-success"/>
                             </div>
                         </form>
                         <!--END Dispatch BLOOD FORM-->

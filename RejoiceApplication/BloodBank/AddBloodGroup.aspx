@@ -9,7 +9,7 @@
                 <meta http-equiv="refresh" content="0;URL=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/ShowErrorPage.php">
             </noscript>
             <script type="text/javascript">
-                jQuery(document).ready(function ($) {
+                jQuery(document).ready(function($) {
 
                     $('#blooddonor_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
                     $('#bloodgroup_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
@@ -21,14 +21,58 @@
                 });
             </script>
             <script type="text/javascript">
-                jQuery(document).ready(function () {
+                jQuery(document).ready(function() {
                     jQuery('#bloodgroup_list').DataTable({
                         "responsive": true,
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
                     jQuery('#blooddonor_list').DataTable({
                         "responsive": true,
-                        language: { "sEmptyTable": "No data available in table", "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries", "sInfoEmpty": "Showing 0 to 0 of 0 entries", "sInfoFiltered": "(filtered from _MAX_ total entries)", "sInfoPostFix": "", "sInfoThousands": ",", "sLengthMenu": "Show _MENU_ entries", "sLoadingRecords": "Loading...", "sProcessing": "Processing...", "sSearch": "Search:", "sZeroRecords": "No matching records found", "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": "Next", "sPrevious": "Previous" }, "oAria": { "sSortAscending": ": activate to sort column ascending", "sSortDescending": ": activate to sort column descending" } }
+                        language: {
+                            "sEmptyTable": "No data available in table",
+                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                            "sInfoPostFix": "",
+                            "sInfoThousands": ",",
+                            "sLengthMenu": "Show _MENU_ entries",
+                            "sLoadingRecords": "Loading...",
+                            "sProcessing": "Processing...",
+                            "sSearch": "Search:",
+                            "sZeroRecords": "No matching records found",
+                            "oPaginate": {
+                                "sFirst": "First",
+                                "sLast": "Last",
+                                "sNext": "Next",
+                                "sPrevious": "Previous"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": activate to sort column ascending",
+                                "sSortDescending": ": activate to sort column descending"
+                            }
+                        }
                     });
 
 
@@ -79,7 +123,7 @@
                         <form name="bloodgroup_form" action="" method="post" class="form-horizontal" id="bloodgroup_form">
                             <!--START BLOOD GROUP FORM-->
                             <input type="hidden" name="action" value="insert">
-                            <input type="hidden" name="bloodgroup_id" value="" />
+                            <input type="hidden" name="bloodgroup_id" value=""/>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label" for="bloodgruop">Blood Group<span class="require-field">*</span></label>
                                 <div class="col-sm-8">
@@ -96,15 +140,15 @@
                                     </select>
                                 </div>
                             </div>
-                            <input type="hidden" id="_wpnonce" name="_wpnonce" value="9758d0bbff" /><input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=bloodbank&amp;tab=addbloodgoup&amp;action=insert" />
+                            <input type="hidden" id="_wpnonce" name="_wpnonce" value="9758d0bbff"/><input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=bloodbank&amp;tab=addbloodgoup&amp;action=insert"/>
                             <div class="form-group margin_bottom_5px">
                                 <label class="col-sm-2 control-label" for="blood_status">Number Of Bags<span class="require-field">*</span></label>
                                 <div class="col-sm-8">
-                                    <input id="blood_status" class="form-control validate[required] text-input" min="0" type="number" onkeypress="if(this.value.length==4) return false;" value="" name="blood_status">
+                                    <input id="blood_status" class="form-control validate[required] text-input" min="0" type="number" onkeypress="if (this.value.length == 4) return false;" value="" name="blood_status">
                                 </div>
                             </div>
                             <div class="col-sm-offset-2 col-sm-8">
-                                <input type="submit" value="Save" name="save_bloodgroup" class="btn btn-success" />
+                                <input type="submit" value="Save" name="save_bloodgroup" class="btn btn-success"/>
                             </div>
                         </form>
                         <!--END BLOOD GROUP FORM-->

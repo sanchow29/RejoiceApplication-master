@@ -8,7 +8,7 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function($) {
     "use strict";
 
     $.fn.fileinputLocales['es'] = {
@@ -23,16 +23,20 @@
         uploadTitle: 'Subir archivos seleccionados',
         msgZoomTitle: 'Ver detalles',
         msgZoomModalHeading: 'Vista previa detallada',
-        msgSizeTooLarge: 'Archivo "{name}" (<b>{size} KB</b>) excede el tamaño máximo permitido de <b>{maxSize} KB</b>.',
+        msgSizeTooLarge:
+            'Archivo "{name}" (<b>{size} KB</b>) excede el tamaño máximo permitido de <b>{maxSize} KB</b>.',
         msgFilesTooLess: 'Debe seleccionar al menos <b>{n}</b> {files} a cargar.',
-        msgFilesTooMany: 'El número de archivos seleccionados a cargar <b>({n})</b> excede el límite máximo permitido de <b>{m}</b>.',
+        msgFilesTooMany:
+            'El número de archivos seleccionados a cargar <b>({n})</b> excede el límite máximo permitido de <b>{m}</b>.',
         msgFileNotFound: 'Archivo "{name}" no encontrado.',
-        msgFileSecured: 'No es posible acceder al archivo "{name}" porque estará siendo usado por otra aplicación o no tengamos permisos de lectura.',
+        msgFileSecured:
+            'No es posible acceder al archivo "{name}" porque estará siendo usado por otra aplicación o no tengamos permisos de lectura.',
         msgFileNotReadable: 'No es posible acceder al archivo "{name}".',
         msgFilePreviewAborted: 'Previsualización del archivo "{name}" cancelada.',
         msgFilePreviewError: 'Ocurrió un error mientras se leía el archivo "{name}".',
         msgInvalidFileType: 'Tipo de archivo no válido para "{name}". Sólo archivos "{types}" son permitidos.',
-        msgInvalidFileExtension: 'Extensión de archivo no válido para "{name}". Sólo archivos "{extensions}" son permitidos.',
+        msgInvalidFileExtension:
+            'Extensión de archivo no válido para "{name}". Sólo archivos "{extensions}" son permitidos.',
         msgUploadAborted: 'La carga de archivos se ha cancelado',
         msgValidationError: 'Error al subir archivo',
         msgLoading: 'Subiendo archivo {index} de {files} &hellip;',

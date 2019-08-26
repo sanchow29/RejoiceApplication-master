@@ -9,7 +9,7 @@
                 <meta http-equiv="refresh" content="0;URL=http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/ShowErrorPage.php">
             </noscript>
             <script type="text/javascript">
-                jQuery(document).ready(function () {
+                jQuery(document).ready(function() {
                     $('.request_time').timepicki(
                         {
                             show_meridian: false,
@@ -52,7 +52,7 @@
                         <a href="Ambulance.aspx">
                             <i class="fa fa-align-justify"></i>Request List
                         </a>
-                        
+
                     </li>
                     <li class="">
 
@@ -66,7 +66,7 @@
                         <a href="AmbulanceList.aspx">
                             <i class="fa fa-align-justify"></i>Ambulance List
                         </a>
-                        
+
                     </li>
 
                     <li class="active">
@@ -80,7 +80,7 @@
                 </ul>
                 <!-- END NAV TAB -->
                 <script type="text/javascript">
-                    jQuery(document).ready(function ($) {
+                    jQuery(document).ready(function($) {
                         $('#patient_form').validationEngine({ promptPosition: "bottomRight", maxErrorsPerField: 1 });
 
                     });
@@ -90,7 +90,7 @@
                     <form name="patient_form" action="" method="post" class="form-horizontal" id="patient_form" enctype="multipart/form-data">
                         <!-- START Ambulance FORM -->
                         <input type="hidden" name="action" value="insert">
-                        <input type="hidden" name="amb_id" value="" />
+                        <input type="hidden" name="amb_id" value=""/>
 
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="ambulance_id">Ambulance Id<span class="require-field">*</span></label>
@@ -101,7 +101,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="amb_Reg_number">Registration Number<span class="require-field">*</span></label>
                             <div class="col-sm-8">
-                                <input id="amb_Reg_number" class="form-control validate[required]" min="0" type="number" onkeypress="if(this.value.length==6) return false;" value="" name="registerd_no">
+                                <input id="amb_Reg_number" class="form-control validate[required]" min="0" type="number" onkeypress="if (this.value.length == 6) return false;" value="" name="registerd_no">
                             </div>
                         </div>
                         <div class="form-group">
@@ -133,12 +133,12 @@
                             <label class="col-sm-2 control-label" for="photo">Driver Image</label>
                             <div class="col-sm-2 margin_bottom_5px">
                                 <input type="text" id="hmgt_user_avatar_url" class="form-control" name="hmgt_user_avatar_url"
-                                    value="" readonly />
+                                       value="" readonly/>
                             </div>
                             <div class="col-sm-3">
                                 <input type="hidden" name="hidden_upload_user_avatar_image"
-                                    value="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/useriamge/patient.png">
-                                <input id="upload_user_avatar_image" name="upload_user_avatar_image" type="file" class="form-control file" value="Upload image" />
+                                       value="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/useriamge/patient.png">
+                                <input id="upload_user_avatar_image" name="upload_user_avatar_image" type="file" class="form-control file" value="Upload image"/>
                             </div>
                             <div class="clearfix"></div>
 
@@ -148,10 +148,10 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" id="_wpnonce" name="_wpnonce" value="09803c5dd0" />
-                        <input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=ambulance&amp;tab=add_ambulance&amp;action=insert" />
+                        <input type="hidden" id="_wpnonce" name="_wpnonce" value="09803c5dd0"/>
+                        <input type="hidden" name="_wp_http_referer" value="/mojoomla/extend/wordpress/hospital/?dashboard=user&amp;page=ambulance&amp;tab=add_ambulance&amp;action=insert"/>
                         <div class="col-sm-offset-2 col-sm-8">
-                            <input type="submit" value="Save" name="save_ambulance" class="btn btn-success" />
+                            <input type="submit" value="Save" name="save_ambulance" class="btn btn-success"/>
                         </div>
                     </form>
                     <!-- END Ambulance FROM-->
