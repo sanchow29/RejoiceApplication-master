@@ -161,13 +161,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="CreatePatient.aspx" />
     <Content Include="CreateUser.aspx" />
-    <Content Include="Dashboards\accountantdashboard.html" />
-    <Content Include="Dashboards\DoctorDashBoard.html" />
-    <Content Include="Dashboards\labarotistdashboard.html" />
-    <Content Include="Dashboards\nursedashboard.html" />
-    <Content Include="Dashboards\patientdashboard.html" />
-    <Content Include="Dashboards\pharmasistdashboard.html" />
-    <Content Include="Dashboards\supportstaffdashboard.html" />
+    <Content Include="Dashboards\AccountantDashboard.aspx" />
+    <Content Include="Dashboards\DoctorDashboard.aspx" />
+    <Content Include="Dashboards\LabarotistDashBoard.aspx" />
+    <Content Include="Dashboards\NurseDashboard.aspx" />
+    <Content Include="Dashboards\PatientDashboard.aspx" />
+    <Content Include="Dashboards\PharmasistDashboard.aspx" />
+    <Content Include="Dashboards\SupportStaff.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Details\Accountant.aspx" />
     <Content Include="Details\BedAllotment.aspx" />
@@ -193,7 +193,9 @@
     <Content Include="Images\dashboard\diagnosis-image.png" />
     <Content Include="Images\dashboard\doctor.png" />
     <Content Include="Images\dashboard\event.png" />
+    <Content Include="Images\dashboard\invoice.png" />
     <Content Include="Images\dashboard\laboratorist.png" />
+    <Content Include="Images\dashboard\medicine.png" />
     <Content Include="Images\dashboard\message.png" />
     <Content Include="Images\dashboard\notice-event-image.png" />
     <Content Include="Images\dashboard\notice1.png" />
@@ -505,6 +507,55 @@
     </Compile>
     <Compile Include="CreateUser.aspx.designer.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\AccountantDashboard.aspx.cs">
+      <DependentUpon>AccountantDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboards\AccountantDashboard.aspx.designer.cs">
+      <DependentUpon>AccountantDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\DoctorDashboard.aspx.cs">
+      <DependentUpon>DoctorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboards\DoctorDashboard.aspx.designer.cs">
+      <DependentUpon>DoctorDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\LabarotistDashBoard.aspx.cs">
+      <DependentUpon>LabarotistDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboards\LabarotistDashBoard.aspx.designer.cs">
+      <DependentUpon>LabarotistDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\NurseDashboard.aspx.cs">
+      <DependentUpon>NurseDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboards\NurseDashboard.aspx.designer.cs">
+      <DependentUpon>NurseDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\PatientDashboard.aspx.cs">
+      <DependentUpon>PatientDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboards\PatientDashboard.aspx.designer.cs">
+      <DependentUpon>PatientDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\PharmasistDashboard.aspx.cs">
+      <DependentUpon>PharmasistDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboards\PharmasistDashboard.aspx.designer.cs">
+      <DependentUpon>PharmasistDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\SupportStaff.aspx.cs">
+      <DependentUpon>SupportStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboards\SupportStaff.aspx.designer.cs">
+      <DependentUpon>SupportStaff.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
