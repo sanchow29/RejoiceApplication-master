@@ -77,7 +77,9 @@
                         <!--START PANEL BODY DIV-->
                         <div class="table-responsive">
                             <!--START TABLE RESPONSIVE DIV-->
-                            <table id="doctor_list" class="display dataTable " cellspacing="0" width="100%">
+                            
+                    <%--        <table id="doctor_list" class="display dataTable " cellspacing="0" width="100%">
+
                                 <!--START DoctorLIST TABLE-->
                                 <thead>
                                 <tr>
@@ -121,7 +123,17 @@
 
                                 </tr>
                                 </tbody>
-                            </table><!--END Doctor LIST TABLE-->
+                            </table>--%>
+                            
+                            <asp:GridView ID="gvCustomers" runat="server" AutoGenerateColumns="false" class="table table-striped"
+                                          Width="100%">
+                                <Columns>
+                                    <asp:BoundField DataField="UserFirstName" HeaderText="Customer ID" />
+                                    <asp:BoundField DataField="UserEducation" HeaderText="Name" />
+                                    <asp:BoundField DataField="UserDepartment" HeaderText="Country" />
+                                </Columns>
+                            </asp:GridView>
+                            <!--END Doctor LIST TABLE-->
                         </div><!--END TABLE RESPONSIVE DIV-->
                     </div><!--END PANEL BODY DIV-->
                 </div><!--END PANEL CONTENT DIV-->

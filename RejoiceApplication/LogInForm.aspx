@@ -89,7 +89,7 @@
                 <div class="col-md-12">
 
                     <asp:Button ID="LoginButton" runat="server" CommandName="Login"
-                                Text="Log In" OnClientClick="javascript:return validate();" ValidationGroup="Login1" CssClass="btn btn-primary form-control"/>
+                                Text="Log In" OnClientClick="javascript:return validate();" OnClick="LoginButton_Click" ValidationGroup="Login1" CssClass="btn btn-primary form-control"/>
 
                 </div>
 

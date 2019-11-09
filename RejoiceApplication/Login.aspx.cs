@@ -9,7 +9,7 @@ namespace RejoiceApplication
     public partial class Login : Page
     {
         private string MyConnection2 =
-            "server = 50.62.209.108;port=3306; user id = sarasa; database = hans;password=@dmin@2018";
+            "server = localhost; user id = sa; database = Rejoice;password=AclIndia@080419";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +23,7 @@ namespace RejoiceApplication
             if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(password))
                 try
                 {
-                    var Query = "select * from rejoice_UserDetails ;";
+                    var Query = "select * from UsersList ;";
                     var MyConn2 = new MySqlConnection(MyConnection2);
                     var MyCommand2 = new MySqlCommand(Query, MyConn2);
                     MyConn2.Open();
