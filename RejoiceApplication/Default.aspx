@@ -11,7 +11,7 @@
 
 <div class="row">
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../Inpatient.html">
+    <a href="Details/InPatientList.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body patient">
                 <div class="info-box-stats">
@@ -26,7 +26,7 @@
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../doctor.html">
+    <a href="Details/DoctorList.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body doctor">
                 <div class="info-box-stats">
@@ -40,7 +40,7 @@
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../Nurse.html">
+    <a href="Details/Nurse.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body nurse">
                 <div class="info-box-stats">
@@ -54,7 +54,7 @@
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../SupportStaff.html">
+    <a href="Details/SupportStaff.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body receptionist">
                 <div class="info-box-stats">
@@ -70,7 +70,7 @@
 
 
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../Message/message.html">
+    <a href="Message/Messages.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body message">
                 <div class="info-box-stats">
@@ -85,7 +85,7 @@
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../account.html">
+    <a href="Details/Accountant.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body setting">
                 <div class="info-box-stats">
@@ -99,20 +99,20 @@
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../appointments/appointment.html">
+    <a href="Appointments/Appoitnments.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body appointment">
                 <div class="info-box-stats">
                     <p class="counter">45</p>
                     <span class="info-box-title">Appointment</span>
                 </div>
-                <img src="../Images/dashboard/appointment-image.png" class="dashboard_background">
+                <img src="Images/dashboard/appointment-image.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../Prescription/prescription.html">
+    <a href="Prescription/Prescription.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body prescription">
                 <div class="info-box-stats">
@@ -120,13 +120,13 @@
 
                     <span class="info-box-title">Prescription</span>
                 </div>
-                <img src="../Images/dashboard/preseription-image.png" class="dashboard_background">
+                <img src="Images/dashboard/preseription-image.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../bedallotment.html">
+    <a href="Details/BedAllotment.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body assignbed">
                 <div class="info-box-stats">
@@ -138,13 +138,13 @@
                         Bed/Nurse
                     </span>
                 </div>
-                <img src="../Images/dashboard/assign-bed-image.png" class="dashboard_background">
+                <img src="Images/dashboard/assign-bed-image.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../Treatment/treatment.html">
+    <a href="Treatment/treatment.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body treatment">
                 <div class="info-box-stats">
@@ -152,13 +152,13 @@
 
                     <span class="info-box-title">Treatment</span>
                 </div>
-                <img src="../Images/dashboard/tretment-image.png" class="dashboard_background">
+                <img src="Images/dashboard/tretment-image.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../event.html">
+    <a href="Events.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body eventnotice">
                 <div class="info-box-stats">
@@ -172,13 +172,13 @@
                         Notice
                     </span>
                 </div>
-                <img src="../Images/dashboard/notice-event-image.png" class="dashboard_background">
+                <img src="Images/dashboard/notice-event-image.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../Reports/BedOccupationReport.html">
+    <a href="Reports/BedOccupation.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body operation_report">
                 <div class="info-box-stats">
@@ -186,13 +186,13 @@
 
                     <span class="info-box-title">Report</span>
                 </div>
-                <img src="../Images/dashboard/report.png" class="dashboard_background">
+                <img src="Images/dashboard/report.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../pharmacist.html">
+    <a href="Details/Pharmacist.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body pharmacist">
                 <div class="info-box-stats">
@@ -200,13 +200,13 @@
 
                     <span class="info-box-title">Pharmacist</span>
                 </div>
-                <img src="../Images/dashboard/pharmacist.png" class="dashboard_background">
+                <img src="Images/dashboard/pharmacist.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../laboratorystaff.html">
+    <a href="Details/LaboratoryStaff.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body laboratorist">
                 <div class="info-box-stats">
@@ -218,13 +218,13 @@
                         Staff
                     </span>
                 </div>
-                <img src="../Images/dashboard/laboratorist.png" class="dashboard_background">
+                <img src="Images/dashboard/laboratorist.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../Diagnosis/diagnosis.html">
+    <a href="Diagnosis/Diagnosis.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body diagnosis">
                 <div class="info-box-stats">
@@ -236,20 +236,20 @@
                         Report
                     </span>
                 </div>
-                <img src="../Images/dashboard/diagnosis-image.png" class="dashboard_background">
+                <img src="Images/dashboard/diagnosis-image.png" class="dashboard_background">
             </div>
         </div>
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-3">
-    <a href="../accountant.html">
+    <a href="Details/Accountant.aspx">
         <div class="panel info-box panel-white">
             <div class="panel-body accountant">
                 <div class="info-box-stats">
                     <p class="counter">2</p>
                     <span class="info-box-title">Accountant</span>
                 </div>
-                <img src="../Images/dashboard/accountant.png" class="dashboard_background">
+                <img src="Images/dashboard/accountant.png" class="dashboard_background">
             </div>
         </div>
     </a>

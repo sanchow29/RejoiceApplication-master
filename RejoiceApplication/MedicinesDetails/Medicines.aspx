@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Medicines6.aspx.cs" Inherits="RejoiceApplication.MedicinesDetails.Medicines6" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Medicines.aspx.cs" Inherits="RejoiceApplication.MedicinesDetails.Medicines6" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <div class="page-inner" style="min-height: 1050px;">
@@ -146,7 +146,7 @@
                 </tr>
                 </tfoot>
                 <tbody>
-                <tr>
+           <%--     <tr>
                     <td class="medicine_name">Pacimol</td>
                     <td class="category">auto test</td>
                     <td class="">003256</td>
@@ -164,119 +164,8 @@
                     <td class="action">
                         <a href="?dashboard=user&page=medicine&tab=addmedicine&action=edit&medicine_id=NA==" class="btn btn-info">Edit</a>
                     </td>
-                </tr>
-                <tr>
-                    <td class="medicine_name">Pacimol</td>
-                    <td class="category">auto test</td>
-                    <td class="">003256</td>
-                    <td class="">24</td>
-                    <td class="price">52</td>
-                    <td class="price">
-                        5 (%)
-
-                    </td>
-                    <td class="">
-                        GST-9
-                    </td>
-                    <td class="price">2020-12-01</td>
-                    <td class="medicine_qty">In</td>
-                    <td class="action">
-                        <a href="?dashboard=user&page=medicine&tab=addmedicine&action=edit&medicine_id=NQ==" class="btn btn-info">Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="medicine_name">bodrek</td>
-                    <td class="category">cate</td>
-                    <td class="">123</td>
-                    <td class="">3</td>
-                    <td class="price">1.12</td>
-                    <td class="price">
-                        -0.02 (%)
-
-                    </td>
-                    <td class="">
-                        VAT-5
-                    </td>
-                    <td class="price">2019-04-30</td>
-                    <td class="medicine_qty">In</td>
-                    <td class="action">
-                        <a href="?dashboard=user&page=medicine&tab=addmedicine&action=edit&medicine_id=Ng==" class="btn btn-info">Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="medicine_name">Ibuprofeno</td>
-                    <td class="category">cate</td>
-                    <td class="">5886</td>
-                    <td class="">230</td>
-                    <td class="price">20</td>
-                    <td class="price">
-                        -
-                    </td>
-                    <td class="">
-                        -
-                    </td>
-                    <td class="price">2019-09-11</td>
-                    <td class="medicine_qty">In</td>
-                    <td class="action">
-                        <a href="?dashboard=user&page=medicine&tab=addmedicine&action=edit&medicine_id=Nw==" class="btn btn-info">Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="medicine_name">abc</td>
-                    <td class="category">cate</td>
-                    <td class="">123</td>
-                    <td class="">1</td>
-                    <td class="price">1</td>
-                    <td class="price">
-                        -
-                    </td>
-                    <td class="">
-                        -
-                    </td>
-                    <td class="price">2019-05-31</td>
-                    <td class="medicine_qty">In</td>
-                    <td class="action">
-                        <a href="?dashboard=user&page=medicine&tab=addmedicine&action=edit&medicine_id=OA==" class="btn btn-info">Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="medicine_name">kkk</td>
-                    <td class="category">Injection</td>
-                    <td class="">kk</td>
-                    <td class="">10</td>
-                    <td class="price">10000</td>
-                    <td class="price">
-                        10 (<span>&#36;</span>)
-
-                    </td>
-                    <td class="">
-                        -
-                    </td>
-                    <td class="price">2019-07-31</td>
-                    <td class="medicine_qty">In</td>
-                    <td class="action">
-                        <a href="?dashboard=user&page=medicine&tab=addmedicine&action=edit&medicine_id=MTA=" class="btn btn-info">Edit</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="medicine_name">ewwe</td>
-                    <td class="category">auto test</td>
-                    <td class="">ewe</td>
-                    <td class="">121</td>
-                    <td class="price">11</td>
-                    <td class="price">
-                        21 (<span>&#36;</span>)
-
-                    </td>
-                    <td class="">
-                        -
-                    </td>
-                    <td class="price">2019-08-16</td>
-                    <td class="medicine_qty">In</td>
-                    <td class="action">
-                        <a href="?dashboard=user&page=medicine&tab=addmedicine&action=edit&medicine_id=MTQ=" class="btn btn-info">Edit</a>
-                    </td>
-                </tr>
+                </tr>--%>
+              
                 </tbody>
             </table>
             <!-- END Medicine LIST TABLE-->

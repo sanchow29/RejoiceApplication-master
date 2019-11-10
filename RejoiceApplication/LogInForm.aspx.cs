@@ -14,8 +14,6 @@ namespace RejoiceApplication
 {
     public partial class LogInForm : System.Web.UI.Page
     {
-        private string MyConnection2 =
-            "server = localhost; user id = sa; database = Rejoice;password=AclIndia@080419";
         protected void Page_Load(object sender, EventArgs e)
         {
 

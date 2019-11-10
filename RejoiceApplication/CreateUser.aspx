@@ -1,62 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateUser.aspx.cs" Inherits="RejoiceApplication.CreateUser" %>
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>
-        doctor,staff creation
-    </h1>
-    <script type="text/javascript">
-        function validate() {
-            var Fname = document.getElementById('<%= txtFname.ClientID %>').value;
-            var Lname = document.getElementById('<%= txtLname.ClientID %>').value;
-            var email = document.getElementById('<%= txtEmail.ClientID %>').value;
-            var userid = document.getElementById('<%= txtuserid.ClientID %>').value;
-            var pwd = document.getElementById('<%= txtPwd.ClientID %>').value;
-            var PhoneNo = document.getElementById('<%= txtPhoneNo.ClientID %>').value;
-            var EmailLimit = document.getElementById('<%= txtbldgroup.ClientID %>').value;
-            if (Fname == "") {
-                alert("please enter First Name!!");
-                document.getElementById('<%= txtFname.ClientID %>').focus();
-                return false;
-            }
-            if (Lname == "") {
-                alert("please enter Last Name!!");
-                document.getElementById('<%= txtLname.ClientID %>').focus();
-                return false;
-            }
-            if (email == "") {
-                alert("please enter Email!!");
-                document.getElementById('<%= txtEmail.ClientID %>').focus();
-                return false;
-            }
-            if (userid == "") {
-                alert("please enter UserId!!");
-                document.getElementById('<%= txtuserid.ClientID %>').focus();
-                return false;
-            }
-            if (pwd == "") {
-                alert("please enter Password!!");
-                document.getElementById('<%= txtPwd.ClientID %>').focus();
-                return false;
-            }
-            if (pwd.length < 8) {
-                alert("Password length should be from 8 to 20 !!");
-                document.getElementById('<%= txtPwd.ClientID %>').focus();
-                return false;
-            }
 
-            if (PhoneNo == "") {
-                alert("please enter Phone!!");
-                document.getElementById('<%= txtPhoneNo.ClientID %>').focus();
-                return false;
-            }
-            if (EmailLimit == "") {
-                alert("please enter Email Limit!!");
-                document.getElementById('<%= txtbldgroup.ClientID %>').focus();
-                return false;
-            }
-            return true;
-        }
-    </script>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-6">
@@ -172,4 +119,60 @@
             <%-- <asp:Button ID="btncreateuser" runat="server" CssClass="btn btn-primary" Text="Create User" OnClientClick="javascript:return validate()" OnClick="btncreateuser_Click" />--%>
         </div>
     </div>
+    <div runat="server">
+     <%--   <script type="text/javascript">
+        function validate() {
+            var Fname = document.getElementById('<%= txtFname.ClientID %>').value;
+            var Lname = document.getElementById('<%= txtLname.ClientID %>').value;
+            var email = document.getElementById('<%= txtEmail.ClientID %>').value;
+            var userid = document.getElementById('<%= txtuserid.ClientID %>').value;
+            var pwd = document.getElementById('<%= txtPwd.ClientID %>').value;
+            var PhoneNo = document.getElementById('<%= txtPhoneNo.ClientID %>').value;
+            var EmailLimit = document.getElementById('<%= txtbldgroup.ClientID %>').value;
+            if (Fname == "") {
+                alert("please enter First Name!!");
+                document.getElementById('<%= txtFname.ClientID %>').focus();
+                return false;
+            }
+            if (Lname == "") {
+                alert("please enter Last Name!!");
+                document.getElementById('<%= txtLname.ClientID %>').focus();
+                return false;
+            }
+            if (email == "") {
+                alert("please enter Email!!");
+                document.getElementById('<%= txtEmail.ClientID %>').focus();
+                return false;
+            }
+            if (userid == "") {
+                alert("please enter UserId!!");
+                document.getElementById('<%= txtuserid.ClientID %>').focus();
+                return false;
+            }
+            if (pwd == "") {
+                alert("please enter Password!!");
+                document.getElementById('<%= txtPwd.ClientID %>').focus();
+                return false;
+            }
+            if (pwd.length < 8) {
+                alert("Password length should be from 8 to 20 !!");
+                document.getElementById('<%= txtPwd.ClientID %>').focus();
+                return false;
+            }
+
+            if (PhoneNo == "") {
+                alert("please enter Phone!!");
+                document.getElementById('<%= txtPhoneNo.ClientID %>').focus();
+                return false;
+            }
+            if (EmailLimit == "") {
+                alert("please enter Email Limit!!");
+                document.getElementById('<%= txtbldgroup.ClientID %>').focus();
+                return false;
+            }
+            return true;
+        }
+    </script>--%>
+    </div>
+     
 </asp:Content>

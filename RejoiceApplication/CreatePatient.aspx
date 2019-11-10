@@ -323,38 +323,7 @@
 </div>
 </div>
 <!-- .entry-content -->
-<script type="text/javascript">
-    <;
-    br /  >  < b > Warning <  /;
-    b >  :;
-    include_once():;
-    http
-        : // wrapper is disabled in the server configuration by allow_url_include=0 in <b>/home/pushnift/public_html/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/settings.php</b> on line <b>2101</b><br />
 
-        ;
-    ;<
-    br /  >  < b > Warning <  /;
-    b >  :;
-    include_once(http;
-    : //pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/assets/js/lang/en.js): failed to open stream: no suitable wrapper could be found in <b>/home/pushnift/public_html/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/settings.php</b> on line <b>2101</b><br />
-    ;<
-    br /  >  < b > Warning <  /;
-    b >  :;
-    include_once():;
-    Failed;
-    opening;
-    'http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/assets/js/lang/en.js';
-    for inclusion(include_path = '.:/opt/alt/php72/usr/share/pear') in
-    ;<
-    b >
-        /home/pushnift / public_html / mojoomla / extend / wordpress / hospital / wp -
-        content / plugins / hospital -
-        management / settings.php <
-    ; /
-    b > on;
-    line < b > 2101 <  /;
-    b >  < br /  > ;
-</script>
 <link rel="stylesheet" id="wcwm-validate-css-css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/lib/validationEngine/css/validationEngine.jquery.css?ver=5.1.1" type="text/css" media="all"/>
 <link rel="stylesheet" id="hmgt-bootstrap-timepicker-css-css" href="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/css/datepicker.min.css?ver=5.1.1" type="text/css" media="all"/>
 <link rel="stylesheet" id="jquery-style-css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css?ver=5.1.1" type="text/css" media="all"/>

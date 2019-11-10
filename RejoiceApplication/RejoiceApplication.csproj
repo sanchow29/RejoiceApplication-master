@@ -91,6 +91,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -182,6 +183,41 @@
     <Content Include="Dashboards\PatientDashboard.aspx" />
     <Content Include="Dashboards\PharmasistDashboard.aspx" />
     <Content Include="Dashboards\SupportStaff.aspx" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.bootstrap.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.bootstrap.min.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.bootstrap4.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.bootstrap4.min.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.foundation.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.foundation.min.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.jqueryui.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.jqueryui.min.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.semanticui.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\dataTables.semanticui.min.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\jquery.dataTables.css" />
+    <Content Include="DataTables\DataTables-1.10.20\css\jquery.dataTables.min.css" />
+    <Content Include="DataTables\DataTables-1.10.20\images\sort_asc.png" />
+    <Content Include="DataTables\DataTables-1.10.20\images\sort_asc_disabled.png" />
+    <Content Include="DataTables\DataTables-1.10.20\images\sort_both.png" />
+    <Content Include="DataTables\DataTables-1.10.20\images\sort_desc.png" />
+    <Content Include="DataTables\DataTables-1.10.20\images\sort_desc_disabled.png" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.bootstrap.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.bootstrap.min.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.bootstrap4.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.bootstrap4.min.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.foundation.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.foundation.min.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.jqueryui.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.jqueryui.min.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.semanticui.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\dataTables.semanticui.min.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\jquery.dataTables.js" />
+    <Content Include="DataTables\DataTables-1.10.20\js\jquery.dataTables.min.js" />
+    <Content Include="DataTables\datatables.css" />
+    <Content Include="DataTables\datatables.js" />
+    <Content Include="DataTables\datatables.min.css" />
+    <Content Include="DataTables\datatables.min.js" />
+    <Content Include="DataTables\jQuery-3.3.1\jquery-3.3.1.js" />
+    <Content Include="DataTables\jQuery-3.3.1\jquery-3.3.1.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="Details\Accountant.aspx" />
     <Content Include="Details\BedAllotment.aspx" />
@@ -197,6 +233,7 @@
     <Content Include="Diagnosis\editdiagonisis.html" />
     <Content Include="Events.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="GetService.asmx" />
     <Content Include="Global.asax" />
     <Content Include="Images\dashboard\accountant.png" />
     <Content Include="Images\dashboard\appointment-image.png" />
@@ -250,7 +287,7 @@
     <Content Include="MedicinesDetails\DispatchMedicines.aspx" />
     <Content Include="MedicinesDetails\editdispatchmedicine.html" />
     <Content Include="MedicinesDetails\editmedicine.html" />
-    <Content Include="MedicinesDetails\Medicines6.aspx" />
+    <Content Include="MedicinesDetails\Medicines.aspx" />
     <Content Include="MedicinesDetails\PharamcyBilling.aspx" />
     <Content Include="Message\ComposeMessage.aspx" />
     <Content Include="Message\Messages.aspx" />
@@ -509,6 +546,7 @@
     <Compile Include="BloodBank\DispatchBlood.aspx.designer.cs">
       <DependentUpon>DispatchBlood.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Class\GetDetails.cs" />
     <Compile Include="CreatePatient.aspx.cs">
       <DependentUpon>CreatePatient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -663,6 +701,10 @@
     <Compile Include="Events.aspx.designer.cs">
       <DependentUpon>Events.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GetService.asmx.cs">
+      <DependentUpon>GetService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -750,12 +792,12 @@
     <Compile Include="MedicinesDetails\DispatchMedicines.aspx.designer.cs">
       <DependentUpon>DispatchMedicines.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MedicinesDetails\Medicines6.aspx.cs">
-      <DependentUpon>Medicines6.aspx</DependentUpon>
+    <Compile Include="MedicinesDetails\Medicines.aspx.cs">
+      <DependentUpon>Medicines.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MedicinesDetails\Medicines6.aspx.designer.cs">
-      <DependentUpon>Medicines6.aspx</DependentUpon>
+    <Compile Include="MedicinesDetails\Medicines.aspx.designer.cs">
+      <DependentUpon>Medicines.aspx</DependentUpon>
     </Compile>
     <Compile Include="MedicinesDetails\PharamcyBilling.aspx.cs">
       <DependentUpon>PharamcyBilling.aspx</DependentUpon>

@@ -13,7 +13,6 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/sweetalert.css" runat="server"/>
     <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/example.css" runat="server"/>
     <link rel="stylesheet" type="text/css" href="~/Scripts/NewScripts/bootstrap-select.css" runat="server"/>
@@ -85,411 +84,6 @@
                         "patient_name": "Ashish Ranjan(P20319)",
                         "doctor_name": "Fernando Therrien",
                         "appointment_time": "10:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-03-23 20:00:00",
-                        "end": "2019-03-23 20:15:00",
-                        "patient_name": "Ashish Ranjan(P20319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "08:00PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-03-22 14:00:00",
-                        "end": "2019-03-22 14:15:00",
-                        "patient_name": "Anna Sanz(P50319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "02:00PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-03-18 10:45:00",
-                        "end": "2019-03-18 11:00:00",
-                        "patient_name": "Mario Rossi(P40319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:45AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-03-22 16:45:00",
-                        "end": "2019-03-22 17:00:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "04:45PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-03-30 10:00:00",
-                        "end": "2019-03-30 10:15:00",
-                        "patient_name": "Ashish Ranjan(P20319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-04-01 10:30:00",
-                        "end": "2019-04-01 10:45:00",
-                        "patient_name": "muhammed shameem(P100419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:30AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-04-01 17:00:00",
-                        "end": "2019-04-01 17:15:00",
-                        "patient_name": "muhammed shameem(P100419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "05:00PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-04-18 10:30:00",
-                        "end": "2019-04-18 10:45:00",
-                        "patient_name": "Mario Rossi(P40319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:30AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-04-22 10:30:00",
-                        "end": "2019-04-22 10:45:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:30AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-04-22 10:00:00",
-                        "end": "2019-04-22 10:15:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-04-22 10:15:00",
-                        "end": "2019-04-22 10:30:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:15AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-05-13 11:45:00",
-                        "end": "2019-05-13 12:00:00",
-                        "patient_name": "R R(P370519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "11:45AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-05-13 11:00:00",
-                        "end": "2019-05-13 11:15:00",
-                        "patient_name": "Abhijit Borgohain(P390519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "11:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-05-14 10:00:00",
-                        "end": "2019-05-14 10:15:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-05-14 10:15:00",
-                        "end": "2019-05-14 10:30:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:15AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-05-13 10:15:00",
-                        "end": "2019-05-13 10:30:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:15AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-05-20 14:15:00",
-                        "end": "2019-05-20 14:30:00",
-                        "patient_name": "R R(P370519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "02:15PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-05-20 11:00:00",
-                        "end": "2019-05-20 11:15:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "11:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-05-20 10:45:00",
-                        "end": "2019-05-20 11:00:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:45AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-06-03 10:30:00",
-                        "end": "2019-06-03 10:45:00",
-                        "patient_name": "R R(P370519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:30AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-06-03 11:15:00",
-                        "end": "2019-06-03 11:30:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "11:15AM "
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-06-24 11:45:00",
-                        "end": "2019-06-24 12:00:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "11:45AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-06-17 10:15:00",
-                        "end": "2019-06-17 10:30:00",
-                        "patient_name": "claudiu ciubotaru(P570619)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:15AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-06-24 11:00:00",
-                        "end": "2019-06-24 11:15:00",
-                        "patient_name": "R R(P370519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "11:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-06-24 10:15:00",
-                        "end": "2019-06-24 10:30:00",
-                        "patient_name": "aaaa aaa(P340519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:15AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-06-24 10:45:00",
-                        "end": "2019-06-24 11:00:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:45AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-10 10:00:00",
-                        "end": "2019-07-10 10:15:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-17 10:15:00",
-                        "end": "2019-07-17 10:30:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:15AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-17 10:30:00",
-                        "end": "2019-07-17 10:45:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:30AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-12 11:15:00",
-                        "end": "2019-07-12 11:30:00",
-                        "patient_name": "Jose Figueroa(P10319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "11:15AM "
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-12 20:00:00",
-                        "end": "2019-07-12 20:15:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "08:00PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-25 16:45:00",
-                        "end": "2019-07-25 17:00:00",
-                        "patient_name": "AS as(P180419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "04:45PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-31 10:15:00",
-                        "end": "2019-07-31 10:30:00",
-                        "patient_name": "Apj Kalam(P440519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:15AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-18 10:30:00",
-                        "end": "2019-07-18 10:45:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:30AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-18 14:30:00",
-                        "end": "2019-07-18 14:45:00",
-                        "patient_name": "Ashish Ranjan(P20319)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "02:30PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-07-29 10:45:00",
-                        "end": "2019-07-29 11:00:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:45AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-08-05 10:30:00",
-                        "end": "2019-08-05 10:45:00",
-                        "patient_name": "aaaa aaa(P340519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:30AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-08-05 10:00:00",
-                        "end": "2019-08-05 10:15:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-08-05 10:15:00",
-                        "end": "2019-08-05 10:30:00",
-                        "patient_name": "R R(P370519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:15AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-08-08 10:00:00",
-                        "end": "2019-08-08 10:15:00",
-                        "patient_name": "Abhijit Borgohain(P390519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-08-09 18:00:00",
-                        "end": "2019-08-09 18:15:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "06:00PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-08-09 18:15:00",
-                        "end": "2019-08-09 18:30:00",
-                        "patient_name": "R R(P370519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "06:15PM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-08-19 10:00:00",
-                        "end": "2019-08-19 10:15:00",
-                        "patient_name": "aaaa aaa(P340519)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "10:00AM"
-                    },
-                    {
-                        "type": "appointment",
-                        "title": "Detail",
-                        "start": "2019-08-20 12:45:00",
-                        "end": "2019-08-20 13:00:00",
-                        "patient_name": "Nina Cadela(P160419)",
-                        "doctor_name": "Fernando Therrien",
-                        "appointment_time": "12:45PM"
-                    },
-                    {
-                        "type": "event",
-                        "title": "event 1",
-                        "start": "2019-03-26",
-                        "end": "2019-03-31",
-                        "event_for": "Patient,Doctor,Nurse,Support Staff,Pharmacist,Laboratory Staff,Accountant",
-                        "event_comment": "event 1",
-                        "backgroundColor": "green"
                     },
                     {
                         "type": "notice",
@@ -693,199 +287,206 @@
 <div class="container-fluid">
 <!-- start container fluid div-->
 <div class="row">
-    <!-- start row div-->
-    <div class="col-sm-2 nopadding hospital_left">
-        <!-- start menu div-->
-        <!--  Left Side -->
-        <ul class="nav nav-pills nav-stacked">
-            <li>
-                <a href="Default.aspx">
-                    <span class="icone">
-                        <img src="../../Images/home.png"/>
-                    </span><span class="title">Home</span>
-                </a>
-            </li>
-            <li class="active">
-                <a href="DoctorDashBoard.html">
-                    <span class="icone">
-                        <img src="../../Images/dashboard.png"/>
-                    </span><span class="title">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/DoctorList.aspx" class="left-tooltip" data-tooltip="Doctor" title="Doctor">
-                    <span class="icone">
-                        <img src="../../Images/doctoricon.png"/>
-                    </span><span class="title">Doctor</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/OutPatientList.aspx" class="left-tooltip" data-tooltip="Outpatient" title="Outpatient">
-                    <span class="icone">
-                        <img src="../Images/outpatient.png"/>
-                    </span><span class="title">Outpatient</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/InPatientList.aspx" class="left-tooltip" data-tooltip="Inpatient" title="Inpatient">
-                    <span class="icone">
-                        <img src="../Images/inPatient.png"/>
-                    </span><span class="title">Inpatient</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/Nurse.aspx" class="left-tooltip" data-tooltip="Nurse" title="Nurse">
-                    <span class="icone">
-                        <img src="../Images/Nurse.png"/>
-                    </span><span class="title">Nurse</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/SupportStaff.aspx" class="left-tooltip" data-tooltip="Support Staff" title="Support Staff">
-                    <span class="icone">
-                        <img src="../Images/support.png"/>
-                    </span><span class="title">Support Staff</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/Pharmacist.aspx" class="left-tooltip" data-tooltip="Pharmacist" title="Pharmacist">
-                    <span class="icone">
-                        <img src="../Images/Pharmacist.png"/>
-                    </span><span class="title">Pharmacist</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/LaboratoryStaff.aspx" class="left-tooltip" data-tooltip="Laboratory Staff" title="Laboratory Staff">
-                    <span class="icone">
-                        <img src="../Images/Laboratorist.png"/>
-                    </span><span class="title">Laboratory Staff</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/Accountant.aspx" class="left-tooltip" data-tooltip="Accountant" title="Accountant">
-                    <span class="icone">
-                        <img src="../Images/Accountant.png"/>
-                    </span><span class="title">Accountant</span>
-                </a>
-            </li>
-            <li>
-                <a href="../MedicinesDetails/Medicines6.aspx" class="left-tooltip" data-tooltip="Medicine" title="Medicine">
-                    <span class="icone">
-                        <img src="../Images/Medicine.png"/>
-                    </span><span class="title">Medicine</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Treatment/Treatment.aspx" class="left-tooltip" data-tooltip="Treatment" title="Treatment">
-                    <span class="icone">
-                        <img src="../Images/Treatment.png"/>
-                    </span><span class="title">Treatment</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Prescription/Prescription.aspx" class="left-tooltip" data-tooltip="Prescription" title="Prescription">
-                    <span class="icone">
-                        <img src="../Images/Prescription.png"/>
-                    </span><span class="title">Prescription</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Details/BedAllotment.aspx" class="left-tooltip" data-tooltip="Assign Bed-Nurse" title="Assign Bed-Nurse">
-                    <span class="icone">
-                        <img src="../Images/Assign--Bed-nurse.png"/>
-                    </span><span class="title">Assign Bed-Nurse</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Operation/OperationList.aspx" class="left-tooltip" data-tooltip="Operation List" title="Operation List">
-                    <span class="icone">
-                        <img src="../Images/Operation-List.png"/>
-                    </span><span class="title">Operation List</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Diagnosis/Diagnosis.aspx" class="left-tooltip" data-tooltip="Diagnosis" title="Diagnosis">
-                    <span class="icone">
-                        <img src="../Images/Diagnosis-Report.png"/>
-                    </span><span class="title">Diagnosis</span>
-                </a>
-            </li>
-            <li>
-                <a href="../BloodBank/BloodBankList.aspx" class="left-tooltip" data-tooltip="Blood Bank" title="Blood Bank">
-                    <span class="icone">
-                        <img src="../Images/Blood-Bank.png"/>
-                    </span><span class="title">Blood Bank</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Appointments/Appoitnments.aspx" class="left-tooltip" data-tooltip="Appointment" title="Appointment">
-                    <span class="icone">
-                        <img src="../Images/Appointment.png"/>
-                    </span><span class="title">Appointment</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Invoice/Invoice.aspx" class="left-tooltip" data-tooltip="Invoice" title="Invoice">
-                    <span class="icone">
-                        <img src="../Images/payment.png"/>
-                    </span><span class="title">Invoice</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Events.aspx" class="left-tooltip" data-tooltip="Event" title="Event">
-                    <span class="icone">
-                        <img src="../Images/notice.png"/>
-                    </span><span class="title">Event</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Message/Messages.aspx" class="left-tooltip" data-tooltip="Message" title="Message">
-                    <span class="icone">
-                        <img src="../Images/message.png"/>
-                    </span><span class="title">Message</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Ambulance/Ambulance.aspx" class="left-tooltip" data-tooltip="Ambulance" title="Ambulance">
-                    <span class="icone">
-                        <img src="../Images/Ambulance.png"/>
-                    </span><span class="title">Ambulance</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Instrument/InstrumentList.aspx" class="left-tooltip" data-tooltip="instrument" title="instrument">
-                    <span class="icone">
-                        <img src="../Images/Instrument.png"/>
-                    </span><span class="title">Instrument</span>
-                </a>
-            </li>
-            <li>
-                <a href="../Reports/BedOccupation.aspx" class="left-tooltip" data-tooltip="Report" title="Report">
-                    <span class="icone">
-                        <img src="../Images/Report.png"/>
-                    </span><span class="title">Report</span>
-                </a>
-            </li>
-            <li>
-                <a href="Account.aspx" class="left-tooltip" data-tooltip="Account" title="Account">
-                    <span class="icone">
-                        <img src="../Images/account.png"/>
-                    </span><span class="title">Account</span>
-                </a>
-            </li>
-            <li >
-                <a href="CreatePatient.aspx">
-                    <span class="icone">
-                        <img src="../Images/dashboard.png"/>
-                    </span><span class="title">CreatePatient</span>
-                </a>
-            </li>
-        </ul>
-    </div><!-- end menu div-->
-    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+<!-- start row div-->
+<div class="col-sm-2 nopadding hospital_left">
+    <!-- start menu div-->
+    <!--  Left Side -->
+    <ul class="nav nav-pills nav-stacked">
+        <li>
+            <a href="../Default.aspx">
+                <span class="icone">
+                    <img src="../../Images/home.png"/>
+                </span><span class="title">Home</span>
+            </a>
+        </li>
+        <li >
+            <a href="../Default.aspx">
+                <span class="icone">
+                    <img src="../../Images/dashboard.png"/>
+                </span><span class="title">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/DoctorList.aspx" class="left-tooltip" data-tooltip="Doctor" title="Doctor">
+                <span class="icone">
+                    <img src="../../Images/doctoricon.png"/>
+                </span><span class="title">Doctor</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/OutPatientList.aspx" class="left-tooltip" data-tooltip="Outpatient" title="Outpatient">
+                <span class="icone">
+                    <img src="../Images/outpatient.png"/>
+                </span><span class="title">Outpatient</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/InPatientList.aspx" class="left-tooltip" data-tooltip="Inpatient" title="Inpatient">
+                <span class="icone">
+                    <img src="../Images/inPatient.png"/>
+                </span><span class="title">Inpatient</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/Nurse.aspx" class="left-tooltip" data-tooltip="Nurse" title="Nurse">
+                <span class="icone">
+                    <img src="../Images/Nurse.png"/>
+                </span><span class="title">Nurse</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/SupportStaff.aspx" class="left-tooltip" data-tooltip="Support Staff" title="Support Staff">
+                <span class="icone">
+                    <img src="../Images/support.png"/>
+                </span><span class="title">Support Staff</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/Pharmacist.aspx" class="left-tooltip" data-tooltip="Pharmacist" title="Pharmacist">
+                <span class="icone">
+                    <img src="../Images/Pharmacist.png"/>
+                </span><span class="title">Pharmacist</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/LaboratoryStaff.aspx" class="left-tooltip" data-tooltip="Laboratory Staff" title="Laboratory Staff">
+                <span class="icone">
+                    <img src="../Images/Laboratorist.png"/>
+                </span><span class="title">Laboratory Staff</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/Accountant.aspx" class="left-tooltip" data-tooltip="Accountant" title="Accountant">
+                <span class="icone">
+                    <img src="../Images/Accountant.png"/>
+                </span><span class="title">Accountant</span>
+            </a>
+        </li>
+        <li>
+            <a href="../MedicinesDetails/Medicines.aspx" class="left-tooltip" data-tooltip="Medicine" title="Medicine">
+                <span class="icone">
+                    <img src="../Images/Medicine.png"/>
+                </span><span class="title">Medicine</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Treatment/Treatment.aspx" class="left-tooltip" data-tooltip="Treatment" title="Treatment">
+                <span class="icone">
+                    <img src="../Images/Treatment.png"/>
+                </span><span class="title">Treatment</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Prescription/Prescription.aspx" class="left-tooltip" data-tooltip="Prescription" title="Prescription">
+                <span class="icone">
+                    <img src="../Images/Prescription.png"/>
+                </span><span class="title">Prescription</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Details/BedAllotment.aspx" class="left-tooltip" data-tooltip="Assign Bed-Nurse" title="Assign Bed-Nurse">
+                <span class="icone">
+                    <img src="../Images/Assign--Bed-nurse.png"/>
+                </span><span class="title">Assign Bed-Nurse</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Operation/OperationList.aspx" class="left-tooltip" data-tooltip="Operation List" title="Operation List">
+                <span class="icone">
+                    <img src="../Images/Operation-List.png"/>
+                </span><span class="title">Operation List</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Diagnosis/Diagnosis.aspx" class="left-tooltip" data-tooltip="Diagnosis" title="Diagnosis">
+                <span class="icone">
+                    <img src="../Images/Diagnosis-Report.png"/>
+                </span><span class="title">Diagnosis</span>
+            </a>
+        </li>
+        <li>
+            <a href="../BloodBank/BloodBankList.aspx" class="left-tooltip" data-tooltip="Blood Bank" title="Blood Bank">
+                <span class="icone">
+                    <img src="../Images/Blood-Bank.png"/>
+                </span><span class="title">Blood Bank</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Appointments/Appoitnments.aspx" class="left-tooltip" data-tooltip="Appointment" title="Appointment">
+                <span class="icone">
+                    <img src="../Images/Appointment.png"/>
+                </span><span class="title">Appointment</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Invoice/Invoice.aspx" class="left-tooltip" data-tooltip="Invoice" title="Invoice">
+                <span class="icone">
+                    <img src="../Images/payment.png"/>
+                </span><span class="title">Invoice</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Events.aspx" class="left-tooltip" data-tooltip="Event" title="Event">
+                <span class="icone">
+                    <img src="../Images/notice.png"/>
+                </span><span class="title">Event</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Message/Messages.aspx" class="left-tooltip" data-tooltip="Message" title="Message">
+                <span class="icone">
+                    <img src="../Images/message.png"/>
+                </span><span class="title">Message</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Ambulance/Ambulance.aspx" class="left-tooltip" data-tooltip="Ambulance" title="Ambulance">
+                <span class="icone">
+                    <img src="../Images/Ambulance.png"/>
+                </span><span class="title">Ambulance</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Instrument/InstrumentList.aspx" class="left-tooltip" data-tooltip="instrument" title="instrument">
+                <span class="icone">
+                    <img src="../Images/Instrument.png"/>
+                </span><span class="title">Instrument</span>
+            </a>
+        </li>
+        <li>
+            <a href="../Reports/BedOccupation.aspx" class="left-tooltip" data-tooltip="Report" title="Report">
+                <span class="icone">
+                    <img src="../Images/Report.png"/>
+                </span><span class="title">Report</span>
+            </a>
+        </li>
+        <li>
+            <a href="Account.aspx" class="left-tooltip" data-tooltip="Account" title="Account">
+                <span class="icone">
+                    <img src="../Images/account.png"/>
+                </span><span class="title">Account</span>
+            </a>
+        </li>
+        <li >
+            <a href="CreatePatient.aspx">
+                <span class="icone">
+                    <img src="../Images/dashboard.png"/>
+                </span><span class="title">CreatePatient</span>
+            </a>
+        </li>
+        <li >
+            <a href="CreateUser.aspx">
+                <span class="icone">
+                    <img src="../Images/dashboard.png"/>
+                </span><span class="title">CreateUser</span>
+            </a>
+        </li>
+    </ul>
+</div><!-- end menu div-->
+<asp:ContentPlaceHolder ID="MainContent" runat="server">
 
 
-    </asp:ContentPlaceHolder>
+</asp:ContentPlaceHolder>
 
 </div><!-- end row div-->
 <div class="row">
