@@ -48,5 +48,35 @@ namespace RejoiceApplication
             var js = new JavaScriptSerializer();
             Context.Response.Write(js.Serialize(doctorsList));
         }
+
+        [WebMethod]
+        public void GetMedicinesList()
+        {
+            var cs = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+            var medicinesList = new List<GetMedicinesList>();
+            using (var con = new SqlConnection(cs))
+            {
+                var cmd = new SqlCommand("SPGetMedicineDetails", con) { CommandType = CommandType.StoredProcedure };
+                con.Open();
+                var dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    var medicines = new GetMedicinesList
+                    {
+                        MedicineName =dr[0].ToString(),
+                        MedicineDescription = dr[1].ToString(),
+                        MedicineType = dr[2].ToString(),
+                        Quantity = dr[3].ToString(),
+                        Manufacture = dr[4].ToString(),
+                        MRP = dr[5].ToString(),
+                        DiscountPrice = dr[6].ToString(),
+                        ExpiryDate = Convert.ToDateTime(dr[7].ToString())
+                    };
+                    medicinesList.Add(medicines);
+                }
+            }
+            var js = new JavaScriptSerializer();
+            Context.Response.Write(js.Serialize(medicinesList));
+        }
     }
 }

@@ -16,4 +16,20 @@ namespace RejoiceApplication.Class
         public string UserPhoneNumber { get; set; }
         public DateTime UserDOB { get; set; }
     }
+
+    public class GetMedicinesList
+    {
+        public string MedicineName { get; set; }
+        public string MedicineDescription { get; set; }
+        public string MedicineType { get; set; }
+        public string Quantity { get; set; }
+        public string Code { get; set; }
+        public string BatchNumber { get; set; }
+        public string Manufacture { get; set; }
+        public DateTime ExpiryDate { get; set; }
+        public string Composition { get; set; }
+        public string Dosage { get; set; }
+        public string DiscountPrice { get; set; }
+        public string MRP { get; set; }
+    }
 }

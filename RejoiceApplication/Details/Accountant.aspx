@@ -109,23 +109,7 @@
                                     <td class="email">abc@gmail.com</td>
                                     <td class="action"></td>
 
-                                </tr>
-                                <tr>
-                                    <td class="user_image">
-                                        <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/uploads/2019/03/driver-old.jpg" height="50px" width="50px" class="img-circle"/>
-                                    </td>
-                                    <td class="name">
-                                        <a href="#">accountantds accountant</a>
-                                    </td>
-                                    <!-- <td class="department">Hospital Management Login Page</td> -->
-                                    <td class="phone">
-                                        7668890099
-                                    </td>
-
-                                    <td class="email">accountantss@gmail.com</td>
-                                    <td class="action"></td>
-
-                                </tr>
+                                </tr>                                
 
                                 </tbody>
                             </table>--%>

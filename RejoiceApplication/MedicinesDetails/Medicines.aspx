@@ -82,7 +82,7 @@
 <ul class="nav nav-tabs panel_tabs" role="tablist">
 
     <li class="active">
-        <a href="Medicines6.aspx">
+        <a href="Medicines.aspx">
             <i class="fa fa-align-justify"></i>Medicine List
         </a>
 
