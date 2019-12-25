@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>LoginForm</title>
-       <style type="text/css">
+    <style type="text/css">
         #div_loginContainer {
             border: 2px solid grey;
             border-radius: 5px;

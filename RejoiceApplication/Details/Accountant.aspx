@@ -18,41 +18,54 @@
             </div>
             <!-- End POP-UP Code -->
             <script type="text/javascript">
-                jQuery(document).ready(function() {
-                    jQuery('#accountant_list').DataTable({
-                        "responsive": true,
-                        "order": [[1, "asc"]],
-                        "aoColumns": [
-                            { "bSortable": false },
-                            { "bSortable": true },
-                            { "bSortable": true },
-                            { "bSortable": true },
-                            { "bSortable": false },
-                        ],
-                        language: {
-                            "sEmptyTable": "No data available in table",
-                            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
-                            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
-                            "sInfoFiltered": "(filtered from _MAX_ total entries)",
-                            "sInfoPostFix": "",
-                            "sInfoThousands": ",",
-                            "sLengthMenu": "Show _MENU_ entries",
-                            "sLoadingRecords": "Loading...",
-                            "sProcessing": "Processing...",
-                            "sSearch": "Search:",
-                            "sZeroRecords": "No matching records found",
-                            "oPaginate": {
-                                "sFirst": "First",
-                                "sLast": "Last",
-                                "sNext": "Next",
-                                "sPrevious": "Previous"
-                            },
-                            "oAria": {
-                                "sSortAscending": ": activate to sort column ascending",
-                                "sSortDescending": ": activate to sort column descending"
-                            }
+                $(document).ready(function() {
+                    $.ajax({
+                        type: "POST",
+                        dataType: "json",
+                        url: "../GetService.asmx/GetAdminList",
+                        success: function(data) {
+                            var datatableVariable = $('#accountant_list').DataTable({
+                                data: data,
+                                columns: [
+                                    { 'data': 'UserId' },
+                                    { 'data': 'UserFirstName' },
+                                    { 'data': 'UserLastName' },
+                                    { 'data': 'UserDepartment' },
+                                    { 'data': 'UserGender' },
+                                    { 'data': 'UserEmailId' },
+                                    { 'data': 'UserPhoneNumber' },
+                                    {
+                                        'data': 'UserDob',
+                                        'render': function(date) {
+                                            var date = new Date(parseInt(date.substr(6)));
+                                            var month = date.getMonth() + 1;
+                                            return date.getDate() + "/" + month + "/" + date.getFullYear();
+                                        }
+                                    }
+                                ]
+                            });
+                            $('#accountant_list tfoot th').each(function() {
+                                var placeHolderTitle = $('#accountant_list thead th').eq($(this).index()).text();
+                                $(this).html(
+                                    '<input type="text" class="form-control input input-sm" placeholder = "Search ' +
+                                    placeHolderTitle +
+                                    '" />');
+                            });
+                            datatableVariable.columns().every(function() {
+                                var column = this;
+                                $(this.footer()).find('input').on('keyup change',
+                                    function() {
+                                        column.search(this.value).draw();
+                                    });
+                            });
+                            $('.showHide').on('click',
+                                function() {
+                                    var tableColumn = datatableVariable.column($(this).attr('data-columnindex'));
+                                    tableColumn.visible(!tableColumn.visible());
+                                });
                         }
                     });
+
                 });
             </script>
             <div class="panel-body panel-white">
@@ -72,55 +85,34 @@
                     <div class="panel-body">
                         <div class="table-responsive">
                             <!-- START TABLE RESPONSIVE DIV -->
-                            <%--<table id="accountant_list" class="display dataTable " cellspacing="0" width="100%">
+                            <table id="accountant_list" class="display dataTable " cellspacing="0" width="100%">
                                 <!-- START ACCOUNT LIST TABLE -->
                                 <thead>
                                 <tr>
-                                    <th style="width: 50px; height: 50px;">Photo</th>
-                                    <th>Accountant Name</th>
-                                    <th>Mobile Number</th>
-                                    <th>Accountant Email</th>
-                                    <th>Action</th>
-
+                                    <th>UserID</th>
+                                    <th>UserFirstName</th>
+                                    <th>UserLastName</th>
+                                    <th>UserDepartment</th>
+                                    <th>UserGender</th>
+                                    <th>UserEmailId</th>
+                                    <th>UserPhoneNumber</th>
+                                    <th>UserDOB</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th>Photo</th>
-                                    <th>Accountant Name</th>
-                                    <th>Mobile Number</th>
-                                    <th>Accountant Email</th>
-                                    <th>Action</th>
+                                    <th>UserID</th>
+                                    <th>UserFirstName</th>
+                                    <th>UserLastName</th>
+                                    <th>UserDepartment</th>
+                                    <th>UserGender</th>
+                                    <th>UserEmailId</th>
+                                    <th>UserPhoneNumber</th>
+                                    <th>UserDOB</th>
                                 </tr>
                                 </tfoot>
-                                <tbody>
-                                <tr>
-                                    <td class="user_image">
-                                        <img src="http://pushnifty.com/mojoomla/extend/wordpress/hospital/wp-content/plugins/hospital-management/assets/images/useriamge/nurse.png" height="50px" width="50px" class="img-circle"/>
-                                    </td>
-                                    <td class="name">
-                                        <a href="#">Joanna Christopher</a>
-                                    </td>
-                                    <!-- <td class="department">Hospital Management Login Page</td> -->
-                                    <td class="phone">
-                                        78788787
-                                    </td>
+                            </table>
 
-                                    <td class="email">abc@gmail.com</td>
-                                    <td class="action"></td>
-
-                                </tr>                                
-
-                                </tbody>
-                            </table>--%>
-                            <asp:GridView ID="gvCustomers" runat="server" AutoGenerateColumns="false" class="table table-striped"
-                                          Width="100%">
-                                <Columns>
-                                    <asp:BoundField DataField="UserFirstName" HeaderText="Customer ID" />
-                                    <asp:BoundField DataField="UserEducation" HeaderText="Name" />
-                                    <asp:BoundField DataField="UserDepartment" HeaderText="Country" />
-                                </Columns>
-                            </asp:GridView>
                             <!-- END ACCOUNTANT LIST TABLE -->
                         </div>
                         <!-- END TABLE RESPONSIVE DIV -->

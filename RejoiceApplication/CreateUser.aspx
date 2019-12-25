@@ -3,7 +3,7 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
+
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-6">
@@ -120,7 +120,7 @@
         </div>
     </div>
     <div runat="server">
-     <%--   <script type="text/javascript">
+        <%--   <script type="text/javascript">
         function validate() {
             var Fname = document.getElementById('<%= txtFname.ClientID %>').value;
             var Lname = document.getElementById('<%= txtLname.ClientID %>').value;
@@ -174,5 +174,5 @@
         }
     </script>--%>
     </div>
-     
+
 </asp:Content>

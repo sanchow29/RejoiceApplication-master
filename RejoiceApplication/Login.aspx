@@ -46,9 +46,9 @@
         <div class="row" style="margin-bottom: 10px; margin-top: 15px;">
 
             <div class="col-md-12">
-               <%-- OnClientClick="javascript:return validate();"--%>
+                <%-- OnClientClick="javascript:return validate();"--%>
                 <asp:Button ID="LoginButton" runat="server" CommandName="Login"
-                            Text="Log In"  ValidationGroup="Login1" CssClass="btn btn-primary form-control" OnClick="LoginButton_Click"/>
+                            Text="Log In" ValidationGroup="Login1" CssClass="btn btn-primary form-control" OnClick="LoginButton_Click"/>
 
             </div>
 

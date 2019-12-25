@@ -16,8 +16,8 @@ namespace RejoiceApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
+
         protected void LoginButton_Click(object sender, EventArgs e)
         {
             var userName = UserName.Text;
@@ -30,31 +30,30 @@ namespace RejoiceApplication
                         ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
                     SqlConnection con = new SqlConnection();
                     con.ConnectionString = connectionString;
-                   // SqlCommand scmd = new SqlCommand("select count (*) as cnt from login_database where username=@usr and password=@pwd", scn);
+                    // SqlCommand scmd = new SqlCommand("select count (*) as cnt from login_database where username=@usr and password=@pwd", scn);
                     SqlCommand cmd = new SqlCommand("select count (*) as cnt from UsersList ", con);
 
                     // scmd.Parameters.Clear();
                     // scmd.Parameters.AddWithValue("@usr", txt_UserName.Text);
                     // scmd.Parameters.AddWithValue("@pwd", txt_PWD.Text);
-                  //  con.Open();
+                    //  con.Open();
                     SqlDataAdapter sda = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
                     con.Open();
                     int i = cmd.ExecuteNonQuery();
-                  
+
                     if (dt.Rows.Count > 0)
                     {
-                       Response.Redirect("Default.aspx",false);
+                        Response.Redirect("Default.aspx", false);
                     }
                     else
                     {
-                       // Label1.Text = "Your username and word is incorrect";
-                      //  Label1.ForeColor = System.Drawing.Color.Red;
-
+                        // Label1.Text = "Your username and word is incorrect";
+                        //  Label1.ForeColor = System.Drawing.Color.Red;
                     }
-                    con.Close();
 
+                    con.Close();
                 }
                 catch (Exception ex)
                 {
